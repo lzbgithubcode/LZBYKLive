@@ -39,6 +39,27 @@
 
 @interface UIImage (LZBClipCircleImage)
 
+/**
+ *  根据尺寸裁剪图片为圆形
+ *
+ *  @param targetSize 目标尺寸
+ */
 - (UIImage *)lzb_ClipCircleImageWithSize:(CGSize)targetSize;
+
+/**
+ *  根据图片的自身大小裁剪为圆形
+ *
+ *  @return
+ */
+- (UIImage *)lzb_ClipCircleImage;
+
+/**
+ *  根据图片的名称和自身的大小裁剪为圆形
+ *
+ *  @param imageName 图片名称
+ *
+ *  @return
+ */
+- (UIImage *)lzb_ClipCircleImageWithName:(NSString *)imageName;
 
 @end

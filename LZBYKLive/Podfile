@@ -1,4 +1,9 @@
 platform :ios, "7.0"
 
 pod 'MJRefresh'
-
+pod 'SVProgressHUD'
+pod 'SDWebImage'
+pod 'Masonry'
+pod 'Mantle'
+pod 'AFNetworking', '~> 2.0'
+pod 'ReactiveCocoa'

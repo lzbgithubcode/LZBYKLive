@@ -67,4 +67,14 @@
     return newImage;
 }
 
+- (UIImage *)lzb_ClipCircleImage
+{
+    return [self lzb_ClipCircleImageWithSize:self.size];
+}
+
+- (UIImage *)lzb_ClipCircleImageWithName:(NSString *)imageName
+{
+    return [[UIImage imageNamed:imageName] lzb_ClipCircleImage];
+}
+
 @end
