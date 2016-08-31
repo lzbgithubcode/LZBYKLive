@@ -66,16 +66,29 @@ static AFHTTPSessionManager *_resquestManger;
     return task;
 }
 
+
+
+
 - (NSString *)checkResquestURLWithURL:(NSString *)url
 {
    if(url == nil)
    {
        NSLog(@"URL为空");
-     return @"htttp://www.baidu.com";
+       return @"htttp://www.baidu.com";
    }
-    else
+   else
+   {
+      if(isContainChinese(url))
+      {
+          url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      }
         return url;
+   
+   }
+    
 }
+
+
  
 
 

@@ -18,6 +18,9 @@
 #import <Mantle/Mantle.h>
 #import <SDWebImageManager.h>
 
+//自定义工具类
+#import "LZBFuncTools.h"
+
 #endif
 
 #endif /* LZBYKPrefixHeader_pch */
