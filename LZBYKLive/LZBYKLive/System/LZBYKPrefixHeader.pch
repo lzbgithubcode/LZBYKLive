@@ -20,6 +20,7 @@
 
 //自定义工具类
 #import "LZBFuncTools.h"
+#import "LZBCommonMacros.h"
 
 #endif
 

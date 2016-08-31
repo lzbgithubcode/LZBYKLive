@@ -43,6 +43,7 @@
 		185D56181D76734C00A53AE9 /* LZBFuncTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBFuncTools.m; sourceTree = "<group>"; };
 		185D56221D76B06F00A53AE9 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
 		185D56231D76B06F00A53AE9 /* HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
+		185D56251D76BA5400A53AE9 /* LZBCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZBCommonMacros.h; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 		18D8A91D1D6E9690005768A2 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
+				185D56251D76BA5400A53AE9 /* LZBCommonMacros.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";

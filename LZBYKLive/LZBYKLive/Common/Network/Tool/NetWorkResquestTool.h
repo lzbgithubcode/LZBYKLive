@@ -48,10 +48,43 @@ typedef void(^failResponseBlock)(NSError *error);
 /**
  *  请求参数模型
  */
-@property (nonatomic, strong) BaseResquestModel *resquestModel;
+@property (nonatomic, strong,readonly) BaseResquestModel *resquestModel;
 
 /**
  *  请求响应模型
  */
-@property (nonatomic, strong) BaseResponseModel *responseModel;
+@property (nonatomic, strong,readonly) BaseResponseModel *responseModel;
+
+#pragma mark - method
+/**
+ *  get请求
+ *
+ *  @param requestModel  请求模型
+ *  @param responseModel 响应模型
+ *  @param sucessBlock   请求成功回调
+ *  @param failBlock     请求失败回调
+ *
+ *  @return
+ */
+- (NSURLSessionDataTask *)httpGetWithModel:(BaseResquestModel *)requestModel
+                             ResponseModel:(BaseResponseModel *)responseModel
+                            sucessResponse:(sucessResponseBlock)sucessBlock
+                              failResponse:(failResponseBlock)failBlock;
+
+
+/**
+ *  Post请求
+ *
+ *  @param requestModel  请求模型
+ *  @param responseModel 响应模型
+ *  @param sucessBlock   请求成功回调
+ *  @param failBlock     请求失败回调
+ *
+ *  @return
+ */
+- (NSURLSessionDataTask *)httpPostWithModel:(BaseResquestModel *)requestModel
+                             ResponseModel:(BaseResponseModel *)responseModel
+                            sucessResponse:(sucessResponseBlock)sucessBlock
+                              failResponse:(failResponseBlock)failBlock;
+
 @end
