@@ -57,7 +57,9 @@ static NSMutableDictionary *_instance;
         if([delegate respondsToSelector:aSelector])
         {
             [delegate performSelector:aSelector withObject:anArgument withObject:anotherAnArgument];
-       }
+             break;
+        }
+      
     }
 }
 

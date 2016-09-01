@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseNC.h"
+#import "LonginInterfaceDM.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    LZBYKLoginVC *login = [LonginInterfaceDM l_instanceLZBYKLoginVC];
+   
+    self.window.rootViewController = [[BaseNC alloc]initWithRootViewController:login];
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
