@@ -15,6 +15,10 @@
 		1850823A1D542D280014D26D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185082351D542D280014D26D /* ViewController.m */; };
 		185D56191D76734C00A53AE9 /* LZBFuncTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D56181D76734C00A53AE9 /* LZBFuncTools.m */; };
 		185D56241D76B06F00A53AE9 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D56231D76B06F00A53AE9 /* HUD.m */; };
+		185D56281D76D39700A53AE9 /* BaseNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D56271D76D39700A53AE9 /* BaseNC.m */; };
+		185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D562A1D76D3CF00A53AE9 /* BaseTC.m */; };
+		185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D562D1D76D3E700A53AE9 /* BaseVC.m */; };
+		185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D56301D76D9CD00A53AE9 /* BaseDataManger.m */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -44,6 +48,14 @@
 		185D56221D76B06F00A53AE9 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
 		185D56231D76B06F00A53AE9 /* HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
 		185D56251D76BA5400A53AE9 /* LZBCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZBCommonMacros.h; sourceTree = "<group>"; };
+		185D56261D76D39700A53AE9 /* BaseNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNC.h; sourceTree = "<group>"; };
+		185D56271D76D39700A53AE9 /* BaseNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNC.m; sourceTree = "<group>"; };
+		185D56291D76D3CF00A53AE9 /* BaseTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTC.h; sourceTree = "<group>"; };
+		185D562A1D76D3CF00A53AE9 /* BaseTC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTC.m; sourceTree = "<group>"; };
+		185D562C1D76D3E700A53AE9 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		185D562D1D76D3E700A53AE9 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		185D562F1D76D9CD00A53AE9 /* BaseDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataManger.h; sourceTree = "<group>"; };
+		185D56301D76D9CD00A53AE9 /* BaseDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataManger.m; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -222,6 +234,8 @@
 			children = (
 				18D8A9651D7563C3005768A2 /* BaseModel.h */,
 				18D8A9661D7563C3005768A2 /* BaseModel.m */,
+				185D562F1D76D9CD00A53AE9 /* BaseDataManger.h */,
+				185D56301D76D9CD00A53AE9 /* BaseDataManger.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +250,12 @@
 		185082401D542D3C0014D26D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				185D56261D76D39700A53AE9 /* BaseNC.h */,
+				185D56271D76D39700A53AE9 /* BaseNC.m */,
+				185D56291D76D3CF00A53AE9 /* BaseTC.h */,
+				185D562A1D76D3CF00A53AE9 /* BaseTC.m */,
+				185D562C1D76D3E700A53AE9 /* BaseVC.h */,
+				185D562D1D76D3E700A53AE9 /* BaseVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -600,12 +620,16 @@
 				18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
 				18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */,
+				185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */,
 				1850823A1D542D280014D26D /* ViewController.m in Sources */,
+				185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */,
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
+				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,
 				18D8A97B1D7570DE005768A2 /* BaseResponseModel.m in Sources */,
 				185D56191D76734C00A53AE9 /* LZBFuncTools.m in Sources */,
+				185D56281D76D39700A53AE9 /* BaseNC.m in Sources */,
 				18D8A97A1D7570DE005768A2 /* BaseHttpModel.m in Sources */,
 				18D8A97C1D7570DE005768A2 /* BaseResquestModel.m in Sources */,
 				185082371D542D280014D26D /* AppDelegate.m in Sources */,

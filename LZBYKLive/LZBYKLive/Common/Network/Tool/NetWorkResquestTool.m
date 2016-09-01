@@ -70,7 +70,6 @@ static AFHTTPSessionManager *_resquestManger;
     _resquestModel = requestModel;
     _responseModel = responseModel;
 }
-
 #pragma mark - 基础网络请求
 /**
  *  get-基本网络请求
