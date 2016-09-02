@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
+		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
 		184D3DDD1D782724000875B2 /* LZBYKLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DDC1D782724000875B2 /* LZBYKLoginVC.m */; };
 		184D3DE01D782CD6000875B2 /* BaseInterfaceDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DDF1D782CD6000875B2 /* BaseInterfaceDM.m */; };
@@ -56,6 +58,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAppCacheDataManger.h; sourceTree = "<group>"; };
+		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAppCacheDataManger.m; sourceTree = "<group>"; };
+		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
+		18370EE81D795B7D006B33A1 /* BaseDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDBModel.m; sourceTree = "<group>"; };
 		184D3DD21D7823A6000875B2 /* BaseHttpDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseHttpDataManger.h; path = BaseModel/BaseHttpDataManger.h; sourceTree = "<group>"; };
 		184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseHttpDataManger.m; path = BaseModel/BaseHttpDataManger.m; sourceTree = "<group>"; };
 		184D3DDB1D782724000875B2 /* LZBYKLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKLoginVC.h; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 				184D3E251D792524000875B2 /* YKAppManger.m */,
 				184D3E271D7926BB000875B2 /* LZBYKShareSDKManger.h */,
 				184D3E281D7926BB000875B2 /* LZBYKShareSDKManger.m */,
+				18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */,
+				18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */,
 			);
 			path = AppManger;
 			sourceTree = "<group>";
@@ -418,6 +426,8 @@
 				185D56301D76D9CD00A53AE9 /* BaseDataManger.m */,
 				184D3DDE1D782CD6000875B2 /* BaseInterfaceDM.h */,
 				184D3DDF1D782CD6000875B2 /* BaseInterfaceDM.m */,
+				18370EE71D795B7D006B33A1 /* BaseDBModel.h */,
+				18370EE81D795B7D006B33A1 /* BaseDBModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -811,6 +821,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */,
+				18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */,
 				18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
 				18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */,
@@ -829,6 +840,7 @@
 				185D56191D76734C00A53AE9 /* LZBFuncTools.m in Sources */,
 				185D56281D76D39700A53AE9 /* BaseNC.m in Sources */,
 				18D8A97A1D7570DE005768A2 /* BaseHttpModel.m in Sources */,
+				18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */,
 				18D8A97C1D7570DE005768A2 /* BaseResquestModel.m in Sources */,
 				184D3DE01D782CD6000875B2 /* BaseInterfaceDM.m in Sources */,
 				185082371D542D280014D26D /* AppDelegate.m in Sources */,
