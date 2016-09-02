@@ -10,4 +10,14 @@
 
 @implementation BaseNC
 
+- (UIViewController *)childViewControllerForStatusBarStyle
+{
+    UIViewController *vc = self.visibleViewController;
+    return vc;
+}
+
+- (UIViewController *)childViewControllerForStatusBarHidden
+{
+    return self.visibleViewController;
+}
 @end

@@ -10,4 +10,9 @@
 
 @interface BaseVC : UIViewController
 
+/**
+ *  设置状态栏风格
+ */
+@property (nonatomic, assign) UIStatusBarStyle statusStyle;
+
 @end

@@ -8,6 +8,19 @@
 
 #import "LZBYKLoginVC.h"
 
+@interface LZBYKLoginVC()
+
+
+@end
+
 @implementation LZBYKLoginVC
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    //self.navigationController.navigationBar.hidden = YES;
+    self.statusStyle = UIStatusBarStyleLightContent;
+}
+
+
 
 @end

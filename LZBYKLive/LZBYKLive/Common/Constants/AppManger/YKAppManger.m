@@ -23,7 +23,7 @@
 
 - (void)yk_applicationDidEnterBackground:(UIApplication *)application
 {
-
+ 
 }
 
 - (void)yk_applicationWillEnterForeground:(UIApplication *)application;

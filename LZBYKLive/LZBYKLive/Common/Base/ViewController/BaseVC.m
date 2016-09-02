@@ -8,10 +8,27 @@
 
 #import "BaseVC.h"
 
+@interface BaseVC()
+
+@end
+
 @implementation BaseVC
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return self.statusStyle;
+}
+
+- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle
+{
+    _statusStyle = statusBarStyle;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+
 @end
