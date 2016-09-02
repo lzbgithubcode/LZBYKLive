@@ -9,5 +9,13 @@
 #import "AppConstants.h"
 
 @implementation AppConstants
++ (NSString *)getShareSDKAppkey
+{
+  return @"16b9edacc91bb";
+}
 
++ (NSString *)getShareSDKAppSecret
+{
+  return @"92f2cfd96982bb9c2d276f73c37c78de";
+}
 @end

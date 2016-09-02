@@ -10,4 +10,13 @@
 
 @interface AppConstants : NSObject
 
+/**
+ *  获得shareSDK的appkey
+ */
++ (NSString *)getShareSDKAppkey;
+
+/**
+ *  获得shareSDK的appSecret
+ */
++ (NSString *)getShareSDKAppSecret;
 @end
