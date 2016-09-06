@@ -8,6 +8,16 @@
 
 #import "YKAppManger.h"
 #import "LZBYKShareSDKManger.h"
+#import "YKAppCacheDataManger.h"
+#import "LZBDataConversionManger.h"
+
+#define YKAPPConfigModelKey  @"YKAPPConfigModelKey"
+
+@interface YKAppManger()
+
+@property (nonatomic, strong) YKAPPConfigModel *configModel;
+
+@end
 
 @implementation YKAppManger
 - (BOOL)yk_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -40,4 +50,28 @@
 {
 
 }
+
+
+#pragma mark - app参数
+- (YKAPPConfigModel *)getAppConfigModel
+{
+    //从沙盒中取
+    NSDictionary *dict = (NSDictionary *)[[YKAppCacheDataManger shareInstance] getObectForKey:YKAPPConfigModelKey];
+    if(dict)
+    {
+        self.configModel = [[LZBDataConversionManger shareInstance] convertWithDictionary:dict ToModel:[YKAPPConfigModel class]];
+    }
+    else
+    {
+    
+    }
+   if(self.configModel == nil)
+   {
+       self.configModel = [[YKAPPConfigModel alloc]init];
+      
+   }
+    return self.configModel;
+}
+
+
 @end

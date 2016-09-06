@@ -15,6 +15,7 @@
  */
 - (NSDictionary *)modelToDictionary;
 
+
 /**
  *  字典转化模型 （属性值一一对应）
  */

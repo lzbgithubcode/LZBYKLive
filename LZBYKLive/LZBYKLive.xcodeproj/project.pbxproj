@@ -45,6 +45,8 @@
 		185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D562A1D76D3CF00A53AE9 /* BaseTC.m */; };
 		185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D562D1D76D3E700A53AE9 /* BaseVC.m */; };
 		185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D56301D76D9CD00A53AE9 /* BaseDataManger.m */; };
+		18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4377A1D7EB05400AE6AAD /* YKAPPConfigModel.m */; };
+		18A4377E1D7EB82100AE6AAD /* LZBDataConversionManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4377D1D7EB82100AE6AAD /* LZBDataConversionManger.m */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -130,6 +132,10 @@
 		185D562D1D76D3E700A53AE9 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		185D562F1D76D9CD00A53AE9 /* BaseDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataManger.h; sourceTree = "<group>"; };
 		185D56301D76D9CD00A53AE9 /* BaseDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataManger.m; sourceTree = "<group>"; };
+		18A437791D7EB05400AE6AAD /* YKAPPConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAPPConfigModel.h; sourceTree = "<group>"; };
+		18A4377A1D7EB05400AE6AAD /* YKAPPConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAPPConfigModel.m; sourceTree = "<group>"; };
+		18A4377C1D7EB82100AE6AAD /* LZBDataConversionManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBDataConversionManger.h; sourceTree = "<group>"; };
+		18A4377D1D7EB82100AE6AAD /* LZBDataConversionManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBDataConversionManger.m; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -376,6 +382,8 @@
 				185D56181D76734C00A53AE9 /* LZBFuncTools.m */,
 				185D56221D76B06F00A53AE9 /* HUD.h */,
 				185D56231D76B06F00A53AE9 /* HUD.m */,
+				18A4377C1D7EB82100AE6AAD /* LZBDataConversionManger.h */,
+				18A4377D1D7EB82100AE6AAD /* LZBDataConversionManger.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -476,6 +484,15 @@
 			children = (
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		18A437781D7EB02600AE6AAD /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				18A437791D7EB05400AE6AAD /* YKAPPConfigModel.h */,
+				18A4377A1D7EB05400AE6AAD /* YKAPPConfigModel.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		18D8A91D1D6E9690005768A2 /* Macros */ = {
@@ -644,6 +661,7 @@
 		18D8A9621D756138005768A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18A437781D7EB02600AE6AAD /* Other */,
 				184D3DE11D782CF1000875B2 /* DM */,
 			);
 			path = Model;
@@ -832,11 +850,13 @@
 				184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */,
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
+				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
 				184D3E291D7926BB000875B2 /* LZBYKShareSDKManger.m in Sources */,
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,
 				184D3E261D792524000875B2 /* YKAppManger.m in Sources */,
 				18D8A97B1D7570DE005768A2 /* BaseResponseModel.m in Sources */,
+				18A4377E1D7EB82100AE6AAD /* LZBDataConversionManger.m in Sources */,
 				185D56191D76734C00A53AE9 /* LZBFuncTools.m in Sources */,
 				185D56281D76D39700A53AE9 /* BaseNC.m in Sources */,
 				18D8A97A1D7570DE005768A2 /* BaseHttpModel.m in Sources */,

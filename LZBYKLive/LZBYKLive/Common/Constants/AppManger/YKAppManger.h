@@ -7,8 +7,10 @@
 //
 
 #import "BaseDataManger.h"
+#import "YKAPPConfigModel.h"
 
 @interface YKAppManger : BaseDataManger
+
 - (BOOL)yk_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
 - (void)yk_applicationWillResignActive:(UIApplication *)application;
@@ -20,4 +22,8 @@
 - (void)yk_applicationDidBecomeActive:(UIApplication *)application;
 
 - (void)yk_applicationWillTerminate:(UIApplication *)application;
+
+
+
+- (YKAPPConfigModel *)getAppConfigModel;
 @end

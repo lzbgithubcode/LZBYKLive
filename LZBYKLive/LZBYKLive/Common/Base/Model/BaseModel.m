@@ -15,6 +15,7 @@
     return [MTLJSONAdapter JSONDictionaryFromModel:self error:nil];
 }
 
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
      //获得模型的属性列表
