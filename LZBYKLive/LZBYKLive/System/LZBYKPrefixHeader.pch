@@ -23,6 +23,8 @@
 #import "LZBCommonMacros.h"
 #import "AppConstants.h"
 #import "UITypes.h"
+#import "UIConstantFont.h"
+#import "UIConstantColor.h"
 
 #endif
 

@@ -10,8 +10,7 @@
 #import "LZBYKShareSDKManger.h"
 #import "YKAppCacheDataManger.h"
 #import "LZBDataConversionManger.h"
-
-#define YKAPPConfigModelKey  @"YKAPPConfigModelKey"
+#import "YKAppCacheDataManger.h"
 
 @interface YKAppManger()
 
@@ -23,6 +22,7 @@
 - (BOOL)yk_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[LZBYKShareSDKManger shareInstance] ykShareSDK_application:application didFinishLaunchingWithOptions:launchOptions];
+    
     return YES;
 }
 
@@ -60,18 +60,22 @@
     if(dict)
     {
         self.configModel = [[LZBDataConversionManger shareInstance] convertWithDictionary:dict ToModel:[YKAPPConfigModel class]];
+        self.configModel.appVersion = [AppConstants getCurrentVersion];
+        self.configModel.appNewVersion = ([self.configModel.appVersion isEqualToString: [AppConstants getCurrentVersion]]);
+        self.configModel.appOpen = NO;
+        [self.configModel saveObject];
     }
     else
     {
-    
+        self.configModel = [[YKAPPConfigModel alloc]init];
+        self.configModel.appOpen = YES;
+        self.configModel.appNewVersion = YES;
+        self.configModel.appVersion = [AppConstants getCurrentVersion];
+        [self.configModel saveObject];
     }
-   if(self.configModel == nil)
-   {
-       self.configModel = [[YKAPPConfigModel alloc]init];
-      
-   }
     return self.configModel;
 }
+
 
 
 @end

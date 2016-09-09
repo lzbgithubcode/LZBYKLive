@@ -14,4 +14,9 @@
 {
     return [[LZBYKLoginVC alloc]init];
 }
+
++ (LZBYKAdvertisementVC *)l_instanceLZBYKAdvertisementVC
+{
+    return [[LZBYKAdvertisementVC alloc]init];
+}
 @end

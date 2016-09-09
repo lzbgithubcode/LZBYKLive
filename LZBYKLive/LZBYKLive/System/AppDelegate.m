@@ -11,6 +11,7 @@
 #import "LonginInterfaceDM.h"
 #import "YKAppManger.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -22,12 +23,25 @@
    
     [[YKAppManger shareInstance] yk_application:application didFinishLaunchingWithOptions:launchOptions];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    LZBYKLoginVC *login = [LonginInterfaceDM l_instanceLZBYKLoginVC];
-    self.window.rootViewController = [[BaseNC alloc]initWithRootViewController:login];
+    [self launchPrepare];
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
+
+- (void)launchPrepare
+{
+    if([[YKAppManger shareInstance] getAppConfigModel].appNewVersion)
+    {
+        self.window.rootViewController = [LonginInterfaceDM l_instanceLZBYKAdvertisementVC];
+    }
+    else
+    {
+        LZBYKLoginVC *login = [LonginInterfaceDM l_instanceLZBYKLoginVC];
+        self.window.rootViewController = [[BaseNC alloc]initWithRootViewController:login];
+    }
+
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     [[YKAppManger shareInstance] yk_applicationWillResignActive:application];

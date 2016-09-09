@@ -9,9 +9,10 @@
 #import "BaseDataManger.h"
 #import <objc/runtime.h>
 
-static NSMutableDictionary *_instance;
+static NSMutableDictionary *_instanceDictionary;
 
 @interface BaseDataManger()
+
 @property (nonatomic, strong) NSHashTable *delegates;
 @end
 
@@ -20,15 +21,15 @@ static NSMutableDictionary *_instance;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if(!_instance)
-        _instance = [NSMutableDictionary dictionary];
+        if(!_instanceDictionary)
+        _instanceDictionary = [NSMutableDictionary dictionary];
     });
     NSString *key = NSStringFromClass([self class]);
-    id  valueObject = [_instance valueForKey:key];
+    id  valueObject = [_instanceDictionary valueForKey:key];
     if(valueObject == nil)
     {
-        valueObject = [valueObject new];
-        [_instance setValue:valueObject forKey:key];
+        valueObject = [self new];
+        [_instanceDictionary setValue:valueObject forKey:key];
     }
     return valueObject;
 }
@@ -36,7 +37,7 @@ static NSMutableDictionary *_instance;
 + (void)removeInstance
 {
     NSString *key = NSStringFromClass([self class]);
-    [_instance removeObjectForKey:key];
+    [_instanceDictionary removeObjectForKey:key];
 }
 
 - (void)addDelegateObject:(id)delegate

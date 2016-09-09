@@ -8,6 +8,7 @@
 
 #import "BaseInterfaceDM.h"
 #import "LZBYKLoginVC.h"
+#import "LZBYKAdvertisementVC.h"
 
 @interface LonginInterfaceDM : BaseInterfaceDM
 
@@ -15,4 +16,9 @@
  *  跳转到登陆控制器
  */
 + (LZBYKLoginVC *)l_instanceLZBYKLoginVC;
+
+/**
+ *  跳转到广告控制器
+ */
++ (LZBYKAdvertisementVC *)l_instanceLZBYKAdvertisementVC;
 @end

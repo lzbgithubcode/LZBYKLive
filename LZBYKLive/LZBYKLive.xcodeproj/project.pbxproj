@@ -47,6 +47,10 @@
 		185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D56301D76D9CD00A53AE9 /* BaseDataManger.m */; };
 		18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4377A1D7EB05400AE6AAD /* YKAPPConfigModel.m */; };
 		18A4377E1D7EB82100AE6AAD /* LZBDataConversionManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4377D1D7EB82100AE6AAD /* LZBDataConversionManger.m */; };
+		18A437851D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437841D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m */; };
+		18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A437861D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg */; };
+		18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */; };
+		18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -60,8 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAppCacheDataManger.h; sourceTree = "<group>"; };
-		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAppCacheDataManger.m; sourceTree = "<group>"; };
+		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
+		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
 		18370EE81D795B7D006B33A1 /* BaseDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDBModel.m; sourceTree = "<group>"; };
 		184D3DD21D7823A6000875B2 /* BaseHttpDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseHttpDataManger.h; path = BaseModel/BaseHttpDataManger.h; sourceTree = "<group>"; };
@@ -136,6 +140,13 @@
 		18A4377A1D7EB05400AE6AAD /* YKAPPConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAPPConfigModel.m; sourceTree = "<group>"; };
 		18A4377C1D7EB82100AE6AAD /* LZBDataConversionManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBDataConversionManger.h; sourceTree = "<group>"; };
 		18A4377D1D7EB82100AE6AAD /* LZBDataConversionManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBDataConversionManger.m; sourceTree = "<group>"; };
+		18A437831D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKAdvertisementVC.h; sourceTree = "<group>"; };
+		18A437841D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKAdvertisementVC.m; sourceTree = "<group>"; };
+		18A437861D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wenxin_tuanguan_icon.jpg; sourceTree = "<group>"; };
+		18A437881D7FB6DF00AE6AAD /* UIConstantFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstantFont.h; sourceTree = "<group>"; };
+		18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantFont.m; sourceTree = "<group>"; };
+		18A4378B1D7FB6FD00AE6AAD /* UIConstantColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstantColor.h; sourceTree = "<group>"; };
+		18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantColor.m; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -289,8 +300,6 @@
 				184D3E251D792524000875B2 /* YKAppManger.m */,
 				184D3E271D7926BB000875B2 /* LZBYKShareSDKManger.h */,
 				184D3E281D7926BB000875B2 /* LZBYKShareSDKManger.m */,
-				18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */,
-				18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */,
 			);
 			path = AppManger;
 			sourceTree = "<group>";
@@ -410,6 +419,7 @@
 				185082431D542D3C0014D26D /* CustomView */,
 				18D8A91D1D6E9690005768A2 /* Macros */,
 				18D8A91E1D6E9690005768A2 /* Network */,
+				18A4377F1D7FAC0F00AE6AAD /* Manger */,
 				18D8A91F1D6E9690005768A2 /* Store */,
 			);
 			path = Common;
@@ -468,6 +478,10 @@
 				18D8A9811D7589E9005768A2 /* AppConstants.m */,
 				184D3E2A1D79524F000875B2 /* UITypes.h */,
 				184D3E2B1D79524F000875B2 /* UITypes.m */,
+				18A437881D7FB6DF00AE6AAD /* UIConstantFont.h */,
+				18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */,
+				18A4378B1D7FB6FD00AE6AAD /* UIConstantColor.h */,
+				18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -493,6 +507,15 @@
 				18A4377A1D7EB05400AE6AAD /* YKAPPConfigModel.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		18A4377F1D7FAC0F00AE6AAD /* Manger */ = {
+			isa = PBXGroup;
+			children = (
+				18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */,
+				18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */,
+			);
+			path = Manger;
 			sourceTree = "<group>";
 		};
 		18D8A91D1D6E9690005768A2 /* Macros */ = {
@@ -654,6 +677,8 @@
 			children = (
 				184D3DDB1D782724000875B2 /* LZBYKLoginVC.h */,
 				184D3DDC1D782724000875B2 /* LZBYKLoginVC.m */,
+				18A437831D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.h */,
+				18A437841D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -670,6 +695,7 @@
 		18D8A9631D756138005768A2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18A437861D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -775,6 +801,7 @@
 			files = (
 				184D3E191D7923AA000875B2 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				185082111D531F850014D26D /* LaunchScreen.storyboard in Resources */,
+				18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */,
 				184D3E1B1D7923AA000875B2 /* WeiboSDK.bundle in Resources */,
 				184D3DF11D7921AB000875B2 /* ShareSDK.bundle in Resources */,
 				184D3E1D1D7923AA000875B2 /* read_me.txt in Resources */,
@@ -839,6 +866,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */,
+				18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */,
 				18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */,
 				18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
@@ -852,8 +880,10 @@
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
+				18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */,
 				184D3E291D7926BB000875B2 /* LZBYKShareSDKManger.m in Sources */,
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,
+				18A437851D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m in Sources */,
 				184D3E261D792524000875B2 /* YKAppManger.m in Sources */,
 				18D8A97B1D7570DE005768A2 /* BaseResponseModel.m in Sources */,
 				18A4377E1D7EB82100AE6AAD /* LZBDataConversionManger.m in Sources */,

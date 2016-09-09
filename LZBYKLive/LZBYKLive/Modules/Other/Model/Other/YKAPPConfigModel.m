@@ -7,7 +7,17 @@
 //
 
 #import "YKAPPConfigModel.h"
+#import "LZBDataConversionManger.h"
+#import "YKAppCacheDataManger.h"
+
 
 @implementation YKAPPConfigModel
+
+
+- (void)saveObject
+{
+    NSDictionary  *dictData = [[LZBDataConversionManger shareInstance] convertWithModelToDictionary:self];
+    [[YKAppCacheDataManger shareInstance] saveObject:dictData forKey:YKAPPConfigModelKey];
+}
 
 @end

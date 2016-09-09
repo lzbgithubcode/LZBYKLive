@@ -18,4 +18,10 @@
 {
   return @"92f2cfd96982bb9c2d276f73c37c78de";
 }
+
+
++ (NSString *)getCurrentVersion
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+}
 @end

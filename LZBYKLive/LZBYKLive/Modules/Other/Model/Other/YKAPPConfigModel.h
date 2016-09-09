@@ -8,6 +8,8 @@
 
 #import "BaseModel.h"
 
+#define YKAPPConfigModelKey  @"YKAPPConfigModelKey"
+
 @interface YKAPPConfigModel : BaseModel
 
 /**
@@ -19,4 +21,13 @@
  *  打开app
  */
 @property (nonatomic, assign) BOOL appOpen;
+
+/**
+ *  app版本号
+ */
+@property (nonatomic, strong) NSString *appVersion;
+
+
+- (void)saveObject;
+
 @end

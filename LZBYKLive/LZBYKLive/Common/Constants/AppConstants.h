@@ -19,4 +19,12 @@
  *  获得shareSDK的appSecret
  */
 + (NSString *)getShareSDKAppSecret;
+
+
+
+#pragma mark - app信息
+/**
+ *  获得当前app版本号
+ */
++ (NSString *)getCurrentVersion;
 @end
