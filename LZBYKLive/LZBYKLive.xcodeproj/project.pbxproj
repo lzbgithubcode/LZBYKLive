@@ -52,6 +52,7 @@
 		18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */; };
 		18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */; };
 		18A437A31D82646500AE6AAD /* UIView+ClipAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */; };
+		18A437A51D86867300AE6AAD /* loginyyun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437A41D86867300AE6AAD /* loginyyun@2x.png */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -150,6 +151,7 @@
 		18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantColor.m; sourceTree = "<group>"; };
 		18A437A11D82646500AE6AAD /* UIView+ClipAngle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ClipAngle.h"; sourceTree = "<group>"; };
 		18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ClipAngle.m"; sourceTree = "<group>"; };
+		18A437A41D86867300AE6AAD /* loginyyun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginyyun@2x.png"; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -700,6 +702,7 @@
 		18D8A9631D756138005768A2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18A437A41D86867300AE6AAD /* loginyyun@2x.png */,
 				18A437861D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg */,
 			);
 			path = Resource;
@@ -810,6 +813,7 @@
 				184D3E1B1D7923AA000875B2 /* WeiboSDK.bundle in Resources */,
 				184D3DF11D7921AB000875B2 /* ShareSDK.bundle in Resources */,
 				184D3E1D1D7923AA000875B2 /* read_me.txt in Resources */,
+				18A437A51D86867300AE6AAD /* loginyyun@2x.png in Resources */,
 				184D3E1E1D7923AA000875B2 /* README.txt in Resources */,
 				185082381D542D280014D26D /* Assets.xcassets in Resources */,
 			);
@@ -1009,6 +1013,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BABCA77381E370F6AAEB35DA /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1034,6 +1039,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 597FFF4F85A490869D747B61 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

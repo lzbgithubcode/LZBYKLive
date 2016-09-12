@@ -26,6 +26,10 @@
 #import "UIConstantFont.h"
 #import "UIConstantColor.h"
 
+
+//自定义分类
+#import "UIView+Frame.h"
+
 #endif
 
 #endif /* LZBYKPrefixHeader_pch */

@@ -82,9 +82,9 @@
 
 - (void)setLzb_Center:(CGPoint)lzb_Center
 {
-    CGPoint center = self.center;
-    center = lzb_Center;
-    self.center = center;
+    CGPoint centerVaule = self.center;
+    centerVaule = lzb_Center;
+    self.center = centerVaule;
 }
 
 - (CGPoint)lzb_Center

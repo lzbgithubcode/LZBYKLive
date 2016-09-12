@@ -43,4 +43,11 @@
     return ColorChangeRGB(0xffffff, 1.0);
 }
 
+
+#pragma mark - 其他
++ (UIColor *)getLonginBackColor
+{
+    return [UIColor colorWithRed:230.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+}
+
 @end

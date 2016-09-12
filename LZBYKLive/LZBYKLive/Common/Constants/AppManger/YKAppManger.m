@@ -61,7 +61,7 @@
     {
         self.configModel = [[LZBDataConversionManger shareInstance] convertWithDictionary:dict ToModel:[YKAPPConfigModel class]];
         self.configModel.appVersion = [AppConstants getCurrentVersion];
-        self.configModel.appNewVersion = ([self.configModel.appVersion isEqualToString: [AppConstants getCurrentVersion]]);
+        self.configModel.appNewVersion = !([self.configModel.appVersion isEqualToString: [AppConstants getCurrentVersion]]);
         self.configModel.appOpen = NO;
         [self.configModel saveObject];
     }

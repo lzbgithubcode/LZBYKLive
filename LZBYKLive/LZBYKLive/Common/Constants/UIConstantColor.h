@@ -18,7 +18,6 @@
  *  设置颜色为C2 0x666666 不透明
  */
 + (UIColor *)getWordColorC2;
-
 /**
  *  设置颜色为C3 0x999999 不透明
  */
@@ -32,4 +31,10 @@
  */
 + (UIColor *)getWordColorC5;
 
+
+#pragma mark - 其他
+/**
+ *  设置背景天蓝色
+ */
++ (UIColor *)getLonginBackColor;
 @end
