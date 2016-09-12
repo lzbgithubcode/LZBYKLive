@@ -51,6 +51,7 @@
 		18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A437861D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg */; };
 		18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */; };
 		18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */; };
+		18A437A31D82646500AE6AAD /* UIView+ClipAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -147,6 +148,8 @@
 		18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantFont.m; sourceTree = "<group>"; };
 		18A4378B1D7FB6FD00AE6AAD /* UIConstantColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstantColor.h; sourceTree = "<group>"; };
 		18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantColor.m; sourceTree = "<group>"; };
+		18A437A11D82646500AE6AAD /* UIView+ClipAngle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ClipAngle.h"; sourceTree = "<group>"; };
+		18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ClipAngle.m"; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -406,6 +409,8 @@
 				18D8A94C1D73C8D7005768A2 /* UIView+Border.m */,
 				18D8A94E1D73CCDC005768A2 /* UIImage+Common.h */,
 				18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */,
+				18A437A11D82646500AE6AAD /* UIView+ClipAngle.h */,
+				18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */,
 			);
 			path = Categrories;
 			sourceTree = "<group>";
@@ -865,6 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A437A31D82646500AE6AAD /* UIView+ClipAngle.m in Sources */,
 				18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */,
 				18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */,
 				18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */,

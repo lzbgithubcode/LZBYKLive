@@ -32,7 +32,7 @@
 {
     if([[YKAppManger shareInstance] getAppConfigModel].appNewVersion)
     {
-        self.window.rootViewController = [LonginInterfaceDM l_instanceLZBYKAdvertisementVC];
+        self.window.rootViewController = [[BaseNC alloc]initWithRootViewController:[LonginInterfaceDM l_instanceLZBYKAdvertisementVC]];
     }
     else
     {
