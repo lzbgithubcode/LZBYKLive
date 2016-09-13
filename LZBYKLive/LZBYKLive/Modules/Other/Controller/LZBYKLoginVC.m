@@ -15,11 +15,20 @@
 #define yunImageView_Height    45
 #define yunImageView_image  [UIImage imageNamed:@"loginyyun"]
 
+//第三方登录
+#define centerLabel_BottomMargin 200
+#define lineView_Width 80
+#define lineView_Height 1
+#define lineView_Margin 15
+
 @interface LZBYKLoginVC()
 
 @property (nonatomic, strong) UIImageView *imageView;
 
-@property (nonatomic, strong) CAShapeLayer *scaleLayer;
+@property (nonatomic, strong) UIView *leftLineView;
+@property (nonatomic, strong) UIView *rightLineView;
+@property (nonatomic, strong) UILabel *centerLabel;
+
 @end
 
 @implementation LZBYKLoginVC
@@ -35,6 +44,7 @@
 
 - (void)setupUI
 {
+    //白云
     for(NSInteger i = 0; i < 3; i++)
     {
         UIImageView *yunImageView = [UIImageView new];
@@ -48,6 +58,32 @@
         yunImageView.frame = CGRectMake(imageX,imageY, imageW, imageH);
         [self addMoveAnimationWithView:yunImageView];
     };
+    
+    //登录方式
+    LZBWeakSelf(weakSelf);
+    [self.centerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakSelf.view);
+        make.bottom.equalTo(weakSelf.view).offset(-centerLabel_BottomMargin);
+    }];
+    
+    [self.leftLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(weakSelf.centerLabel);
+        make.width.mas_equalTo(lineView_Width);
+        make.right.equalTo(weakSelf.centerLabel.mas_left).offset(-lineView_Margin);
+        make.height.mas_equalTo(lineView_Height);
+    }];
+    
+    [self.rightLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(weakSelf.centerLabel);
+        make.width.mas_equalTo(lineView_Width);
+        make.left.equalTo(weakSelf.centerLabel.mas_right).offset(lineView_Margin);
+        make.height.mas_equalTo(lineView_Height);
+    }];
+    
+    //三方登录按钮
+    NSArray *thirdLongin = @[@"login_weibo",@"login_wx",@"login_dx",@"login_qq"];
+
+    
     
 }
 
@@ -67,6 +103,42 @@
     grop.repeatCount = CGFLOAT_MAX;
     grop.duration = (animationView.tag - default_Tag) ==1?20: (animationView.tag - default_Tag)*20.0 + 40.0;
     [animationView.layer addAnimation:grop forKey:[NSString stringWithFormat:@"animationView-%ld",animationView.tag]];
+}
+
+#pragma mark - set/get
+- (UIView *)leftLineView
+{
+  if(_leftLineView == nil)
+  {
+      _leftLineView = [UIView new];
+      _leftLineView.backgroundColor = [UIConstantColor getWordColorC4];
+      [self.view addSubview:_leftLineView];
+  }
+    return _leftLineView;
+}
+- (UIView *)rightLineView
+{
+    if(_rightLineView == nil)
+    {
+        _rightLineView = [UIView new];
+        _rightLineView.backgroundColor = self.leftLineView.backgroundColor;
+        [self.view addSubview:_rightLineView];
+    }
+    return _rightLineView;
+}
+
+-(UILabel *)centerLabel
+{
+  if(_centerLabel == nil)
+  {
+      _centerLabel = [UILabel new];
+      _centerLabel.font = [UIConstantFont getFontW3_H14];
+      _centerLabel.textColor = [UIConstantColor getWordColorC3];
+      _centerLabel.textAlignment = NSTextAlignmentCenter;
+      _centerLabel.text = @"请选择登录方式";
+     [self.view addSubview:_centerLabel];
+  }
+    return _centerLabel;
 }
 
 
