@@ -7,7 +7,8 @@
 //
 
 #import "LZBYKLoginVC.h"
-
+#import "LZBYKShareSDKManger.h"
+#import "HUD.h"
 
 #define default_Margin 50
 #define default_Tag  100
@@ -21,6 +22,8 @@
 #define lineView_Height 1
 #define lineView_Margin 15
 
+#define thridLogin_TopMargin 30
+
 @interface LZBYKLoginVC()
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -28,6 +31,8 @@
 @property (nonatomic, strong) UIView *leftLineView;
 @property (nonatomic, strong) UIView *rightLineView;
 @property (nonatomic, strong) UILabel *centerLabel;
+@property (nonatomic, strong) UILabel *tipLabel;
+@property (nonatomic, strong) UILabel *textLable;
 
 @end
 
@@ -58,9 +63,15 @@
         yunImageView.frame = CGRectMake(imageX,imageY, imageW, imageH);
         [self addMoveAnimationWithView:yunImageView];
     };
+     LZBWeakSelf(weakSelf);
+     //中间提示文字
+    [self.textLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(weakSelf.view);
+        make.width.equalTo(weakSelf.view).offset(-30);
+    }];
     
     //登录方式
-    LZBWeakSelf(weakSelf);
+   
     [self.centerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(weakSelf.view);
         make.bottom.equalTo(weakSelf.view).offset(-centerLabel_BottomMargin);
@@ -81,10 +92,60 @@
     }];
     
     //三方登录按钮
+    UIButton *lastButton = nil;
     NSArray *thirdLongin = @[@"login_weibo",@"login_wx",@"login_dx",@"login_qq"];
+    for (NSInteger i = 0 ; i < thirdLongin.count; i++)
+    {
+        UIButton *btn = [self creatSignleButtonWithImage:thirdLongin[i]];
+        btn.tag = i;
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(weakSelf.centerLabel.mas_bottom).offset(thridLogin_TopMargin);
+            make.size.mas_equalTo(CGSizeMake(50, 50));
+            if(i == 0)
+                make.left.equalTo(weakSelf.leftLineView);
+            else
+                make.left.equalTo(lastButton.mas_right).offset(20);
+        }];
+        lastButton = btn;
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    //提示
+    [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(weakSelf.view).offset(-30);
+        make.centerX.equalTo(weakSelf.view);
+    }];
+    self.tipLabel.attributedText = [self getMutableAttributedStringWithString:@"登录代表想看看子彬的高仿映客demo"];
+}
 
-    
-    
+- (NSMutableAttributedString *)getMutableAttributedStringWithString:(NSString *)string
+{
+    NSMutableAttributedString *mustring = [[NSMutableAttributedString alloc]initWithString:string];
+    NSRange range = NSMakeRange(0, string.length);
+    NSRange subRange = [string rangeOfString:@"子"];
+    NSRange changeRange = NSMakeRange(subRange.location, range.length-subRange.location);
+    [mustring addAttribute:NSFontAttributeName value:[UIConstantFont getFontW3_H15] range:range];
+    [mustring addAttribute:NSForegroundColorAttributeName value:[UIConstantColor getWordColorC3] range:range];
+    [mustring addAttribute:NSForegroundColorAttributeName value:[UIConstantColor getThemeColor] range:changeRange];
+    [mustring addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:changeRange];
+    return mustring;
+}
+
+
+#pragma mark - hanle
+
+- (void)btnClick:(UIButton *)button
+{
+    //手机登陆
+    [[LZBYKShareSDKManger shareInstance] sharkSDKLoginUserRegisterType:eUserRegisterType_Phone];
+    [HUD showSuccessMessage:@"登陆成功"];
+}
+- (UIButton *)creatSignleButtonWithImage:(NSString *)imageString
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:button];
+    [button setImage:[UIImage imageNamed:imageString] forState:UIControlStateNormal];
+    return button;
 }
 
 - (void)addMoveAnimationWithView:(UIView *)animationView
@@ -139,6 +200,31 @@
      [self.view addSubview:_centerLabel];
   }
     return _centerLabel;
+}
+
+- (UILabel *)tipLabel
+{
+  if(_tipLabel == nil)
+  {
+      _tipLabel = [UILabel new];
+      [self.view addSubview:_tipLabel];
+  }
+    return _tipLabel;
+}
+
+- (UILabel *)textLable
+{
+  if(_textLable == nil)
+  {
+      _textLable = [UILabel new];
+      [self.view addSubview:_textLable];
+      _textLable.font = [UIConstantFont getFontW3_H8];
+      _textLable.textColor = [UIColor blueColor];
+      _textLable.textAlignment = NSTextAlignmentCenter;
+      _textLable.text = @"这里有些文提示文字,点击任意一个可以登陆";
+      _textLable.numberOfLines = 0;
+  }
+    return _textLable;
 }
 
 

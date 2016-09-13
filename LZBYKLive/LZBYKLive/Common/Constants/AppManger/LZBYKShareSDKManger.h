@@ -13,4 +13,11 @@
 
 - (BOOL)ykShareSDK_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
+
+/**
+ *  第三方用户注册类型
+ */
+- (void)sharkSDKLoginUserRegisterType:(eUserRegisterType)registerType;
+
+
 @end

@@ -86,6 +86,25 @@
 
 
 #pragma mark - 第三方登录
+
+- (void)sharkSDKLoginUserRegisterType:(eUserRegisterType)registerType
+{
+    switch (registerType) {
+        case eUserRegisterType_WeiXin:
+            [self shareSDKthirdLonginSocail:SSDKPlatformTypeWechat registerType:eUserRegisterType_WeiXin];
+            break;
+        case eUserRegisterType_WeiBo:
+            [self shareSDKthirdLonginSocail:SSDKPlatformTypeSinaWeibo registerType:eUserRegisterType_WeiBo];
+            break;
+        case eUserRegisterType_QQ:
+            [self shareSDKthirdLonginSocail:SSDKPlatformTypeQQ registerType:eUserRegisterType_QQ];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 - (void)shareSDKthirdLonginSocail:(SSDKPlatformType)platformType  registerType:(eUserRegisterType)registerType
 {
     [SSEThirdPartyLoginHelper loginByPlatform:platformType

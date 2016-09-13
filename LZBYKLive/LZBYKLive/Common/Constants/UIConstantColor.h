@@ -37,4 +37,10 @@
  *  设置背景天蓝色
  */
 + (UIColor *)getLonginBackColor;
+
+/**
+ *  设置主题绿色
+ */
++ (UIColor *)getThemeColor;
+
 @end

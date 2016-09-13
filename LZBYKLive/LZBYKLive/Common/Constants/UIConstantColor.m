@@ -50,4 +50,8 @@
     return [UIColor colorWithRed:230.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)getThemeColor{
+    return ColorChangeRGB(0x00bb9e, 1);
+}
+
 @end
