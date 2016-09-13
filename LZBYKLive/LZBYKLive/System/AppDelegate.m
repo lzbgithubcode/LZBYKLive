@@ -10,6 +10,7 @@
 #import "BaseNC.h"
 #import "LonginInterfaceDM.h"
 #import "YKAppManger.h"
+#import "LZBReachabilityManager.h"
 
 
 @interface AppDelegate ()
@@ -40,6 +41,8 @@
         self.window.rootViewController = [[BaseNC alloc]initWithRootViewController:login];
     }
 
+    //网络监测
+    [[LZBReachabilityManager shareInstance] reachabilityIsOpen:YES];
 }
 
 
