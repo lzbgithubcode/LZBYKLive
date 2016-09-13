@@ -53,35 +53,21 @@
 
 - (void)addMoveAnimationWithView:(UIView *)animationView
 {
-//    CABasicAnimation *moveAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-//    //设置通过动画，将layer从哪儿移动到哪儿
-//    moveAnimation.fromValue=[NSValue valueWithCGPoint:CGPointMake(LZBSCREEN__WIDTH +LZBSCREEN__WIDTH * 0.2 , animationView.lzb_CenterY)];
-//    moveAnimation.toValue=[NSValue valueWithCGPoint:CGPointMake(-LZBSCREEN__WIDTH * 0.2, animationView.lzb_CenterY)];
-//    moveAnimation.duration = (animationView.tag - default_Tag) ==1?20: (animationView.tag - default_Tag)*20.0 + 40.0;
-//    moveAnimation.repeatCount = CGFLOAT_MAX;
-//    moveAnimation.fillMode=kCAFillModeForwards;
-//    [animationView.layer addAnimation:moveAnimation forKey:[NSString stringWithFormat:@"animationView-%ld",animationView.tag]];
-    [self addScaleAnimationWithView:animationView];
-}
-
-- (void)addScaleAnimationWithView:(UIView *)animationView
-{
-   CAShapeLayer *scaleLayer = [CAShapeLayer layer];
-    scaleLayer.frame = animationView.bounds;
+    CABasicAnimation *moveAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    //设置通过动画，将layer从哪儿移动到哪儿
+    moveAnimation.fromValue=[NSValue valueWithCGPoint:CGPointMake(LZBSCREEN__WIDTH +LZBSCREEN__WIDTH * 0.2 , animationView.lzb_CenterY)];
+    moveAnimation.toValue=[NSValue valueWithCGPoint:CGPointMake(-LZBSCREEN__WIDTH * 0.2, animationView.lzb_CenterY)];
+   
     CAKeyframeAnimation *scaleAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.values = @[@1.0,@1.5,@1.0];
-    scaleAnimation.duration = 1.0;
-    scaleAnimation.repeatCount = CGFLOAT_MAX;
-    scaleAnimation.fillMode=kCAFillModeForwards;
-    [animationView.layer addSublayer:scaleLayer];
-    [scaleLayer addAnimation:scaleAnimation forKey:@"transform.scale"];
+
+    CAAnimationGroup *grop = [CAAnimationGroup animation];
+    grop.animations = @[moveAnimation,scaleAnimation];
+    grop.fillMode = kCAFillModeForwards;
+    grop.repeatCount = CGFLOAT_MAX;
+    grop.duration = (animationView.tag - default_Tag) ==1?20: (animationView.tag - default_Tag)*20.0 + 40.0;
+    [animationView.layer addAnimation:grop forKey:[NSString stringWithFormat:@"animationView-%ld",animationView.tag]];
 }
-
-
-
-
-
-
 
 
 @end
