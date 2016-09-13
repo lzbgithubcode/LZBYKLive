@@ -13,7 +13,6 @@
 
 + (void)showMessage:(NSString *)message
 {
-   if(message.length > 0)
    [SVProgressHUD showWithStatus:message];
 }
 
@@ -27,6 +26,11 @@
 {
     if(message.length > 0)
     [SVProgressHUD showErrorWithStatus:message];
+}
+
++ (void)dismissHUD
+{
+    [SVProgressHUD dismiss];
 }
 
 

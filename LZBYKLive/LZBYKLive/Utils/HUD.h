@@ -23,4 +23,9 @@
  *  显示失败数据
  */
 + (void)showFailMessage:(NSString *)message;
+
+/**
+ *  取消显示框
+ */
++ (void)dismissHUD;
 @end

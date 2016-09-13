@@ -25,6 +25,7 @@
 #import "UITypes.h"
 #import "UIConstantFont.h"
 #import "UIConstantColor.h"
+#import "HUD.h"
 
 
 //自定义分类

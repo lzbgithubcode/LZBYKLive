@@ -8,7 +8,7 @@
 
 #import "LZBYKLoginVC.h"
 #import "LZBYKShareSDKManger.h"
-#import "HUD.h"
+#import "LZBYKLoginManger.h"
 
 #define default_Margin 50
 #define default_Tag  100
@@ -138,7 +138,9 @@
 {
     //手机登陆
     [[LZBYKShareSDKManger shareInstance] sharkSDKLoginUserRegisterType:eUserRegisterType_Phone];
-    [HUD showSuccessMessage:@"登陆成功"];
+    [[LZBYKLoginManger shareInstance] loginWithUserTel:nil password:nil compeletion:^(NSError *error) {
+        
+    }];
 }
 - (UIButton *)creatSignleButtonWithImage:(NSString *)imageString
 {
