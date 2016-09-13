@@ -7,7 +7,32 @@
 //
 
 #import "LZBYKMainTabVC.h"
+#import "LZBMyInterfaceDM.h"
+#import "LZBCenterInterfaceDM.h"
+#import "LZBYKMainInterfaceDM.h"
+#import "BaseNC.h"
+
+@interface LZBYKMainTabVC()
+
+@end
+
 
 @implementation LZBYKMainTabVC
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self addChildViewControllers];
+}
+
+- (void)addChildViewControllers
+{
+    [self addChildViewController:[[BaseNC alloc]initWithRootViewController: [LZBYKMainInterfaceDM  m_instanceMainViewController]]];
+    [self addChildViewController:[[BaseNC alloc]initWithRootViewController: [LZBCenterInterfaceDM  c_instanceCenterViewController]]];
+    [self addChildViewController:[[BaseNC alloc]initWithRootViewController: [LZBMyInterfaceDM  m_instanceMyViewController]]];
+}
+
+
+
 
 @end

@@ -65,6 +65,19 @@
 		18A437D21D87ED1000AE6AAD /* LZBYKLoginManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437D11D87ED1000AE6AAD /* LZBYKLoginManger.m */; };
 		18A437D51D87F33400AE6AAD /* LZBYKMainTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437D41D87F33400AE6AAD /* LZBYKMainTabVC.m */; };
 		18A437D91D87F3FA00AE6AAD /* LZBYKMainInterfaceDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437D81D87F3FA00AE6AAD /* LZBYKMainInterfaceDM.m */; };
+		18A437DC1D8800B900AE6AAD /* LZBYKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437DB1D8800B900AE6AAD /* LZBYKMainViewController.m */; };
+		18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437DE1D88011700AE6AAD /* LZBYKCenterViewController.m */; };
+		18A437E21D88013B00AE6AAD /* LZBYKMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437E11D88013B00AE6AAD /* LZBYKMyViewController.m */; };
+		18A437E71D88026400AE6AAD /* LZBCenterInterfaceDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437E61D88026400AE6AAD /* LZBCenterInterfaceDM.m */; };
+		18A437EA1D88028300AE6AAD /* LZBMyInterfaceDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A437E91D88028300AE6AAD /* LZBMyInterfaceDM.m */; };
+		18A437F31D881D2300AE6AAD /* tab_live_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437EB1D881D2300AE6AAD /* tab_live_p@2x.png */; };
+		18A437F41D881D2300AE6AAD /* tab_live_p@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437EC1D881D2300AE6AAD /* tab_live_p@3x.png */; };
+		18A437F51D881D2300AE6AAD /* tab_live@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437ED1D881D2300AE6AAD /* tab_live@2x.png */; };
+		18A437F61D881D2300AE6AAD /* tab_live@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437EE1D881D2300AE6AAD /* tab_live@3x.png */; };
+		18A437F71D881D2300AE6AAD /* tab_me_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437EF1D881D2300AE6AAD /* tab_me_p@2x.png */; };
+		18A437F81D881D2300AE6AAD /* tab_me_p@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437F01D881D2300AE6AAD /* tab_me_p@3x.png */; };
+		18A437F91D881D2300AE6AAD /* tab_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437F11D881D2300AE6AAD /* tab_me@2x.png */; };
+		18A437FA1D881D2300AE6AAD /* tab_me@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437F21D881D2300AE6AAD /* tab_me@3x.png */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -180,6 +193,24 @@
 		18A437D41D87F33400AE6AAD /* LZBYKMainTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainTabVC.m; sourceTree = "<group>"; };
 		18A437D71D87F3FA00AE6AAD /* LZBYKMainInterfaceDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainInterfaceDM.h; sourceTree = "<group>"; };
 		18A437D81D87F3FA00AE6AAD /* LZBYKMainInterfaceDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainInterfaceDM.m; sourceTree = "<group>"; };
+		18A437DA1D8800B900AE6AAD /* LZBYKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainViewController.h; sourceTree = "<group>"; };
+		18A437DB1D8800B900AE6AAD /* LZBYKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainViewController.m; sourceTree = "<group>"; };
+		18A437DD1D88011700AE6AAD /* LZBYKCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKCenterViewController.h; sourceTree = "<group>"; };
+		18A437DE1D88011700AE6AAD /* LZBYKCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKCenterViewController.m; sourceTree = "<group>"; };
+		18A437E01D88013B00AE6AAD /* LZBYKMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMyViewController.h; sourceTree = "<group>"; };
+		18A437E11D88013B00AE6AAD /* LZBYKMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMyViewController.m; sourceTree = "<group>"; };
+		18A437E51D88026400AE6AAD /* LZBCenterInterfaceDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBCenterInterfaceDM.h; sourceTree = "<group>"; };
+		18A437E61D88026400AE6AAD /* LZBCenterInterfaceDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBCenterInterfaceDM.m; sourceTree = "<group>"; };
+		18A437E81D88028300AE6AAD /* LZBMyInterfaceDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBMyInterfaceDM.h; sourceTree = "<group>"; };
+		18A437E91D88028300AE6AAD /* LZBMyInterfaceDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBMyInterfaceDM.m; sourceTree = "<group>"; };
+		18A437EB1D881D2300AE6AAD /* tab_live_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_live_p@2x.png"; sourceTree = "<group>"; };
+		18A437EC1D881D2300AE6AAD /* tab_live_p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_live_p@3x.png"; sourceTree = "<group>"; };
+		18A437ED1D881D2300AE6AAD /* tab_live@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_live@2x.png"; sourceTree = "<group>"; };
+		18A437EE1D881D2300AE6AAD /* tab_live@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_live@3x.png"; sourceTree = "<group>"; };
+		18A437EF1D881D2300AE6AAD /* tab_me_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_me_p@2x.png"; sourceTree = "<group>"; };
+		18A437F01D881D2300AE6AAD /* tab_me_p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_me_p@3x.png"; sourceTree = "<group>"; };
+		18A437F11D881D2300AE6AAD /* tab_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_me@2x.png"; sourceTree = "<group>"; };
+		18A437F21D881D2300AE6AAD /* tab_me@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_me@3x.png"; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -564,6 +595,24 @@
 			path = DM;
 			sourceTree = "<group>";
 		};
+		18A437E31D88016600AE6AAD /* DM */ = {
+			isa = PBXGroup;
+			children = (
+				18A437E81D88028300AE6AAD /* LZBMyInterfaceDM.h */,
+				18A437E91D88028300AE6AAD /* LZBMyInterfaceDM.m */,
+			);
+			path = DM;
+			sourceTree = "<group>";
+		};
+		18A437E41D88017A00AE6AAD /* DM */ = {
+			isa = PBXGroup;
+			children = (
+				18A437E51D88026400AE6AAD /* LZBCenterInterfaceDM.h */,
+				18A437E61D88026400AE6AAD /* LZBCenterInterfaceDM.m */,
+			);
+			path = DM;
+			sourceTree = "<group>";
+		};
 		18D8A91D1D6E9690005768A2 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,6 +653,8 @@
 		18D8A9391D73C457005768A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18A437DD1D88011700AE6AAD /* LZBYKCenterViewController.h */,
+				18A437DE1D88011700AE6AAD /* LZBYKCenterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -611,6 +662,7 @@
 		18D8A93A1D73C457005768A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18A437E41D88017A00AE6AAD /* DM */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -645,6 +697,8 @@
 			children = (
 				18A437D31D87F33400AE6AAD /* LZBYKMainTabVC.h */,
 				18A437D41D87F33400AE6AAD /* LZBYKMainTabVC.m */,
+				18A437DA1D8800B900AE6AAD /* LZBYKMainViewController.h */,
+				18A437DB1D8800B900AE6AAD /* LZBYKMainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -660,6 +714,14 @@
 		18D8A9401D73C457005768A2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18A437EB1D881D2300AE6AAD /* tab_live_p@2x.png */,
+				18A437EC1D881D2300AE6AAD /* tab_live_p@3x.png */,
+				18A437ED1D881D2300AE6AAD /* tab_live@2x.png */,
+				18A437EE1D881D2300AE6AAD /* tab_live@3x.png */,
+				18A437EF1D881D2300AE6AAD /* tab_me_p@2x.png */,
+				18A437F01D881D2300AE6AAD /* tab_me_p@3x.png */,
+				18A437F11D881D2300AE6AAD /* tab_me@2x.png */,
+				18A437F21D881D2300AE6AAD /* tab_me@3x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -685,6 +747,8 @@
 		18D8A9431D73C457005768A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18A437E01D88013B00AE6AAD /* LZBYKMyViewController.h */,
+				18A437E11D88013B00AE6AAD /* LZBYKMyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -692,6 +756,7 @@
 		18D8A9441D73C457005768A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18A437E31D88016600AE6AAD /* DM */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -869,13 +934,21 @@
 				18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */,
 				184D3E1B1D7923AA000875B2 /* WeiboSDK.bundle in Resources */,
 				184D3DF11D7921AB000875B2 /* ShareSDK.bundle in Resources */,
+				18A437F91D881D2300AE6AAD /* tab_me@2x.png in Resources */,
+				18A437F51D881D2300AE6AAD /* tab_live@2x.png in Resources */,
 				184D3E1D1D7923AA000875B2 /* read_me.txt in Resources */,
+				18A437F81D881D2300AE6AAD /* tab_me_p@3x.png in Resources */,
+				18A437FA1D881D2300AE6AAD /* tab_me@3x.png in Resources */,
 				18A437A51D86867300AE6AAD /* loginyyun@2x.png in Resources */,
 				184D3E1E1D7923AA000875B2 /* README.txt in Resources */,
+				18A437F41D881D2300AE6AAD /* tab_live_p@3x.png in Resources */,
 				18A437C01D87A6E900AE6AAD /* login_qq@2x.png in Resources */,
 				18A437C21D87A6E900AE6AAD /* login_weibo@2x.png in Resources */,
 				18A437C11D87A6E900AE6AAD /* login_qq@3x.png in Resources */,
 				185082381D542D280014D26D /* Assets.xcassets in Resources */,
+				18A437F71D881D2300AE6AAD /* tab_me_p@2x.png in Resources */,
+				18A437F31D881D2300AE6AAD /* tab_live_p@2x.png in Resources */,
+				18A437F61D881D2300AE6AAD /* tab_live@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,19 +1011,23 @@
 				18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */,
 				18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */,
 				18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */,
+				18A437E71D88026400AE6AAD /* LZBCenterInterfaceDM.m in Sources */,
 				18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
 				18A437D21D87ED1000AE6AAD /* LZBYKLoginManger.m in Sources */,
 				18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */,
 				18A437C71D87A72C00AE6AAD /* LZBYKLoginVC.m in Sources */,
 				18A437D51D87F33400AE6AAD /* LZBYKMainTabVC.m in Sources */,
+				18A437DC1D8800B900AE6AAD /* LZBYKMainViewController.m in Sources */,
 				185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */,
 				185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */,
 				18A437D91D87F3FA00AE6AAD /* LZBYKMainInterfaceDM.m in Sources */,
 				18A437CF1D87E44700AE6AAD /* LZBReachabilityManager.m in Sources */,
+				18A437EA1D88028300AE6AAD /* LZBMyInterfaceDM.m in Sources */,
 				184D3DE41D782D19000875B2 /* LonginInterfaceDM.m in Sources */,
 				184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */,
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
+				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
@@ -966,6 +1043,7 @@
 				18D8A97A1D7570DE005768A2 /* BaseHttpModel.m in Sources */,
 				18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */,
 				18D8A97C1D7570DE005768A2 /* BaseResquestModel.m in Sources */,
+				18A437E21D88013B00AE6AAD /* LZBYKMyViewController.m in Sources */,
 				184D3DE01D782CD6000875B2 /* BaseInterfaceDM.m in Sources */,
 				185082371D542D280014D26D /* AppDelegate.m in Sources */,
 				185D56241D76B06F00A53AE9 /* HUD.m in Sources */,

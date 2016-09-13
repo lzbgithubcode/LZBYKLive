@@ -8,6 +8,7 @@
 
 #import "BaseInterfaceDM.h"
 #import "LZBYKMainTabVC.h"
+#import "LZBYKMainViewController.h"
 
 @interface LZBYKMainInterfaceDM : BaseInterfaceDM
 
@@ -15,4 +16,9 @@
  *  跳转到根控制器的tabBar控制器
  */
 + (LZBYKMainTabVC *)instanceMainTabVC;
+
+/**
+ *  跳转到主控制器
+ */
++ (LZBYKMainViewController *)m_instanceMainViewController;
 @end

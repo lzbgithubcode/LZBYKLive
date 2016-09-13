@@ -8,9 +8,16 @@
 
 #import "LZBYKMainInterfaceDM.h"
 
+
 @implementation LZBYKMainInterfaceDM
+
 + (LZBYKMainTabVC *)instanceMainTabVC
 {
     return [[LZBYKMainTabVC alloc]init];
+}
+
++ (LZBYKMainViewController *)m_instanceMainViewController
+{
+    return [[LZBYKMainViewController alloc]init];
 }
 @end

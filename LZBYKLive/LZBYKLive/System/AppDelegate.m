@@ -58,11 +58,17 @@
 #pragma mark - 登陆方法
 - (void)didLogInSucess
 {
-    [HUD showSuccessMessage:@"登陆成功"];
     LZBWeakSelf(weakSelf);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        weakSelf.window.rootViewController = [LZBYKMainInterfaceDM instanceMainTabVC];
-    });
+    LZBYKMainTabVC *rootVC =[LZBYKMainInterfaceDM instanceMainTabVC];
+    [UIView transitionFromView:weakSelf.window.rootViewController.view
+                        toView:rootVC.view
+                      duration:0.3
+                       options:UIViewAnimationOptionTransitionFlipFromTop
+                    completion:^(BOOL finished) {
+                         [HUD showSuccessMessage:@"登陆成功"];
+                          weakSelf.window.rootViewController = rootVC;
+                    }];
+ 
 }
 
 - (void)didLogOutSucess
