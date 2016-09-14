@@ -13,7 +13,7 @@
 #import "BaseNC.h"
 #import "LZBYKTabBar.h"
 
-@interface LZBYKMainTabVC()
+@interface LZBYKMainTabVC()<UITabBarControllerDelegate>
 
 @property (nonatomic, strong) LZBYKTabBar *customTabBar;
 @end
@@ -24,6 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.delegate = self;
     [self addChildViewControllers];
 }
 
@@ -33,12 +34,24 @@
     [self addChildVC:[LZBMyInterfaceDM  m_instanceMyViewController] image:@"tab_me" selectImage:@"tab_me_p" title:nil];
     
     [self setValue:self.customTabBar forKey:@"tabBar"];
+    LZBWeakSelf(weakSelf);
     [self.customTabBar setTabBarCenterClickBlcok:^{
-        LZBCustomLog(@"点击中间开启直播");
+        [weakSelf gotoCenterViewControllerWithStartLive];
     }];
 }
 
 
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    return YES;
+}
+
+- (void)gotoCenterViewControllerWithStartLive
+{
+  
+}
+
+#pragma mark - set/get
 - (void)addChildVC:(UIViewController *)childVC image:(NSString *)imageName selectImage:(NSString *)selctImageName title:(NSString *)title;
 {
     childVC.title = title.length > 0 ? title :@"";
