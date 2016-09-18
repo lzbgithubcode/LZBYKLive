@@ -12,8 +12,11 @@
 #import "LZBYKMainInterfaceDM.h"
 #import "BaseNC.h"
 #import "LZBYKTabBar.h"
+#import "UIDevice+Extension.h"
 
-@interface LZBYKMainTabVC()<UITabBarControllerDelegate>
+
+
+@interface LZBYKMainTabVC()
 
 @property (nonatomic, strong) LZBYKTabBar *customTabBar;
 @end
@@ -24,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.delegate = self;
     [self addChildViewControllers];
 }
 
@@ -32,7 +34,6 @@
 {
     [self addChildVC:[LZBYKMainInterfaceDM  m_instanceMainViewController] image:@"tab_live" selectImage:@"tab_live_p" title:nil];
     [self addChildVC:[LZBMyInterfaceDM  m_instanceMyViewController] image:@"tab_me" selectImage:@"tab_me_p" title:nil];
-    
     [self setValue:self.customTabBar forKey:@"tabBar"];
     LZBWeakSelf(weakSelf);
     [self.customTabBar setTabBarCenterClickBlcok:^{
@@ -40,16 +41,46 @@
     }];
 }
 
-
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+- (void)gotoCenterViewControllerWithStartLive
 {
+    if([self checkVailableCenterViewController])
+       [self presentViewController:[LZBCenterInterfaceDM c_instanceCenterViewController]
+                          animated:YES
+                        completion:nil];
+}
+
+
+- (BOOL)checkVailableCenterViewController
+{
+    //判断模拟器
+    if([UIConstant isSimulator])
+    {
+        [HUD  showNormalMessage:@"当前设备是模拟器，\n暂时不支持直播测试"];
+        return NO;
+    }
+    //判断摄像头是否可用
+    if(![UIConstant isValidateCamera])
+    {
+        [HUD  showNormalMessage:@"当前设备是摄像头不可用，\n请确认摄像头是否打开"];
+        return NO;
+    }
+    //获取摄像头权限
+    if(![UIConstant isCameraAuthorization])
+    {
+       [HUD  showNormalMessage:@"子彬直播需要访问您的摄像头。\n请启用摄像头-设置/隐私/摄像头"];
+        return NO;
+    }
+
+    //获取麦克风权限
+    if(![UIConstant isAudioAuthorization])
+    {
+        [HUD  showNormalMessage:@"app需要访问您的麦克风。\n请启用麦克风-设置/隐私/麦克风"];
+        return NO;
+    }
+    
     return YES;
 }
 
-- (void)gotoCenterViewControllerWithStartLive
-{
-  
-}
 
 #pragma mark - set/get
 - (void)addChildVC:(UIViewController *)childVC image:(NSString *)imageName selectImage:(NSString *)selctImageName title:(NSString *)title;
@@ -60,8 +91,6 @@
     [self addChildViewController:[[BaseNC alloc]initWithRootViewController:childVC]];
 
 }
-
-
 - (LZBYKTabBar *)customTabBar
 {
   if(_customTabBar == nil)

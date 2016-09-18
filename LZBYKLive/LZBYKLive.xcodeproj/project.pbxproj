@@ -81,6 +81,8 @@
 		18A437FD1D88222F00AE6AAD /* tab_launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437FB1D88222F00AE6AAD /* tab_launch@2x.png */; };
 		18A437FE1D88222F00AE6AAD /* tab_launch@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A437FC1D88222F00AE6AAD /* tab_launch@3x.png */; };
 		18A438011D88231800AE6AAD /* LZBYKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A438001D88231800AE6AAD /* LZBYKTabBar.m */; };
+		18A438041D8E296100AE6AAD /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A438031D8E296100AE6AAD /* UIDevice+Extension.m */; };
+		18A438071D8E3DB900AE6AAD /* UIConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A438061D8E3DB900AE6AAD /* UIConstant.m */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -218,6 +220,10 @@
 		18A437FC1D88222F00AE6AAD /* tab_launch@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_launch@3x.png"; sourceTree = "<group>"; };
 		18A437FF1D88231800AE6AAD /* LZBYKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKTabBar.h; sourceTree = "<group>"; };
 		18A438001D88231800AE6AAD /* LZBYKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKTabBar.m; sourceTree = "<group>"; };
+		18A438021D8E296100AE6AAD /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
+		18A438031D8E296100AE6AAD /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		18A438051D8E3DB900AE6AAD /* UIConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstant.h; sourceTree = "<group>"; };
+		18A438061D8E3DB900AE6AAD /* UIConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstant.m; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -481,6 +487,8 @@
 				18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */,
 				18A437A11D82646500AE6AAD /* UIView+ClipAngle.h */,
 				18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */,
+				18A438021D8E296100AE6AAD /* UIDevice+Extension.h */,
+				18A438031D8E296100AE6AAD /* UIDevice+Extension.m */,
 			);
 			path = Categrories;
 			sourceTree = "<group>";
@@ -557,6 +565,8 @@
 				18A437891D7FB6DF00AE6AAD /* UIConstantFont.m */,
 				18A4378B1D7FB6FD00AE6AAD /* UIConstantColor.h */,
 				18A4378C1D7FB6FD00AE6AAD /* UIConstantColor.m */,
+				18A438051D8E3DB900AE6AAD /* UIConstant.h */,
+				18A438061D8E3DB900AE6AAD /* UIConstant.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1031,6 +1041,7 @@
 				18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */,
 				18A437C71D87A72C00AE6AAD /* LZBYKLoginVC.m in Sources */,
 				18A437D51D87F33400AE6AAD /* LZBYKMainTabVC.m in Sources */,
+				18A438071D8E3DB900AE6AAD /* UIConstant.m in Sources */,
 				18A437DC1D8800B900AE6AAD /* LZBYKMainViewController.m in Sources */,
 				185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */,
 				185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */,
@@ -1045,6 +1056,7 @@
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
 				18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */,
+				18A438041D8E296100AE6AAD /* UIDevice+Extension.m in Sources */,
 				184D3E291D7926BB000875B2 /* LZBYKShareSDKManger.m in Sources */,
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,
 				18A437851D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m in Sources */,

@@ -34,4 +34,12 @@
 }
 
 
++ (void)showNormalMessage:(NSString *)message
+{
+  UIAlertView *alterView =  [[UIAlertView alloc]initWithTitle:@"子彬直播" message:message delegate:nil cancelButtonTitle:@
+     "知道了"otherButtonTitles:nil, nil];
+    [alterView show];
+}
+
+
 @end

@@ -35,3 +35,5 @@ BOOL isContainChinese(NSString *targetSring);
  *  @return 
  */
 BOOL isValidateMobile(NSString *mobile);
+
+

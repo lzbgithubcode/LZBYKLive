@@ -28,4 +28,9 @@
  *  取消显示框
  */
 + (void)dismissHUD;
+
+/**
+ *  显示普通数据
+ */
++ (void)showNormalMessage:(NSString *)message;
 @end
