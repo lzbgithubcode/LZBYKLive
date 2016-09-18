@@ -43,4 +43,9 @@
  */
 + (UIColor *)getThemeColor;
 
+/**
+ *  默认导航条背景蓝色
+ */
++ (UIColor *)getNaviBlueColor;
+
 @end

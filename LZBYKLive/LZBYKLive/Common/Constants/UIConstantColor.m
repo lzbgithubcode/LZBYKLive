@@ -54,4 +54,9 @@
     return ColorChangeRGB(0x00bb9e, 1);
 }
 
++ (UIColor *)getNaviBlueColor
+{
+   return [UIColor colorWithRed:0.0/255.0 green:210.0/255.0 blue:190.0/255.0 alpha:1.0];
+}
+
 @end

@@ -14,5 +14,14 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setupNavi];
+    
+}
+
+- (void)setupNavi
+{
+    self.isShowCustomBar = YES;
+    self.naviBarContentView.backgroundColor = [UIConstantColor getNaviBlueColor];
+    self.statusStyle = UIStatusBarStyleLightContent;
 }
 @end
