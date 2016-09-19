@@ -120,6 +120,11 @@
 		18A4384F1D8E76F500AE6AAD /* shortvideo_main_live@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A4384B1D8E76F500AE6AAD /* shortvideo_main_live@3x.png */; };
 		18A438501D8E76F500AE6AAD /* shortvideo_main_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A4384C1D8E76F500AE6AAD /* shortvideo_main_video@2x.png */; };
 		18A438511D8E76F500AE6AAD /* shortvideo_main_video@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A4384D1D8E76F500AE6AAD /* shortvideo_main_video@3x.png */; };
+		18A438541D8E79CC00AE6AAD /* LZBYKAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A438531D8E79CC00AE6AAD /* LZBYKAttentionViewController.m */; };
+		18A438571D8E7AA500AE6AAD /* LZBYKHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A438561D8E7AA500AE6AAD /* LZBYKHotViewController.m */; };
+		18A4385A1D8E7ACD00AE6AAD /* LZBYKNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A438591D8E7ACD00AE6AAD /* LZBYKNearViewController.m */; };
+		18A4385D1D8E7B3600AE6AAD /* LZBYKMainSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4385C1D8E7B3600AE6AAD /* LZBYKMainSlideView.m */; };
+		18A438601D8E7BF600AE6AAD /* LZBYKSlideStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4385F1D8E7BF600AE6AAD /* LZBYKSlideStyleModel.m */; };
 		18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9481D73C4A0005768A2 /* UIView+Frame.m */; };
 		18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94C1D73C8D7005768A2 /* UIView+Border.m */; };
 		18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A94F1D73CCDC005768A2 /* UIImage+Common.m */; };
@@ -298,6 +303,16 @@
 		18A4384B1D8E76F500AE6AAD /* shortvideo_main_live@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_main_live@3x.png"; sourceTree = "<group>"; };
 		18A4384C1D8E76F500AE6AAD /* shortvideo_main_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_main_video@2x.png"; sourceTree = "<group>"; };
 		18A4384D1D8E76F500AE6AAD /* shortvideo_main_video@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_main_video@3x.png"; sourceTree = "<group>"; };
+		18A438521D8E79CC00AE6AAD /* LZBYKAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKAttentionViewController.h; sourceTree = "<group>"; };
+		18A438531D8E79CC00AE6AAD /* LZBYKAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKAttentionViewController.m; sourceTree = "<group>"; };
+		18A438551D8E7AA500AE6AAD /* LZBYKHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKHotViewController.h; sourceTree = "<group>"; };
+		18A438561D8E7AA500AE6AAD /* LZBYKHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKHotViewController.m; sourceTree = "<group>"; };
+		18A438581D8E7ACD00AE6AAD /* LZBYKNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKNearViewController.h; sourceTree = "<group>"; };
+		18A438591D8E7ACD00AE6AAD /* LZBYKNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKNearViewController.m; sourceTree = "<group>"; };
+		18A4385B1D8E7B3600AE6AAD /* LZBYKMainSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainSlideView.h; sourceTree = "<group>"; };
+		18A4385C1D8E7B3600AE6AAD /* LZBYKMainSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainSlideView.m; sourceTree = "<group>"; };
+		18A4385E1D8E7BF600AE6AAD /* LZBYKSlideStyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKSlideStyleModel.h; sourceTree = "<group>"; };
+		18A4385F1D8E7BF600AE6AAD /* LZBYKSlideStyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKSlideStyleModel.m; sourceTree = "<group>"; };
 		18D8A9471D73C4A0005768A2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18D8A9481D73C4A0005768A2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D8A94B1D73C8D7005768A2 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
@@ -821,6 +836,12 @@
 				18A437D41D87F33400AE6AAD /* LZBYKMainTabVC.m */,
 				18A437DA1D8800B900AE6AAD /* LZBYKMainViewController.h */,
 				18A437DB1D8800B900AE6AAD /* LZBYKMainViewController.m */,
+				18A438521D8E79CC00AE6AAD /* LZBYKAttentionViewController.h */,
+				18A438531D8E79CC00AE6AAD /* LZBYKAttentionViewController.m */,
+				18A438551D8E7AA500AE6AAD /* LZBYKHotViewController.h */,
+				18A438561D8E7AA500AE6AAD /* LZBYKHotViewController.m */,
+				18A438581D8E7ACD00AE6AAD /* LZBYKNearViewController.h */,
+				18A438591D8E7ACD00AE6AAD /* LZBYKNearViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -829,6 +850,8 @@
 			isa = PBXGroup;
 			children = (
 				18A437D61D87F3C600AE6AAD /* DM */,
+				18A4385E1D8E7BF600AE6AAD /* LZBYKSlideStyleModel.h */,
+				18A4385F1D8E7BF600AE6AAD /* LZBYKSlideStyleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -859,6 +882,8 @@
 		18D8A9411D73C457005768A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18A4385B1D8E7B3600AE6AAD /* LZBYKMainSlideView.h */,
+				18A4385C1D8E7B3600AE6AAD /* LZBYKMainSlideView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1184,6 +1209,8 @@
 				18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */,
 				18A437E71D88026400AE6AAD /* LZBCenterInterfaceDM.m in Sources */,
 				18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */,
+				18A438541D8E79CC00AE6AAD /* LZBYKAttentionViewController.m in Sources */,
+				18A438571D8E7AA500AE6AAD /* LZBYKHotViewController.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
 				18A437D21D87ED1000AE6AAD /* LZBYKLoginManger.m in Sources */,
 				18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */,
@@ -1198,11 +1225,13 @@
 				18A437EA1D88028300AE6AAD /* LZBMyInterfaceDM.m in Sources */,
 				184D3DE41D782D19000875B2 /* LonginInterfaceDM.m in Sources */,
 				184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */,
+				18A4385A1D8E7ACD00AE6AAD /* LZBYKNearViewController.m in Sources */,
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
 				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
+				18A4385D1D8E7B3600AE6AAD /* LZBYKMainSlideView.m in Sources */,
 				18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */,
 				18A438041D8E296100AE6AAD /* UIDevice+Extension.m in Sources */,
 				184D3E291D7926BB000875B2 /* LZBYKShareSDKManger.m in Sources */,
@@ -1220,6 +1249,7 @@
 				18A437E21D88013B00AE6AAD /* LZBYKMyViewController.m in Sources */,
 				184D3DE01D782CD6000875B2 /* BaseInterfaceDM.m in Sources */,
 				185082371D542D280014D26D /* AppDelegate.m in Sources */,
+				18A438601D8E7BF600AE6AAD /* LZBYKSlideStyleModel.m in Sources */,
 				185D56241D76B06F00A53AE9 /* HUD.m in Sources */,
 				184D3E2C1D79524F000875B2 /* UITypes.m in Sources */,
 			);

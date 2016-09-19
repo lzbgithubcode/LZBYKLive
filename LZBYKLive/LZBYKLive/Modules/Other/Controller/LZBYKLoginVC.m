@@ -33,6 +33,7 @@
 @property (nonatomic, strong) UILabel *centerLabel;
 @property (nonatomic, strong) UILabel *tipLabel;
 @property (nonatomic, strong) UILabel *textLable;
+@property (nonatomic, strong) UIImageView *leftImageView;
 
 @end
 
@@ -68,6 +69,12 @@
     [self.textLable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(weakSelf.view);
         make.width.equalTo(weakSelf.view).offset(-30);
+    }];
+    
+    [self.leftImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.with.equalTo(weakSelf.view);
+        make.bottom.equalTo(weakSelf.textLable.mas_top);
+        make.height.mas_equalTo(107);
     }];
     
     //登录方式
@@ -227,6 +234,19 @@
       _textLable.numberOfLines = 0;
   }
     return _textLable;
+}
+
+- (UIImageView *)leftImageView
+{
+   if(_leftImageView == nil)
+   {
+       _leftImageView = [UIImageView new];
+       _leftImageView.contentMode = UIViewContentModeScaleAspectFill;
+       _leftImageView.clipsToBounds = YES;
+       _leftImageView.image = [UIImage imageNamed:@"login_tree"];
+       [self.view addSubview:_leftImageView];
+   }
+    return _leftImageView;
 }
 
 
