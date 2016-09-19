@@ -20,7 +20,7 @@
 
 //常用尺寸
 #define LZBSCREEN__WIDTH  [UIScreen mainScreen].bounds.size.width
-#define LZBSCREEN__HEIGHT  [UIScreen mainScreen].bounds.size.heigh
+#define LZBSCREEN__HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define LZBSCREEN__NAVIBAR__TOTAL__HEIGHT 64
 #define LZBSCREEN__NAVIBAR__STATUSBAR__HEIGHT 20
 #define LZBSCREEN__NAVIBAR__HEIGHT 44

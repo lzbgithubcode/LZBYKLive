@@ -10,4 +10,13 @@
 
 @implementation LZBYKSlideStyleModel
 
+
+- (NSMutableArray<NSString *> *)tiltes
+{
+   if(_tiltes == nil)
+   {
+       _tiltes = [NSMutableArray array];
+   }
+    return _tiltes;
+}
 @end

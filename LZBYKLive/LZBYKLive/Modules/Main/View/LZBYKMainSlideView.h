@@ -22,4 +22,7 @@ typedef void(^clickSelectHanleBlcok)(LZBYKMainSlideViewType type);
 
 - (instancetype)initWithSlideStyleModel:(LZBYKSlideStyleModel *)model selectHandle:(clickSelectHanleBlcok)selectHandle;
 
+
+- (void)reloadSegmentViewUIWithProgress:(CGFloat)progress  currentIndex:(NSInteger)currentIndex oldIndex:(NSInteger)oldIndex;
+
 @end

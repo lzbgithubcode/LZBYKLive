@@ -9,5 +9,9 @@
 #import "LZBYKNearViewController.h"
 
 @implementation LZBYKNearViewController
-
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
+}
 @end

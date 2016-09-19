@@ -10,7 +10,7 @@
 
 @interface LZBYKSlideStyleModel : NSObject
 
-@property (nonatomic, strong) NSArray <NSString *>*tiltes;
+@property (nonatomic, strong) NSMutableArray <NSString *>*tiltes;
 
 @property (nonatomic, strong) UIFont *normalFont;
 
