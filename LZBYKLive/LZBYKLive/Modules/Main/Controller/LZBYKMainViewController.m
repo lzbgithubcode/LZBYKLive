@@ -115,12 +115,12 @@
     self.oldOffsetX = scrollView.contentOffset.x;
 }
 
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
-//    NSInteger currentIndex = scrollView.contentOffset.x / self.scrollView.bounds.size.width;
-//   [self.slideView reloadSegmentViewUIWithProgress:1.0 currentIndex:currentIndex oldIndex:currentIndex];
-//  
-//}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger currentIndex = scrollView.contentOffset.x / self.scrollView.bounds.size.width;
+   [self.slideView reloadSegmentViewUIWithProgress:1.0 currentIndex:currentIndex oldIndex:currentIndex];
+  
+}
 
 #pragma mark - set/get
 - (LZBYKSlideStyleModel *)slideModel
