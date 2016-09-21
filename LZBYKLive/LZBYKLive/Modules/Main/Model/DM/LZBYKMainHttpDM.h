@@ -14,6 +14,5 @@
 /**
  *  获得热门列表主页数据
  */
-- (NSURLSessionDataTask *)getMainHotListsucessResponse:(sucessResponseBlock)sucessBlock
-                                           failResponse:(failResponseBlock)failBlock;
+- (NSURLSessionDataTask *)getMainHotListsucessResponse:(void (^)(LZBYKMainListResponseModel *response))sucessBlock failResponse:(failResponseBlock)failBlock;
 @end

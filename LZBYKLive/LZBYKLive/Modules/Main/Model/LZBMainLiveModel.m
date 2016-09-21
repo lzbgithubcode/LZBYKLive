@@ -10,12 +10,12 @@
 
 @implementation LZBMainLiveModel
 
-//+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
-//{
-//   if([key isEqualToString:@"creator"])
-//   {
-//     return [MTLJSONAdapter dictionaryTransformerWithModelClass:[LZBYKCreatorModel class]];
-//   }
-//    return nil;
-//}
++ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
+{
+   if([key isEqualToString:@"creator"])
+   {
+     return [MTLJSONAdapter dictionaryTransformerWithModelClass:[LZBYKCreatorModel class]];
+   }
+    return nil;
+}
 @end

@@ -10,7 +10,7 @@
 
 @implementation LZBYKMainHttpDM
 
-- (NSURLSessionDataTask *)getMainHotListsucessResponse:(sucessResponseBlock)sucessBlock
+- (NSURLSessionDataTask *)getMainHotListsucessResponse:(void (^)(LZBYKMainListResponseModel *response))sucessBlock
                                           failResponse:(failResponseBlock)failBlock;
 {
     LZBYKMainListResquestModel *requestModel = [[LZBYKMainListResquestModel alloc]init];

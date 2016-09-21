@@ -60,18 +60,23 @@
       make.size.equalTo(weakSelf.baseContentView);
       make.center.equalTo(weakSelf.baseContentView);
   }];
-  //布局子控件
+  
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    //布局子控件
     for (NSInteger i = 0; i < self.childViewControllers.count; i++)
     {
         UIViewController *vc = self.childViewControllers[i];
-        CGFloat childVCX = i * LZBSCREEN__WIDTH;
-        CGFloat childVCY = 0;
-        CGFloat childVCW = LZBSCREEN__WIDTH;
+        CGFloat childVCW = self.baseContentView.lzb_w;
         CGFloat childVCH = self.baseContentView.lzb_h;
+        CGFloat childVCX = i * childVCW;
+        CGFloat childVCY = 0;
         vc.view.frame = CGRectMake(childVCX, childVCY, childVCW, childVCH);
     }
     self.scrollView.contentSize = CGSizeMake(LZBSCREEN__WIDTH * self.childViewControllers.count, 0);
-  
 }
 
 
