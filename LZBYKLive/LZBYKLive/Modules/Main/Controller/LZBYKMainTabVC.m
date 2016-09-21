@@ -11,9 +11,8 @@
 #import "LZBCenterInterfaceDM.h"
 #import "LZBYKMainInterfaceDM.h"
 #import "BaseNC.h"
-#import "LZBYKTabBar.h"
 #import "UIDevice+Extension.h"
-
+#import "LZBYKTabBar.h"
 
 
 @interface LZBYKMainTabVC()

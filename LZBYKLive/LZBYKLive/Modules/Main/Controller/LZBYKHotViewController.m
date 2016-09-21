@@ -10,10 +10,9 @@
 #import "LZBYKMainHttpDM.h"
 #import "LZBMainLiveModel.h"
 
-static NSString *liveCellID = @"liveCellID";
-@interface LZBYKHotViewController()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+static NSString *liveCellID = @"liveCellID";
+@interface LZBYKHotViewController()
 @property (nonatomic, strong) NSMutableArray <LZBMainLiveModel*>*data;
 
 @end
@@ -23,9 +22,9 @@ static NSString *liveCellID = @"liveCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view addSubview:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:liveCellID];
     [self loadDowndata];
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -40,10 +39,6 @@ static NSString *liveCellID = @"liveCellID";
     return cell;
 }
 
-
-
-
-
 #pragma mark - 数据
 - (void)loadDowndata
 {
@@ -57,6 +52,7 @@ static NSString *liveCellID = @"liveCellID";
 
 - (void)processNetWorkDataWithResponse:(LZBYKMainListResponseModel *)response
 {
+    [self.tableView.mj_header endRefreshing];
     [self.data addObjectsFromArray:response.lives];
     [self.tableView reloadData];
 }
@@ -64,17 +60,6 @@ static NSString *liveCellID = @"liveCellID";
 
 
 #pragma mark - set/get
-- (UITableView *)tableView
-{
-   if(_tableView == nil)
-   {
-       _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, LZBSCREEN__WIDTH, self.view.lzb_h -LZBSCREEN__NAVIBAR__TOTAL__HEIGHT) style:UITableViewStylePlain];
-       _tableView.delegate =self;
-       _tableView.dataSource =self;
-   }
-    return _tableView;
-}
-
 - (NSMutableArray<LZBMainLiveModel *> *)data
 {
     if(_data ==nil)

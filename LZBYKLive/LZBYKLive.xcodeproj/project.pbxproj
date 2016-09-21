@@ -10,6 +10,9 @@
 		1826510E1D927107001BE03A /* LZBYKMainHttpDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826510D1D927107001BE03A /* LZBYKMainHttpDM.m */; };
 		182651111D927E16001BE03A /* LZBMainLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651101D927E16001BE03A /* LZBMainLiveModel.m */; };
 		182651141D927EDC001BE03A /* LZBYKCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651131D927EDC001BE03A /* LZBYKCreatorModel.m */; };
+		182651171D92B7E6001BE03A /* LZBYKGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651161D92B7E6001BE03A /* LZBYKGifHeader.m */; };
+		1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651191D92B899001BE03A /* LZBYKAutoFooter.m */; };
+		1826511D1D92C373001BE03A /* LZBYKMainBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */; };
 		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
@@ -148,6 +151,12 @@
 		182651101D927E16001BE03A /* LZBMainLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBMainLiveModel.m; sourceTree = "<group>"; };
 		182651121D927EDC001BE03A /* LZBYKCreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKCreatorModel.h; sourceTree = "<group>"; };
 		182651131D927EDC001BE03A /* LZBYKCreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKCreatorModel.m; sourceTree = "<group>"; };
+		182651151D92B7E6001BE03A /* LZBYKGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKGifHeader.h; sourceTree = "<group>"; };
+		182651161D92B7E6001BE03A /* LZBYKGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKGifHeader.m; sourceTree = "<group>"; };
+		182651181D92B899001BE03A /* LZBYKAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKAutoFooter.h; sourceTree = "<group>"; };
+		182651191D92B899001BE03A /* LZBYKAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKAutoFooter.m; sourceTree = "<group>"; };
+		1826511B1D92C373001BE03A /* LZBYKMainBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainBaseVC.h; sourceTree = "<group>"; };
+		1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainBaseVC.m; sourceTree = "<group>"; };
 		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
 		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
@@ -715,6 +724,10 @@
 			children = (
 				18A437FF1D88231800AE6AAD /* LZBYKTabBar.h */,
 				18A438001D88231800AE6AAD /* LZBYKTabBar.m */,
+				182651151D92B7E6001BE03A /* LZBYKGifHeader.h */,
+				182651161D92B7E6001BE03A /* LZBYKGifHeader.m */,
+				182651181D92B899001BE03A /* LZBYKAutoFooter.h */,
+				182651191D92B899001BE03A /* LZBYKAutoFooter.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -867,6 +880,8 @@
 				18A438561D8E7AA500AE6AAD /* LZBYKHotViewController.m */,
 				18A438581D8E7ACD00AE6AAD /* LZBYKNearViewController.h */,
 				18A438591D8E7ACD00AE6AAD /* LZBYKNearViewController.m */,
+				1826511B1D92C373001BE03A /* LZBYKMainBaseVC.h */,
+				1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1249,6 +1264,7 @@
 				18A437C71D87A72C00AE6AAD /* LZBYKLoginVC.m in Sources */,
 				18A437D51D87F33400AE6AAD /* LZBYKMainTabVC.m in Sources */,
 				18A438071D8E3DB900AE6AAD /* UIConstant.m in Sources */,
+				182651171D92B7E6001BE03A /* LZBYKGifHeader.m in Sources */,
 				18A437DC1D8800B900AE6AAD /* LZBYKMainViewController.m in Sources */,
 				185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */,
 				185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */,
@@ -1257,8 +1273,10 @@
 				18A437EA1D88028300AE6AAD /* LZBMyInterfaceDM.m in Sources */,
 				184D3DE41D782D19000875B2 /* LonginInterfaceDM.m in Sources */,
 				184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */,
+				1826511D1D92C373001BE03A /* LZBYKMainBaseVC.m in Sources */,
 				18A4385A1D8E7ACD00AE6AAD /* LZBYKNearViewController.m in Sources */,
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
+				1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */,
 				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,

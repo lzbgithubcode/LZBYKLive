@@ -12,7 +12,7 @@
 #import "LZBYKHotViewController.h"
 #import "LZBYKNearViewController.h"
 
-@interface LZBYKMainViewController()<UIScrollViewDelegate>
+@interface LZBYKMainViewController()<UIScrollViewDelegate,LZBYKMainTableViewDelegate>
 
 @property (nonatomic, strong) LZBYKMainSlideView *slideView;
 
@@ -127,6 +127,25 @@
   
 }
 
+- (void)lzbyk_MainscrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if(scrollView.contentOffset.y > 0)
+    {
+        [self moveToNaviWithScrollView:scrollView];
+       
+    }
+}
+
+- (void)moveToNaviWithScrollView:(UIScrollView *)scrollView
+{
+    LZBWeakSelf(weakSelf);
+    [self.naviBarContentView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.view).offset(-scrollView.contentOffset.y);
+    }];
+}
+
+
+
 #pragma mark - set/get
 - (LZBYKSlideStyleModel *)slideModel
 {
@@ -182,8 +201,9 @@
     return _childVCs;
 }
 
-- (void)addChildVC:(UIViewController *)childVC withTitle:(NSString *)title withMutabeArray:(NSMutableArray *)childVCs
+- (void)addChildVC:(LZBYKMainBaseVC *)childVC withTitle:(NSString *)title withMutabeArray:(NSMutableArray *)childVCs
 {
+    childVC.mainDelegate = self;
     childVC.title =title;
     [childVCs addObject:childVC];
     [self addChildViewController:childVC];
