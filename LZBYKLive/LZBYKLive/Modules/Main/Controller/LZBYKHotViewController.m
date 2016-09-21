@@ -7,11 +7,23 @@
 //
 
 #import "LZBYKHotViewController.h"
+#import "LZBYKMainHttpDM.h"
 
 @implementation LZBYKHotViewController
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
+    [self loadDowndata];
+}
+
+- (void)loadDowndata
+{
+  [[LZBYKMainHttpDM shareInstance] getMainHotListsucessResponse:^(id response) {
+      
+  } failResponse:^(NSError *error) {
+      
+  }];
 }
 @end

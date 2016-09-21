@@ -22,7 +22,7 @@
  *  @return 
  */
 - (NSURLSessionDataTask *)sendGetWithModel:(BaseResquestModel *)requestModel
-                             ResponseModel:(BaseResponseModel *)responseModel
+                             ResponseClass:(Class)responseClass
                             sucessResponse:(sucessResponseBlock)sucessBlock
                               failResponse:(failResponseBlock)failBlock;
 @end

@@ -13,6 +13,7 @@
 #define kResponseAcceptableContentTypes   [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain",@"charset=utf-8", nil]
 
 static AFHTTPSessionManager *_resquestManger;
+
 @interface NetWorkResquestTool()
 
 @property (nonatomic, strong) Class responseClass;
@@ -28,7 +29,7 @@ static AFHTTPSessionManager *_resquestManger;
             _resquestManger = [AFHTTPSessionManager manager];
     });
     _resquestManger.requestSerializer = [AFHTTPRequestSerializer serializer];
-    _resquestManger.responseSerializer = [AFHTTPResponseSerializer serializer];
+    _resquestManger.responseSerializer = [AFJSONResponseSerializer serializer];
     _resquestManger.responseSerializer.acceptableContentTypes = kResponseAcceptableContentTypes;
     return _resquestManger;
 }
@@ -47,28 +48,28 @@ static AFHTTPSessionManager *_resquestManger;
 
 #pragma mark - 网络请求
 - (NSURLSessionDataTask *)httpGetWithModel:(BaseResquestModel *)requestModel
-                             ResponseModel:(BaseResponseModel *)responseModel
+                             ResponseClass:(Class)responseClass
                             sucessResponse:(sucessResponseBlock)sucessBlock
                               failResponse:(failResponseBlock)failBlock
 {
-    [self resquestProcess:requestModel responseProcess:responseModel];
+    [self resquestProcess:requestModel responseClass:responseClass];
     
     return [self baseGetHttpWithURL:requestModel.url parameters:[requestModel modelToBaseResquestModel] sucessResponse:sucessBlock failResponse:failBlock];
 }
 
 - (NSURLSessionDataTask *)httpPostWithModel:(BaseResquestModel *)requestModel
-                              ResponseModel:(BaseResponseModel *)responseModel
+                              ResponseClass:(Class)responseClass
                              sucessResponse:(sucessResponseBlock)sucessBlock
                                failResponse:(failResponseBlock)failBlock
 {
-   [self resquestProcess:requestModel responseProcess:responseModel];
+   [self resquestProcess:requestModel responseClass:responseClass];
     return [self basePostHttpWithURL:[requestModel url] parameters:[requestModel modelToBaseResquestModel] sucessResponse:sucessBlock failResponse:failBlock];
 }
 
-- (void)resquestProcess:(BaseResquestModel *)requestModel responseProcess:(BaseResponseModel *)responseModel
+- (void)resquestProcess:(BaseResquestModel *)requestModel responseClass:(Class)responseClass
 {
     _resquestModel = requestModel;
-    _responseModel = responseModel;
+    self.responseClass= responseClass;
 }
 #pragma mark - 基础网络请求
 /**
@@ -86,12 +87,12 @@ static AFHTTPSessionManager *_resquestManger;
                               sucessResponse:(sucessResponseBlock)sucessBlock
                                 failResponse:(failResponseBlock)failBlock{
     
-  AFHTTPSessionManager *httpManger = [self configHttpBaseInfoWithURL:url withParamsDict:paramDicts httpType:@"get请求方式"];
-    LZBWeakSelf(ws);
+  AFHTTPSessionManager *httpManger = [self configHttpBaseInfoWithURL:url withParamsDict:paramDicts httpType:@"GET-请求方式"];
+   
     NSURLSessionDataTask *task = [httpManger GET:url parameters:paramDicts success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        [ws resultProcess:responseObject error:nil sucessResponse:sucessBlock failResponse:failBlock];
+        [self resultProcess:responseObject error:nil sucessResponse:sucessBlock failResponse:failBlock];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [ws resultProcess:nil error:error sucessResponse:sucessBlock failResponse:failBlock];
+        [self resultProcess:nil error:error sucessResponse:sucessBlock failResponse:failBlock];
     }];
     return task;
 }
@@ -112,11 +113,10 @@ static AFHTTPSessionManager *_resquestManger;
                                 failResponse:(failResponseBlock)failBlock
 {
      AFHTTPSessionManager *httpManger = [self configHttpBaseInfoWithURL:url withParamsDict:paramDicts httpType:@"post请求方式"];
-    LZBWeakSelf(ws);
     NSURLSessionDataTask *task = [httpManger POST:url parameters:paramDicts success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        [ws resultProcess:responseObject error:nil sucessResponse:sucessBlock failResponse:failBlock];
+        [self resultProcess:responseObject error:nil sucessResponse:sucessBlock failResponse:failBlock];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         [ws resultProcess:nil error:error sucessResponse:sucessBlock failResponse:failBlock];
+         [self resultProcess:nil error:error sucessResponse:sucessBlock failResponse:failBlock];
     }];
     return task;
 }
@@ -151,10 +151,11 @@ static AFHTTPSessionManager *_resquestManger;
            LZBCustomLog(@"网络请求结果为:%@",responseDict);
            return;
        }
-       _responseModel = [MTLJSONAdapter modelOfClass:self.responseClass fromJSONDictionary:responseDict error:nil];
-       if(_responseModel == nil)
+       NSError *jsonError;
+       _responseModel = [MTLJSONAdapter modelOfClass:self.responseClass fromJSONDictionary:responseDict error:&jsonError];
+       if(_responseModel == nil||jsonError)
        {
-           LZBCustomLog(@"\n序列化失败：%@",_responseModel);
+           LZBCustomLog(@"\n序列化失败：%@",jsonError);
            return;
        }
        if(sucessBlock != nil)

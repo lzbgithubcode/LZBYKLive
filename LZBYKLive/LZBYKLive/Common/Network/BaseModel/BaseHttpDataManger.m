@@ -10,13 +10,13 @@
 
 @implementation BaseHttpDataManger
 - (NSURLSessionDataTask *)sendGetWithModel:(BaseResquestModel *)requestModel
-                             ResponseModel:(BaseResponseModel *)responseModel
+                             ResponseClass:(Class)responseClass
                             sucessResponse:(sucessResponseBlock)sucessBlock
                               failResponse:(failResponseBlock)failBlock
 {
     NetWorkResquestTool *requestTool = [[NetWorkResquestTool alloc]init];
     LZBWeakSelf(weakSelf);
-    return [requestTool httpGetWithModel:requestModel ResponseModel:responseModel sucessResponse:^(id response) {
+    return [requestTool httpGetWithModel:requestModel ResponseClass:responseClass sucessResponse:^(id response) {
         [weakSelf callback:response error:nil sucess:sucessBlock fail:failBlock];
     } failResponse:^(NSError *error) {
         [weakSelf callback:nil error:error sucess:sucessBlock fail:failBlock];

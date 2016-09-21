@@ -7,13 +7,15 @@
 //
 
 #import "BaseModel.h"
+#import "BaseHttpModel.h"
+#import "BaseResponseModel.h"
 
 @interface BaseResquestModel : BaseModel
 
 /**
  *  服务器需求地址url
  */
-@property (nonatomic, strong) NSString *url;
+- (NSString *)url;
 
 /**
  *  网络请求模型参数转化为字典参数

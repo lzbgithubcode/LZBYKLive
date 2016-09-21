@@ -67,7 +67,7 @@ typedef void(^failResponseBlock)(NSError *error);
  *  @return
  */
 - (NSURLSessionDataTask *)httpGetWithModel:(BaseResquestModel *)requestModel
-                             ResponseModel:(BaseResponseModel *)responseModel
+                             ResponseClass:(Class)responseClass
                             sucessResponse:(sucessResponseBlock)sucessBlock
                               failResponse:(failResponseBlock)failBlock;
 
@@ -83,7 +83,7 @@ typedef void(^failResponseBlock)(NSError *error);
  *  @return
  */
 - (NSURLSessionDataTask *)httpPostWithModel:(BaseResquestModel *)requestModel
-                             ResponseModel:(BaseResponseModel *)responseModel
+                             ResponseClass:(Class)responseClass
                             sucessResponse:(sucessResponseBlock)sucessBlock
                               failResponse:(failResponseBlock)failBlock;
 
