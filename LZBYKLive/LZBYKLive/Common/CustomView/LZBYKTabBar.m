@@ -23,7 +23,7 @@
    if(self = [super initWithFrame:frame])
    {
      [self addSubview:self.centerPlayButton];
-     self.backgroundColor = [UIColor yellowColor];
+     self.backgroundColor = [UIColor whiteColor];
        //去除tabbar顶部分割线
      [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
      [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];

@@ -28,6 +28,7 @@
 #import "HUD.h"
 #import "UIConstant.h"
 #import "config.h"
+#import "LZBCommonTool.h"
 
 
 //自定义分类

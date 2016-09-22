@@ -29,7 +29,8 @@
        _iconImageViewFrame = CGRectMake(iconImageViewX, iconImageViewY, iconImageViewW, iconImageViewH);
        
        //2.名字
-       CGSize nameSize = self.liver_name?[self.liver_name sizeWithAttributes:@{NSFontAttributeName :[UIConstantFont getFontW3_H11]}]:CGSizeZero;
+       CGSize nameSize = self.liver_name.length>0
+       ?[self.liver_name sizeWithAttributes:@{NSFontAttributeName :[UIConstantFont getFontW3_H11]}]:CGSizeZero;
        CGFloat nameLabelX = defult_Margin + CGRectGetMaxX(_iconImageViewFrame);
        CGFloat nameLabelY = iconImageViewY;
        CGFloat nameLabelW = nameSize.width;
@@ -37,7 +38,7 @@
        _nameLabelFrame = CGRectMake(nameLabelX, nameLabelY, nameLabelW, nameLabelH);
        
        //3.地点
-       CGSize locationSize = [self.liver_city?self.liver_city:default_location_address sizeWithAttributes:@{NSFontAttributeName :[UIConstantFont getFontW3_H12]}];
+       CGSize locationSize = [self.liver_city.length > 0?self.liver_city:default_location_address sizeWithAttributes:@{NSFontAttributeName :[UIConstantFont getFontW3_H12]}];
        CGFloat locationButtonW = locationSize.width;
        CGFloat locationButtonH = locationSize.height;
        CGFloat locationButtonX = nameLabelX;
@@ -45,7 +46,7 @@
        _locationButtonFrame = CGRectMake(locationButtonX, locationButtonY, locationButtonW, locationButtonH);
        
        //4.观看人数
-        CGSize peopleLabelSize = self.audience_count?[self.audience_count sizeWithAttributes:@{NSFontAttributeName :[UIConstantFont getFontW3_H12]}]:CGSizeZero;
+        CGSize peopleLabelSize = self.audience_count.length > 0?[self.audience_count sizeWithAttributes:@{NSFontAttributeName :[UIConstantFont getFontW3_H12]}]:CGSizeZero;
        CGFloat peopleLabelW = peopleLabelSize.width;
        CGFloat peopleLabelH = peopleLabelSize.height;
        CGFloat peopleLabelX = LZBSCREEN__WIDTH -peopleLabelW -defult_Margin;
@@ -120,14 +121,16 @@
 {
     if(cellModel == nil) return;
     _cellModel = cellModel;
-
+    LZBWeakSelf(weakSelf);
     NSString *portaitUrl = [UIConstant httpImage_getNormalImageNameString:cellModel.liver_portrait withSize:CGSizeZero];
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:portaitUrl] placeholderImage:[UIImage imageNamed:@"default_head"]];
-    self.nameLabel.text = cellModel.liver_name?cellModel.liver_name:@"无名氏";
-    [self.locationButton setTitle:cellModel.liver_city?cellModel.liver_city:default_location_address forState:UIControlStateNormal];
+    self.nameLabel.text = cellModel.liver_name.length > 0?cellModel.liver_name:@"无名氏";
+    [self.locationButton setTitle:cellModel.liver_city.length > 0?cellModel.liver_city:default_location_address forState:UIControlStateNormal];
     self.peopleLabel.text = cellModel.audience_count;
     self.tipLabel.text = @"在看";
-    [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:[UIConstant httpImage_getNormalImageNameString:cellModel.liver_portrait withSize:CGSizeZero]] placeholderImage:[UIImage imageNamed:@"default_photo"]];
+    [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:[UIConstant httpImage_getNormalImageNameString:cellModel.liver_portrait withSize:CGSizeZero]] placeholderImage:[UIImage imageNamed:@"default_photo"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [LZBCommonTool animationOptionTransitionCrossDissolveView:weakSelf.contentImageView];
+    }];
     
 }
 

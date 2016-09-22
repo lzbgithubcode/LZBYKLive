@@ -12,7 +12,6 @@
 		182651141D927EDC001BE03A /* LZBYKCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651131D927EDC001BE03A /* LZBYKCreatorModel.m */; };
 		182651171D92B7E6001BE03A /* LZBYKGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651161D92B7E6001BE03A /* LZBYKGifHeader.m */; };
 		1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651191D92B899001BE03A /* LZBYKAutoFooter.m */; };
-		1826511D1D92C373001BE03A /* LZBYKMainBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */; };
 		182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */; };
 		182651221D9373E7001BE03A /* default_ticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651211D9373E7001BE03A /* default_ticker.png */; };
 		182651251D938A83001BE03A /* LZBYKMainHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651241D938A83001BE03A /* LZBYKMainHotCell.m */; };
@@ -20,6 +19,11 @@
 		182651291D93ADF3001BE03A /* default_head@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651271D93ADF3001BE03A /* default_head@3x.png */; };
 		1826512C1D93BBA6001BE03A /* default_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1826512A1D93BBA6001BE03A /* default_photo@2x.png */; };
 		1826512D1D93BBA6001BE03A /* default_photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1826512B1D93BBA6001BE03A /* default_photo@3x.png */; };
+		182651341D93D622001BE03A /* LZBCommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651331D93D622001BE03A /* LZBCommonTool.m */; };
+		182651371D93DC26001BE03A /* LZBYKMainNearSignleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651361D93DC26001BE03A /* LZBYKMainNearSignleView.m */; };
+		1826513A1D93DDC4001BE03A /* nearby_icon_now_live@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651381D93DDC4001BE03A /* nearby_icon_now_live@2x.png */; };
+		1826513B1D93DDC4001BE03A /* nearby_icon_now_live@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651391D93DDC4001BE03A /* nearby_icon_now_live@3x.png */; };
+		1826513E1D93DDFF001BE03A /* LZBYKNearResqustModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826513D1D93DDFF001BE03A /* LZBYKNearResqustModel.m */; };
 		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
@@ -162,8 +166,6 @@
 		182651161D92B7E6001BE03A /* LZBYKGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKGifHeader.m; sourceTree = "<group>"; };
 		182651181D92B899001BE03A /* LZBYKAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKAutoFooter.h; sourceTree = "<group>"; };
 		182651191D92B899001BE03A /* LZBYKAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKAutoFooter.m; sourceTree = "<group>"; };
-		1826511B1D92C373001BE03A /* LZBYKMainBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainBaseVC.h; sourceTree = "<group>"; };
-		1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainBaseVC.m; sourceTree = "<group>"; };
 		1826511E1D9371BC001BE03A /* LZBInifiteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBInifiteScrollView.h; sourceTree = "<group>"; };
 		1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBInifiteScrollView.m; sourceTree = "<group>"; };
 		182651211D9373E7001BE03A /* default_ticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_ticker.png; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 		182651271D93ADF3001BE03A /* default_head@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_head@3x.png"; sourceTree = "<group>"; };
 		1826512A1D93BBA6001BE03A /* default_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_photo@2x.png"; sourceTree = "<group>"; };
 		1826512B1D93BBA6001BE03A /* default_photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_photo@3x.png"; sourceTree = "<group>"; };
+		182651321D93D622001BE03A /* LZBCommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBCommonTool.h; sourceTree = "<group>"; };
+		182651331D93D622001BE03A /* LZBCommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBCommonTool.m; sourceTree = "<group>"; };
+		182651351D93DC26001BE03A /* LZBYKMainNearSignleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainNearSignleView.h; sourceTree = "<group>"; };
+		182651361D93DC26001BE03A /* LZBYKMainNearSignleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainNearSignleView.m; sourceTree = "<group>"; };
+		182651381D93DDC4001BE03A /* nearby_icon_now_live@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby_icon_now_live@2x.png"; sourceTree = "<group>"; };
+		182651391D93DDC4001BE03A /* nearby_icon_now_live@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby_icon_now_live@3x.png"; sourceTree = "<group>"; };
+		1826513C1D93DDFF001BE03A /* LZBYKNearResqustModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKNearResqustModel.h; sourceTree = "<group>"; };
+		1826513D1D93DDFF001BE03A /* LZBYKNearResqustModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKNearResqustModel.m; sourceTree = "<group>"; };
 		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
 		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
@@ -630,6 +640,8 @@
 				185D56231D76B06F00A53AE9 /* HUD.m */,
 				18A4377C1D7EB82100AE6AAD /* LZBDataConversionManger.h */,
 				18A4377D1D7EB82100AE6AAD /* LZBDataConversionManger.m */,
+				182651321D93D622001BE03A /* LZBCommonTool.h */,
+				182651331D93D622001BE03A /* LZBCommonTool.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -754,6 +766,8 @@
 			children = (
 				1888BAA11D91704A00B71E90 /* LZBYKMainListResquestModel.h */,
 				1888BAA21D91704A00B71E90 /* LZBYKMainListResquestModel.m */,
+				1826513C1D93DDFF001BE03A /* LZBYKNearResqustModel.h */,
+				1826513D1D93DDFF001BE03A /* LZBYKNearResqustModel.m */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -897,8 +911,6 @@
 				18A438561D8E7AA500AE6AAD /* LZBYKHotViewController.m */,
 				18A438581D8E7ACD00AE6AAD /* LZBYKNearViewController.h */,
 				18A438591D8E7ACD00AE6AAD /* LZBYKNearViewController.m */,
-				1826511B1D92C373001BE03A /* LZBYKMainBaseVC.h */,
-				1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -921,6 +933,8 @@
 		18D8A9401D73C457005768A2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				182651381D93DDC4001BE03A /* nearby_icon_now_live@2x.png */,
+				182651391D93DDC4001BE03A /* nearby_icon_now_live@3x.png */,
 				1826512A1D93BBA6001BE03A /* default_photo@2x.png */,
 				1826512B1D93BBA6001BE03A /* default_photo@3x.png */,
 				182651261D93ADF3001BE03A /* default_head@2x.png */,
@@ -954,6 +968,8 @@
 				18A4385C1D8E7B3600AE6AAD /* LZBYKMainSlideView.m */,
 				182651231D938A83001BE03A /* LZBYKMainHotCell.h */,
 				182651241D938A83001BE03A /* LZBYKMainHotCell.m */,
+				182651351D93DC26001BE03A /* LZBYKMainNearSignleView.h */,
+				182651361D93DC26001BE03A /* LZBYKMainNearSignleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1174,6 +1190,7 @@
 				18A4384E1D8E76F500AE6AAD /* shortvideo_main_live@2x.png in Resources */,
 				18A4382F1D8E74E000AE6AAD /* refresh_fly_0011.png in Resources */,
 				18A438361D8E74E000AE6AAD /* refresh_fly_0018.png in Resources */,
+				1826513B1D93DDC4001BE03A /* nearby_icon_now_live@3x.png in Resources */,
 				18A437FD1D88222F00AE6AAD /* tab_launch@2x.png in Resources */,
 				18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */,
 				182651221D9373E7001BE03A /* default_ticker.png in Resources */,
@@ -1192,6 +1209,7 @@
 				18A437FA1D881D2300AE6AAD /* tab_me@3x.png in Resources */,
 				1826512D1D93BBA6001BE03A /* default_photo@3x.png in Resources */,
 				18A438411D8E74E000AE6AAD /* refresh_fly_0029.png in Resources */,
+				1826513A1D93DDC4001BE03A /* nearby_icon_now_live@2x.png in Resources */,
 				18A437A51D86867300AE6AAD /* loginyyun@2x.png in Resources */,
 				18A4383C1D8E74E000AE6AAD /* refresh_fly_0024.png in Resources */,
 				18A4382E1D8E74E000AE6AAD /* refresh_fly_0010.png in Resources */,
@@ -1290,6 +1308,7 @@
 				18A438571D8E7AA500AE6AAD /* LZBYKHotViewController.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
 				18A437D21D87ED1000AE6AAD /* LZBYKLoginManger.m in Sources */,
+				1826513E1D93DDFF001BE03A /* LZBYKNearResqustModel.m in Sources */,
 				18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */,
 				18A437C71D87A72C00AE6AAD /* LZBYKLoginVC.m in Sources */,
 				18A437D51D87F33400AE6AAD /* LZBYKMainTabVC.m in Sources */,
@@ -1303,19 +1322,20 @@
 				18A437EA1D88028300AE6AAD /* LZBMyInterfaceDM.m in Sources */,
 				184D3DE41D782D19000875B2 /* LonginInterfaceDM.m in Sources */,
 				184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */,
-				1826511D1D92C373001BE03A /* LZBYKMainBaseVC.m in Sources */,
 				18A4385A1D8E7ACD00AE6AAD /* LZBYKNearViewController.m in Sources */,
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
 				1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */,
 				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
 				182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
+				182651371D93DC26001BE03A /* LZBYKMainNearSignleView.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,
 				18A4385D1D8E7B3600AE6AAD /* LZBYKMainSlideView.m in Sources */,
 				18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */,
 				18A438041D8E296100AE6AAD /* UIDevice+Extension.m in Sources */,
 				182651251D938A83001BE03A /* LZBYKMainHotCell.m in Sources */,
+				182651341D93D622001BE03A /* LZBCommonTool.m in Sources */,
 				184D3E291D7926BB000875B2 /* LZBYKShareSDKManger.m in Sources */,
 				1826510E1D927107001BE03A /* LZBYKMainHttpDM.m in Sources */,
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,

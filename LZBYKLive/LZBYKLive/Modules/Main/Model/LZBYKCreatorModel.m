@@ -15,6 +15,7 @@
              @"birth":@"birth",
              @"emotion":@"emotion",
              @"nick":@"nick",
-             @"portrait":@"portrait",};
+             @"portrait":@"portrait",
+             @"level":@"level",};
 }
 @end

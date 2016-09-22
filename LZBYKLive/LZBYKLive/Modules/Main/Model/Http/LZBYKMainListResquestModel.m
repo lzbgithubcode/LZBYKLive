@@ -15,9 +15,6 @@
 }
 @end
 
-@implementation LZBYKMainListHttpModel
-
-@end
 
 @implementation LZBYKMainListResponseModel
 + (NSValueTransformer *)JSONTransformerForKey:(NSString *)key

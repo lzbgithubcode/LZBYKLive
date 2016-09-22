@@ -187,7 +187,7 @@
     return _childVCs;
 }
 
-- (void)addChildVC:(LZBYKMainBaseVC *)childVC withTitle:(NSString *)title withMutabeArray:(NSMutableArray *)childVCs
+- (void)addChildVC:(UIViewController *)childVC withTitle:(NSString *)title withMutabeArray:(NSMutableArray *)childVCs
 {
     childVC.title =title;
     [childVCs addObject:childVC];

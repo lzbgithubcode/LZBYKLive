@@ -14,4 +14,5 @@
 @property (nonatomic, strong) NSString *nick;
 @property (nonatomic, strong) NSString *portrait;
 @property (nonatomic, assign) NSInteger userId;
+@property (nonatomic, assign) NSInteger level;
 @end

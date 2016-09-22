@@ -11,14 +11,20 @@
 #import "LZBMainLiveModel.h"
 #import "LZBInifiteScrollView.h"
 #import "LZBYKMainHotCell.h"
+#import "LZBYKGifHeader.h"
 
 #define scrollView_Height  125
 
 static NSString *LZBYKMainHotCellID = @"LZBYKMainHotCellID";
-@interface LZBYKHotViewController()
+
+@interface LZBYKHotViewController()<UITableViewDataSource,UITableViewDelegate>
+
 @property (nonatomic, strong) NSMutableArray <LZBYKMainHotCellModel*>*data;
 
 @property (nonatomic, strong) LZBInifiteScrollView *headScrollView;
+
+@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) NSArray *images;
 
 @end
@@ -28,9 +34,20 @@ static NSString *LZBYKMainHotCellID = @"LZBYKMainHotCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view addSubview:self.tableView];
     self.tableView.tableHeaderView = self.headScrollView;
     [self.tableView registerClass:[LZBYKMainHotCell class] forCellReuseIdentifier:LZBYKMainHotCellID];
     [self loadDowndata];
+    [self setupRefresh];
+}
+
+- (void)setupRefresh
+{
+    LZBWeakSelf(weakSelf);
+    LZBYKGifHeader *header = [LZBYKGifHeader headerWithRefreshingBlock:^{
+        [weakSelf loadDowndata];
+    }];
+    self.tableView.mj_header = header;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -43,6 +60,15 @@ static NSString *LZBYKMainHotCellID = @"LZBYKMainHotCellID";
     LZBYKMainHotCell *cell = [tableView dequeueReusableCellWithIdentifier:LZBYKMainHotCellID];
     cell.cellModel = (indexPath.row < self.data.count)?self.data[indexPath.row]:nil;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+    [UIView animateWithDuration:1.0 animations:^{
+        cell.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0);
+    }];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,6 +133,19 @@ static NSString *LZBYKMainHotCellID = @"LZBYKMainHotCellID";
       [_headScrollView setpageControlCurrentColor:[UIConstantColor getNaviBlueColor] OtherColor:[UIColor colorWithWhite:0.8 alpha:0.5]];
   }
     return _headScrollView;
+}
+
+#pragma mark - set/get
+- (UITableView *)tableView
+{
+    if(_tableView == nil)
+    {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, LZBSCREEN__WIDTH, self.view.lzb_h -LZBSCREEN__NAVIBAR__TOTAL__HEIGHT) style:UITableViewStylePlain];
+        _tableView.delegate =self;
+        _tableView.dataSource =self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return _tableView;
 }
 
 - (NSArray *)images

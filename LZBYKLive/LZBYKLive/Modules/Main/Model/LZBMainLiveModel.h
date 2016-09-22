@@ -14,4 +14,5 @@
 @property (nonatomic, strong) LZBYKCreatorModel *creator;
 @property (nonatomic, assign)  NSInteger online_users;
 @property (nonatomic, strong) NSString *stream_addr;
+@property (nonatomic, strong) NSString *distance;
 @end
