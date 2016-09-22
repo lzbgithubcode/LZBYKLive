@@ -1,5 +1,5 @@
 //
-//  LZBYKMainNearSignleView.h
+//  LZBYKMainNearCell.h
 //  LZBYKLive
 //
 //  Created by zibin on 16/9/22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZBYKMainNearSignleView : UIView
+@interface LZBYKMainNearCell : UICollectionViewCell
 
 @end
