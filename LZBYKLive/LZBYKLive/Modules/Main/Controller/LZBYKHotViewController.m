@@ -10,12 +10,13 @@
 #import "LZBYKMainHttpDM.h"
 #import "LZBMainLiveModel.h"
 #import "LZBInifiteScrollView.h"
+#import "LZBYKMainHotCell.h"
 
 #define scrollView_Height  125
 
-static NSString *liveCellID = @"liveCellID";
+static NSString *LZBYKMainHotCellID = @"LZBYKMainHotCellID";
 @interface LZBYKHotViewController()
-@property (nonatomic, strong) NSMutableArray <LZBMainLiveModel*>*data;
+@property (nonatomic, strong) NSMutableArray <LZBYKMainHotCellModel*>*data;
 
 @property (nonatomic, strong) LZBInifiteScrollView *headScrollView;
 @property (nonatomic, strong) NSArray *images;
@@ -28,7 +29,7 @@ static NSString *liveCellID = @"liveCellID";
 {
     [super viewDidLoad];
     self.tableView.tableHeaderView = self.headScrollView;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:liveCellID];
+    [self.tableView registerClass:[LZBYKMainHotCell class] forCellReuseIdentifier:LZBYKMainHotCellID];
     [self loadDowndata];
 }
 
@@ -39,9 +40,17 @@ static NSString *liveCellID = @"liveCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:liveCellID];
-    cell.textLabel.text = [NSString stringWithFormat:@"第%ld个cell",indexPath.row];
+    LZBYKMainHotCell *cell = [tableView dequeueReusableCellWithIdentifier:LZBYKMainHotCellID];
+    cell.cellModel = (indexPath.row < self.data.count)?self.data[indexPath.row]:nil;
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row < self.data.count)
+        return self.data[indexPath.row].cellHeight;
+    else
+        return CGFLOAT_MIN;
 }
 
 #pragma mark - 数据
@@ -51,19 +60,34 @@ static NSString *liveCellID = @"liveCellID";
   [[LZBYKMainHttpDM shareInstance] getMainHotListsucessResponse:^(LZBYKMainListResponseModel *response) {
       [weakSelf processNetWorkDataWithResponse:response];
   } failResponse:^(NSError *error) {
-      
+     [weakSelf.tableView.mj_header endRefreshing];
   }];
 }
 
 - (void)processNetWorkDataWithResponse:(LZBYKMainListResponseModel *)response
 {
     [self.tableView.mj_header endRefreshing];
-    [self.data addObjectsFromArray:response.lives];
+    self.data= [self convertFromNetWorkModelToCellModel:response.lives];
     [self.tableView reloadData];
 }
 
+- (NSMutableArray <LZBYKMainHotCellModel *>*)convertFromNetWorkModelToCellModel:(NSArray <LZBMainLiveModel *>*)lives
+{
+    NSMutableArray *tempaArray = [NSMutableArray array];
+    for (LZBMainLiveModel *object in lives) {
+        LZBYKMainHotCellModel *model = [[LZBYKMainHotCellModel alloc]init];
+        model.liver_city = object.city;
+        model.liver_name = object.creator.nick;
+        model.liver_portrait = object.creator.portrait;
+        model.audience_count = [NSString stringWithFormat:@"%ld人",object.online_users];
+        model.liver_stream = object.stream_addr;
+        [tempaArray addObject:model];
+    }
+    return tempaArray;
+}
+
 #pragma mark - set/get
-- (NSMutableArray<LZBMainLiveModel *> *)data
+- (NSMutableArray<LZBYKMainHotCellModel *> *)data
 {
     if(_data ==nil)
     {

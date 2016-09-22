@@ -15,6 +15,7 @@
 #pragma mark - 网络请求
 + (NSString *)httpImage_getImageNameString:(NSString *)name withSize:(CGSize)size;
 
++ (NSString *)httpImage_getNormalImageNameString:(NSString *)name withSize:(CGSize)size;
 #pragma mark - 设备信息
 /**
  *  当前设置是否是模拟器

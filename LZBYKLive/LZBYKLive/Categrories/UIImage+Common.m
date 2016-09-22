@@ -63,6 +63,8 @@
     CGRect rect = CGRectMake(0, 0, targetSize.width, targetSize.height);
     CGContextAddEllipseInRect(context, rect);
     CGContextClip(context);
+    [self drawInRect:rect];
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
 }

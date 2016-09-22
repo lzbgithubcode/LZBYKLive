@@ -21,6 +21,18 @@
     return fullImageUrl;
 }
 
++ (NSString *)httpImage_getNormalImageNameString:(NSString *)name withSize:(CGSize)size
+{
+    if(size.width == 0)
+        return [NSString stringWithFormat:@"http://img.meelive.cn/%@",name];
+    else
+    {
+        NSString *fullImageUrl = [NSString stringWithFormat:@"http://img.meelive.cn/%@&w=%.0f&s=80&h=%.0f&c=0&o=0",name,size.width,size.height];
+        return fullImageUrl;
+    }
+    
+}
+
 
 #pragma mark- 设备信息
 +(BOOL)isSimulator

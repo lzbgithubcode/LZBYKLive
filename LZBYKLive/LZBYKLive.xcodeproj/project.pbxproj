@@ -15,6 +15,11 @@
 		1826511D1D92C373001BE03A /* LZBYKMainBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */; };
 		182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */; };
 		182651221D9373E7001BE03A /* default_ticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651211D9373E7001BE03A /* default_ticker.png */; };
+		182651251D938A83001BE03A /* LZBYKMainHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651241D938A83001BE03A /* LZBYKMainHotCell.m */; };
+		182651281D93ADF3001BE03A /* default_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651261D93ADF3001BE03A /* default_head@2x.png */; };
+		182651291D93ADF3001BE03A /* default_head@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651271D93ADF3001BE03A /* default_head@3x.png */; };
+		1826512C1D93BBA6001BE03A /* default_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1826512A1D93BBA6001BE03A /* default_photo@2x.png */; };
+		1826512D1D93BBA6001BE03A /* default_photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1826512B1D93BBA6001BE03A /* default_photo@3x.png */; };
 		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
@@ -162,6 +167,12 @@
 		1826511E1D9371BC001BE03A /* LZBInifiteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBInifiteScrollView.h; sourceTree = "<group>"; };
 		1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBInifiteScrollView.m; sourceTree = "<group>"; };
 		182651211D9373E7001BE03A /* default_ticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_ticker.png; sourceTree = "<group>"; };
+		182651231D938A83001BE03A /* LZBYKMainHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainHotCell.h; sourceTree = "<group>"; };
+		182651241D938A83001BE03A /* LZBYKMainHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainHotCell.m; sourceTree = "<group>"; };
+		182651261D93ADF3001BE03A /* default_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_head@2x.png"; sourceTree = "<group>"; };
+		182651271D93ADF3001BE03A /* default_head@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_head@3x.png"; sourceTree = "<group>"; };
+		1826512A1D93BBA6001BE03A /* default_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_photo@2x.png"; sourceTree = "<group>"; };
+		1826512B1D93BBA6001BE03A /* default_photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_photo@3x.png"; sourceTree = "<group>"; };
 		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
 		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
@@ -910,6 +921,10 @@
 		18D8A9401D73C457005768A2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1826512A1D93BBA6001BE03A /* default_photo@2x.png */,
+				1826512B1D93BBA6001BE03A /* default_photo@3x.png */,
+				182651261D93ADF3001BE03A /* default_head@2x.png */,
+				182651271D93ADF3001BE03A /* default_head@3x.png */,
 				18A4384A1D8E76F500AE6AAD /* shortvideo_main_live@2x.png */,
 				18A4384B1D8E76F500AE6AAD /* shortvideo_main_live@3x.png */,
 				18A4384C1D8E76F500AE6AAD /* shortvideo_main_video@2x.png */,
@@ -937,6 +952,8 @@
 				1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */,
 				18A4385B1D8E7B3600AE6AAD /* LZBYKMainSlideView.h */,
 				18A4385C1D8E7B3600AE6AAD /* LZBYKMainSlideView.m */,
+				182651231D938A83001BE03A /* LZBYKMainHotCell.h */,
+				182651241D938A83001BE03A /* LZBYKMainHotCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1148,6 +1165,7 @@
 				18A438291D8E74E000AE6AAD /* refresh_fly_0005.png in Resources */,
 				18A4382A1D8E74E000AE6AAD /* refresh_fly_0006.png in Resources */,
 				18A438251D8E74E000AE6AAD /* refresh_fly_0001.png in Resources */,
+				182651291D93ADF3001BE03A /* default_head@3x.png in Resources */,
 				185082111D531F850014D26D /* LaunchScreen.storyboard in Resources */,
 				18A438381D8E74E000AE6AAD /* refresh_fly_0020.png in Resources */,
 				18A437BF1D87A6E900AE6AAD /* login_dx@3x.png in Resources */,
@@ -1172,6 +1190,7 @@
 				184D3E1D1D7923AA000875B2 /* read_me.txt in Resources */,
 				18A437F81D881D2300AE6AAD /* tab_me_p@3x.png in Resources */,
 				18A437FA1D881D2300AE6AAD /* tab_me@3x.png in Resources */,
+				1826512D1D93BBA6001BE03A /* default_photo@3x.png in Resources */,
 				18A438411D8E74E000AE6AAD /* refresh_fly_0029.png in Resources */,
 				18A437A51D86867300AE6AAD /* loginyyun@2x.png in Resources */,
 				18A4383C1D8E74E000AE6AAD /* refresh_fly_0024.png in Resources */,
@@ -1180,6 +1199,7 @@
 				18A437F41D881D2300AE6AAD /* tab_live_p@3x.png in Resources */,
 				18A437C01D87A6E900AE6AAD /* login_qq@2x.png in Resources */,
 				18A437C21D87A6E900AE6AAD /* login_weibo@2x.png in Resources */,
+				1826512C1D93BBA6001BE03A /* default_photo@2x.png in Resources */,
 				18A437C11D87A6E900AE6AAD /* login_qq@3x.png in Resources */,
 				18A438441D8E75F800AE6AAD /* login_tree@2x.png in Resources */,
 				185082381D542D280014D26D /* Assets.xcassets in Resources */,
@@ -1190,6 +1210,7 @@
 				18A438281D8E74E000AE6AAD /* refresh_fly_0004.png in Resources */,
 				18A4382D1D8E74E000AE6AAD /* refresh_fly_0009.png in Resources */,
 				18A438351D8E74E000AE6AAD /* refresh_fly_0017.png in Resources */,
+				182651281D93ADF3001BE03A /* default_head@2x.png in Resources */,
 				18A438491D8E769A00AE6AAD /* searchbar_search@3x.png in Resources */,
 				18A437F31D881D2300AE6AAD /* tab_live_p@2x.png in Resources */,
 				18A4382B1D8E74E000AE6AAD /* refresh_fly_0007.png in Resources */,
@@ -1294,6 +1315,7 @@
 				18A4385D1D8E7B3600AE6AAD /* LZBYKMainSlideView.m in Sources */,
 				18A4378A1D7FB6DF00AE6AAD /* UIConstantFont.m in Sources */,
 				18A438041D8E296100AE6AAD /* UIDevice+Extension.m in Sources */,
+				182651251D938A83001BE03A /* LZBYKMainHotCell.m in Sources */,
 				184D3E291D7926BB000875B2 /* LZBYKShareSDKManger.m in Sources */,
 				1826510E1D927107001BE03A /* LZBYKMainHttpDM.m in Sources */,
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,
