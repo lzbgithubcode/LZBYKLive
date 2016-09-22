@@ -80,6 +80,7 @@ static NSString *liveCellID = @"liveCellID";
       _headScrollView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, scrollView_Height);
       _headScrollView.placeholder = [UIImage imageNamed:@"default_ticker"];
       _headScrollView.images = self.images;
+      [_headScrollView setpageControlCurrentColor:[UIConstantColor getNaviBlueColor] OtherColor:[UIColor colorWithWhite:0.8 alpha:0.5]];
   }
     return _headScrollView;
 }

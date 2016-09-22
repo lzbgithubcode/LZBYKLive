@@ -9,14 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "LZBYKGifHeader.h"
 
-@protocol  LZBYKMainTableViewDelegate <NSObject>
-- (void)lzbyk_MainscrollViewDidScroll:(UIScrollView *)scrollView;
-@end
 
 @interface LZBYKMainBaseVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, weak) id<LZBYKMainTableViewDelegate> mainDelegate;
 
 - (void)loadDowndata;
 @end

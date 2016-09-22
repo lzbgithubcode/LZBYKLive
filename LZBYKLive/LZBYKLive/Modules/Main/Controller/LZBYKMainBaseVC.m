@@ -35,12 +35,6 @@
 
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-  if([self.mainDelegate respondsToSelector:@selector(lzbyk_MainscrollViewDidScroll:)])
-      [self.mainDelegate lzbyk_MainscrollViewDidScroll:scrollView];
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;

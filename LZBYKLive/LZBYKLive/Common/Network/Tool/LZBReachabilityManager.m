@@ -73,9 +73,10 @@ static LZBReachabilityManager *_instance;
 
 - (void)showStatusViewWithTips:(NSString *)tips
 {
-    if([[UIApplication sharedApplication].keyWindow.subviews containsObject:self.tipLabel])
+    if([[[UIApplication sharedApplication].windows lastObject].subviews containsObject:self.tipLabel])
         return;
-    [[UIApplication sharedApplication].keyWindow addSubview:self.tipLabel];
+    UIWindow *lastWindown = [[UIApplication sharedApplication].windows lastObject];
+    [lastWindown insertSubview:self.tipLabel atIndex:0];
     self.tipLabel.text = tips;
     LZBWeakSelf(weakSelf);
     [UIView animateWithDuration:0.5 animations:^{
@@ -85,7 +86,7 @@ static LZBReachabilityManager *_instance;
 
 - (void)removeStatusView
 {
-    if(![[UIApplication sharedApplication].keyWindow.subviews containsObject:self.tipLabel])
+    if(![[[UIApplication sharedApplication].windows lastObject].subviews containsObject:self.tipLabel])
         return;
     LZBWeakSelf(weakSelf);
     [UIView animateWithDuration:0.5 animations:^{
@@ -93,10 +94,13 @@ static LZBReachabilityManager *_instance;
     } completion:^(BOOL finished) {
         [weakSelf.tipLabel removeFromSuperview];
     }];
-    
 }
 
-
+- (void)clickTipLabel
+{
+    [self removeStatusView];
+    [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
+}
 
 #pragma mark - get/set
 - (UILabel *)tipLabel
@@ -108,8 +112,8 @@ static LZBReachabilityManager *_instance;
        [_tipLabel setTextAlignment:NSTextAlignmentCenter];
        [_tipLabel setFont:[UIFont systemFontOfSize:15]];
        [_tipLabel setTextColor:[UIColor whiteColor]];
-       [_tipLabel setUserInteractionEnabled:NO];
-       
+       [_tipLabel setUserInteractionEnabled:YES];
+       [_tipLabel addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickTipLabel)]];
        CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"opacity"];
        animation.fromValue=[NSNumber numberWithFloat:0.6];
        animation.toValue=[NSNumber numberWithFloat:0.8];
