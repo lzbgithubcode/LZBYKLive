@@ -13,6 +13,8 @@
 		182651171D92B7E6001BE03A /* LZBYKGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651161D92B7E6001BE03A /* LZBYKGifHeader.m */; };
 		1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651191D92B899001BE03A /* LZBYKAutoFooter.m */; };
 		1826511D1D92C373001BE03A /* LZBYKMainBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */; };
+		182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */; };
+		182651221D9373E7001BE03A /* default_ticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651211D9373E7001BE03A /* default_ticker.png */; };
 		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
@@ -157,6 +159,9 @@
 		182651191D92B899001BE03A /* LZBYKAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKAutoFooter.m; sourceTree = "<group>"; };
 		1826511B1D92C373001BE03A /* LZBYKMainBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainBaseVC.h; sourceTree = "<group>"; };
 		1826511C1D92C373001BE03A /* LZBYKMainBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainBaseVC.m; sourceTree = "<group>"; };
+		1826511E1D9371BC001BE03A /* LZBInifiteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBInifiteScrollView.h; sourceTree = "<group>"; };
+		1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBInifiteScrollView.m; sourceTree = "<group>"; };
+		182651211D9373E7001BE03A /* default_ticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_ticker.png; sourceTree = "<group>"; };
 		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
 		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
@@ -559,6 +564,7 @@
 		1850822D1D542D280014D26D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				182651211D9373E7001BE03A /* default_ticker.png */,
 				18A438081D8E74E000AE6AAD /* refresh_fly_0001.png */,
 				18A438091D8E74E000AE6AAD /* refresh_fly_0002.png */,
 				18A4380A1D8E74E000AE6AAD /* refresh_fly_0003.png */,
@@ -927,6 +933,8 @@
 		18D8A9411D73C457005768A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1826511E1D9371BC001BE03A /* LZBInifiteScrollView.h */,
+				1826511F1D9371BC001BE03A /* LZBInifiteScrollView.m */,
 				18A4385B1D8E7B3600AE6AAD /* LZBYKMainSlideView.h */,
 				18A4385C1D8E7B3600AE6AAD /* LZBYKMainSlideView.m */,
 			);
@@ -1150,6 +1158,7 @@
 				18A438361D8E74E000AE6AAD /* refresh_fly_0018.png in Resources */,
 				18A437FD1D88222F00AE6AAD /* tab_launch@2x.png in Resources */,
 				18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */,
+				182651221D9373E7001BE03A /* default_ticker.png in Resources */,
 				18A4383E1D8E74E000AE6AAD /* refresh_fly_0026.png in Resources */,
 				184D3E1B1D7923AA000875B2 /* WeiboSDK.bundle in Resources */,
 				18A4383A1D8E74E000AE6AAD /* refresh_fly_0022.png in Resources */,
@@ -1278,6 +1287,7 @@
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
 				1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */,
 				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
+				182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
 				185082391D542D280014D26D /* main.m in Sources */,

@@ -9,10 +9,20 @@
 
 #import "UIDevice+Extension.h"
 #import <AVFoundation/AVFoundation.h>
-
+#define image_base_URL   @"http://image.scale.inke.com/imageproxy2/dimgm/scaleImage?"
 
 @implementation UIConstant
 
+#pragma mark - image请求
++ (NSString *)httpImage_getImageNameString:(NSString *)name withSize:(CGSize)size
+{
+    NSString *base_ImageUrl = [NSString stringWithFormat:@"%@url=http%%3A%%2F%%2Fimg.meelive.cn%%",image_base_URL];
+    NSString *fullImageUrl = [base_ImageUrl stringByAppendingFormat:@"%@&w=%.0f&s=80&h=%.0f&c=0&o=0",name,size.width,size.height];
+    return fullImageUrl;
+}
+
+
+#pragma mark- 设备信息
 +(BOOL)isSimulator
 {
    return[[UIDevice deviceType] isEqualToString:@"Simulator"];

@@ -9,11 +9,16 @@
 #import "LZBYKHotViewController.h"
 #import "LZBYKMainHttpDM.h"
 #import "LZBMainLiveModel.h"
+#import "LZBInifiteScrollView.h"
 
+#define scrollView_Height  125
 
 static NSString *liveCellID = @"liveCellID";
 @interface LZBYKHotViewController()
 @property (nonatomic, strong) NSMutableArray <LZBMainLiveModel*>*data;
+
+@property (nonatomic, strong) LZBInifiteScrollView *headScrollView;
+@property (nonatomic, strong) NSArray *images;
 
 @end
 
@@ -22,9 +27,9 @@ static NSString *liveCellID = @"liveCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.tableHeaderView = self.headScrollView;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:liveCellID];
     [self loadDowndata];
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,8 +62,6 @@ static NSString *liveCellID = @"liveCellID";
     [self.tableView reloadData];
 }
 
-
-
 #pragma mark - set/get
 - (NSMutableArray<LZBMainLiveModel *> *)data
 {
@@ -67,5 +70,28 @@ static NSString *liveCellID = @"liveCellID";
         _data = [NSMutableArray array];
     }
     return _data;
+}
+
+- (LZBInifiteScrollView *)headScrollView
+{
+  if(_headScrollView == nil)
+  {
+      _headScrollView = [[LZBInifiteScrollView alloc]init];
+      _headScrollView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, scrollView_Height);
+      _headScrollView.placeholder = [UIImage imageNamed:@"default_ticker"];
+      _headScrollView.images = self.images;
+  }
+    return _headScrollView;
+}
+
+- (NSArray *)images
+{
+  if(_images == nil)
+  {
+      _images = @[[NSURL URLWithString:[UIConstant httpImage_getImageNameString:@"2FNzM4OTExNDc0NDYyOTA5.jpg" withSize:CGSizeMake(640, 213)]],
+                  [NSURL URLWithString:[UIConstant httpImage_getImageNameString:@"2FNTAyNDMxNDc0MzY1OTg0.jpg" withSize:CGSizeMake(640, 213)]],
+                  [NSURL URLWithString:[UIConstant httpImage_getImageNameString:@"2FODUxMzQxNDc0NDYwNzYy.jpg" withSize:CGSizeMake(640, 213)]]];
+  }
+    return _images;
 }
 @end
