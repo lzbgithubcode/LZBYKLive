@@ -8,8 +8,12 @@
 
 #import "LZBYKNearViewController.h"
 #import "LZBYKMainNearCell.h"
+#import "LZBYKMainNearHeadView.h"
+#import "LZBYKGifHeader.h"
+#import "LZBYKMainHttpDM.h"
 
 static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
+static   NSString *LZBYKMainNearHeadViewID = @"LZBYKMainNearHeadViewID";
 
 @interface LZBYKNearViewController()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -17,7 +21,7 @@ static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
 
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
 
-@property (nonatomic, strong) NSMutableArray *datas;
+@property (nonatomic, strong) NSMutableArray<LZBYKMainNearCellModel *> *datas;
 
 @end
 
@@ -28,8 +32,54 @@ static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
     [super viewDidLoad];
     [self.view addSubview:self.collectionView];
     [self.collectionView registerClass:[LZBYKMainNearCell class] forCellWithReuseIdentifier:LZBYKMainNearCellID];
+    [self.collectionView registerClass:[LZBYKMainNearHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:LZBYKMainNearHeadViewID];
+    [self setupRefresh];
 }
 
+#pragma mark -data
+- (void)setupRefresh
+{
+    LZBWeakSelf(weakSelf);
+    LZBYKGifHeader *header = [LZBYKGifHeader headerWithRefreshingBlock:^{
+        [weakSelf loadDowndata];
+    }];
+    self.collectionView.mj_header = header;
+    [self loadDowndata];
+}
+
+- (void)loadDowndata
+{
+    LZBWeakSelf(weakSelf);
+    [[LZBYKMainHttpDM shareInstance] getMainNearListsucessResponse:^(LZBYKNearResponseModel *response) {
+        [weakSelf processNetWorkDataWithResponse:response];
+    } failResponse:^(NSError *error) {
+        [weakSelf.collectionView.mj_header endRefreshing];
+    }];
+}
+- (void)processNetWorkDataWithResponse:(LZBYKNearResponseModel *)response
+{
+    [self.collectionView.mj_header endRefreshing];
+    self.datas= [self convertFromNetWorkModelToCellModel:response.lives];
+    [self.collectionView reloadData];
+}
+
+- (NSMutableArray <LZBYKMainNearCellModel *>*)convertFromNetWorkModelToCellModel:(NSArray <LZBMainLiveModel *>*)lives
+{
+    NSMutableArray *tempaArray = [NSMutableArray array];
+    for (LZBMainLiveModel *object in lives) {
+        LZBYKMainNearCellModel *model = [[LZBYKMainNearCellModel alloc]init];
+        model.liver_count = [NSString stringWithFormat:@"%ld",object.creator.level];
+        model.liver_distance = object.distance;
+        model.liver_portrait = object.creator.portrait;
+        model.liver_stream = object.stream_addr;
+        [tempaArray addObject:model];
+    }
+    return tempaArray;
+}
+
+
+
+#pragma mark - collectionView
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.datas.count;
@@ -38,6 +88,7 @@ static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LZBYKMainNearCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LZBYKMainNearCellID forIndexPath:indexPath];
+    cell.cellModel = indexPath.row < self.datas.count ? self.datas[indexPath.row]: nil;
     return cell;
 }
 
@@ -46,21 +97,16 @@ static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
     UICollectionReusableView *reusableview = nil;
     if([kind isEqualToString:UICollectionElementKindSectionHeader])
     {
-//        RecipeCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        
-//        NSString *title = [[NSString alloc] initWithFormat:@"Recipe Group #%i",indexPath.section +1];
-//        
-//        headerView.title.text = title;
-//        
-//        UIImage *headerImage = [UIImage imageNamed:@"header_banner.png"];
-//        
-//        headerView.backgroundImage.image = headerImage;
-//        
-//        reusableView = headerView;
-        
-
+        LZBYKMainNearHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:LZBYKMainNearHeadViewID forIndexPath:indexPath];
+       reusableview = headerView;
     }
     return reusableview;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    LZBYKMainNearCellModel *model = self.datas[indexPath.row];
+    CGFloat width = (LZBSCREEN__WIDTH - (default_EveryRow_Count+1) *default_Margin)/default_EveryRow_Count;
+    return CGSizeMake(width, model.cellHeight);
 }
 
 #pragma mark - set/get
@@ -71,7 +117,8 @@ static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, LZBSCREEN__WIDTH, self.view.lzb_h -LZBSCREEN__NAVIBAR__TOTAL__HEIGHT) collectionViewLayout:self.flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor grayColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        
     }
     return _collectionView;
 }
@@ -81,15 +128,16 @@ static   NSString *LZBYKMainNearCellID = @"LZBYKMainNearCellID";
     if(_flowLayout == nil)
     {
         _flowLayout = [[UICollectionViewFlowLayout alloc]init];
-        _flowLayout.minimumLineSpacing = 5;
-        _flowLayout.minimumInteritemSpacing = 5;
-        _flowLayout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+        _flowLayout.minimumLineSpacing = default_Margin;
+        _flowLayout.minimumInteritemSpacing = default_Margin;
+        _flowLayout.sectionInset = UIEdgeInsetsMake(default_Margin, default_Margin, default_Margin, default_Margin);
         _flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        _flowLayout.headerReferenceSize = CGSizeMake(LZBSCREEN__WIDTH, 50);
     }
     return _flowLayout;
 }
 
-- (NSMutableArray *)datas
+- (NSMutableArray<LZBYKMainNearCellModel *> *)datas
 {
   if(_datas == nil)
   {

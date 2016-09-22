@@ -16,4 +16,10 @@
     LZBYKMainListResquestModel *requestModel = [[LZBYKMainListResquestModel alloc]init];
     return [self sendGetWithModel:requestModel ResponseClass:[LZBYKMainListResponseModel class] sucessResponse:sucessBlock failResponse:failBlock];
 }
+
+- (NSURLSessionDataTask *)getMainNearListsucessResponse:(void (^)(LZBYKNearResponseModel *response))sucessBlock failResponse:(failResponseBlock)failBlock
+{
+    LZBYKNearResqustModel *model = [[LZBYKNearResqustModel alloc]init];
+       return [self sendGetWithModel:model ResponseClass:[LZBYKNearResponseModel class] sucessResponse:sucessBlock failResponse:failBlock];
+}
 @end

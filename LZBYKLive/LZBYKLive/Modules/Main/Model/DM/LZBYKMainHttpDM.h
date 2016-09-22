@@ -8,6 +8,7 @@
 
 #import "BaseHttpDataManger.h"
 #import "LZBYKMainListResquestModel.h"
+#import "LZBYKNearResqustModel.h"
 
 @interface LZBYKMainHttpDM : BaseHttpDataManger
 
@@ -15,4 +16,9 @@
  *  获得热门列表主页数据
  */
 - (NSURLSessionDataTask *)getMainHotListsucessResponse:(void (^)(LZBYKMainListResponseModel *response))sucessBlock failResponse:(failResponseBlock)failBlock;
+
+/**
+ *  获得附近直播列表数据
+ */
+- (NSURLSessionDataTask *)getMainNearListsucessResponse:(void (^)(LZBYKNearResponseModel *response))sucessBlock failResponse:(failResponseBlock)failBlock;
 @end
