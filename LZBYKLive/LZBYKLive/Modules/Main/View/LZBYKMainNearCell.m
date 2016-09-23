@@ -8,9 +8,9 @@
 
 #import "LZBYKMainNearCell.h"
 
-#define countButton_Width 60
-#define countButton_Height 15
-#define countButton_Margin 10
+#define countButton_Width 40
+#define countButton_Height 20
+#define countButton_Margin 10 *get6sConstantWidthScale()
 
 @implementation LZBYKMainNearCellModel
 - (CGFloat)cellHeight
@@ -32,10 +32,11 @@
        _countButtonFrame = CGRectMake(countButtonFrameX, countButtonFrameY, countButtonFrameW, countButtonFrameH);
        
        //3.距离
-       CGFloat distanceLabelW = coverImageViewFrameW * 0.5;
-       CGFloat distanceLabelH = countButtonFrameH;
-       CGFloat distanceLabelX = coverImageViewFrameW - distanceLabelW;
+       CGFloat distanceLabelX = CGRectGetMaxX(_countButtonFrame) + countButton_Margin * 0.5;
        CGFloat distanceLabelY = countButtonFrameY;
+       CGFloat distanceLabelW = coverImageViewFrameW - distanceLabelX;
+       CGFloat distanceLabelH = countButtonFrameH;
+      
        _distanceLabelFrame = CGRectMake(distanceLabelX, distanceLabelY, distanceLabelW, distanceLabelH);
        
        _cellHeight = CGRectGetMaxY(_distanceLabelFrame) + countButton_Margin;
@@ -109,13 +110,12 @@
   if(_countButton == nil)
   {
       _countButton = [UIButton buttonWithType:UIButtonTypeCustom];
-      _countButton.backgroundColor = [UIColor greenColor];
       _countButton.titleLabel.font = [UIConstantFont getFontW3_H12];
-      _countButton.titleLabel.textColor = [UIConstantColor getWordColorC5];
-      _countButton.imageView.contentMode = UIViewContentModeCenter;
+      _countButton.imageView.contentMode = UIViewContentModeLeft;
       _countButton.imageView.clipsToBounds =YES;
-      [_countButton setImage:[UIImage imageNamed:@"DazStarOutline"] forState:UIControlStateNormal];
-      [_countButton setTitle:@"2" forState:UIControlStateNormal];
+      [_countButton setImage:[UIImage imageNamed:@"me_other_followed"] forState:UIControlStateNormal];
+      [_countButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+      _countButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 5);
   }
     return _countButton;
 }

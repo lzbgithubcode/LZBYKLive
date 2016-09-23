@@ -127,11 +127,6 @@
   
 }
 
-
-
-
-
-
 #pragma mark - set/get
 - (LZBYKSlideStyleModel *)slideModel
 {
@@ -143,8 +138,8 @@
       }
       _slideModel.normalFont = [UIConstantFont getFontW3_H11];
       _slideModel.normalColor = [UIConstantColor getWordColorC5];
-      _slideModel.selectColor = [UIColor redColor];
-      _slideModel.titleScale = 1.3;
+      _slideModel.selectColor = [UIColor orangeColor];
+      _slideModel.titleScale = 1.2;
   }
     return _slideModel;
 }

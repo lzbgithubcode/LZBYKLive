@@ -64,11 +64,7 @@ static NSString *LZBYKMainHotCellID = @"LZBYKMainHotCellID";
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
-    [UIView animateWithDuration:1.0 animations:^{
-        cell.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0);
-    }];
-    
+   //动画效果
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

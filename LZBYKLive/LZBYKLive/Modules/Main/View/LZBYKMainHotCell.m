@@ -12,6 +12,8 @@
 #define iconImageView_Width  36
 #define iconImageView_Height  iconImageView_Width
 #define defult_Margin 10
+#define live_iconImageView_tag_Width 54
+#define live_iconImageView_tag_Height 20
 
 #define default_location_address @"难道是在火星?"
 
@@ -83,6 +85,7 @@
 @property (nonatomic, strong)  UILabel *peopleLabel;
 @property (nonatomic, strong)  UILabel *tipLabel;
 @property (nonatomic, strong)  UIImageView *contentImageView;
+@property (nonatomic, strong) UIImageView *tagImageView;
 @end
 @implementation LZBYKMainHotCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -103,6 +106,7 @@
     [self.contentView addSubview:self.peopleLabel];
     [self.contentView addSubview:self.tipLabel];
     [self.contentView addSubview:self.contentImageView];
+    [self.contentImageView addSubview:self.tagImageView];
 }
 
 - (void)layoutSubviews
@@ -114,6 +118,13 @@
     self.peopleLabel.frame = self.cellModel.peopleLabelFrame;
     self.tipLabel.frame = self.cellModel.tipLabelFrame;
     self.contentImageView.frame = self.cellModel.contentImageViewFrame;
+    LZBWeakSelf(weakSelf);
+    [self.tagImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(live_iconImageView_tag_Width);
+        make.height.mas_equalTo(live_iconImageView_tag_Height);
+        make.top.equalTo(weakSelf.contentImageView).offset(defult_Margin);
+        make.right.equalTo(weakSelf.contentImageView).offset(-defult_Margin);
+    }];
     
 }
 
@@ -209,4 +220,17 @@
   }
     return _contentImageView;
 }
+
+- (UIImageView *)tagImageView
+{
+  if(_tagImageView == nil)
+  {
+      _tagImageView = [UIImageView new];
+      _tagImageView.contentMode = UIViewContentModeScaleAspectFill;
+      _tagImageView.clipsToBounds = YES;
+      _tagImageView.image = [UIImage imageNamed:@"live_tag_live"];
+  }
+    return _tagImageView;
+}
+
 @end

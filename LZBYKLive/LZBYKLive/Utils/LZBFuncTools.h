@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+//适配的尺寸对比
+CGFloat getScreenWidth();
+CGFloat getScreenHeight();
+CGFloat get6sConstantWidth();
+CGFloat get6sConstantHeight();
+CGFloat get6sConstantWidthScale();
+CGFloat get6sConstantHeightScale();
+
 /**
  *  获取随机颜色
  */

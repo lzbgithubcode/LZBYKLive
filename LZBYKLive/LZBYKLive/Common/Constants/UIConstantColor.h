@@ -48,4 +48,8 @@
  */
 + (UIColor *)getNaviBlueColor;
 
+/**
+ *  设置默认分割线颜色
+ */
++ (UIColor *)getDefaultSeperatorColor;
 @end

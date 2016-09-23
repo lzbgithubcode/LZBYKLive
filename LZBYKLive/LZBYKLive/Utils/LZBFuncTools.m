@@ -8,6 +8,33 @@
 
 #import "LZBFuncTools.h"
 
+CGFloat getScreenWidth()
+{
+    UIScreen *screen = [UIScreen mainScreen];
+    return screen.bounds.size.width;
+}
+CGFloat getScreenHeight()
+{
+    UIScreen *screen = [UIScreen mainScreen];
+    return screen.bounds.size.height;
+}
+CGFloat get6sConstantWidth()
+{
+    return 375;
+}
+CGFloat get6sConstantHeight()
+{
+    return 667;
+}
+CGFloat get6sConstantWidthScale()
+{
+    return getScreenWidth()/get6sConstantWidth();
+}
+CGFloat get6sConstantHeightScale()
+{
+    return getScreenHeight()/get6sConstantHeight();
+}
+
 UIColor *getRandColor()
 {
     return getColor(arc4random()%255, arc4random()%255, arc4random()%255, 255);

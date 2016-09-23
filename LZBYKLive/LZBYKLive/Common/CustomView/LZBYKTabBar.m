@@ -13,6 +13,7 @@
 
 @interface LZBYKTabBar()
 
+@property (nonatomic, strong) CALayer *lineLayer;
 @property (nonatomic, strong) UIButton *centerPlayButton;
 @end
 
@@ -22,8 +23,10 @@
 {
    if(self = [super initWithFrame:frame])
    {
-     [self addSubview:self.centerPlayButton];
+     
      self.backgroundColor = [UIColor whiteColor];
+     [self.layer addSublayer:self.lineLayer];
+     [self addSubview:self.centerPlayButton];
        //去除tabbar顶部分割线
      [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
      [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
@@ -62,6 +65,8 @@
                tabbarButtonIndex++;
         }
     }
+    self.lineLayer.frame = CGRectMake(0, 0, LZBSCREEN__WIDTH, 0.5);
+    
 }
 
 
@@ -92,5 +97,15 @@
       _centerPlayButton.layer.shadowOffset = CGSizeMake(0, 4);
   }
     return _centerPlayButton;
+}
+
+- (CALayer *)lineLayer
+{
+  if(_lineLayer == nil)
+  {
+      _lineLayer = [CALayer layer];
+      _lineLayer.backgroundColor = [UIConstantColor getDefaultSeperatorColor].CGColor;
+  }
+    return _lineLayer;
 }
 @end

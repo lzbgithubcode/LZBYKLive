@@ -15,7 +15,7 @@
 @property (nonatomic, strong) LZBYKSlideStyleModel *styleModel;
 @property (nonatomic, strong) UIView *underLine;
 @property (nonatomic, strong) UIButton *lastSelectButton;
-@property (nonatomic, copy) clickSelectHanleBlcok selectHandleBlock;
+@property (nonatomic, copy)   clickSelectHanleBlcok selectHandleBlock;
 @property (nonatomic, strong) NSMutableArray <UIButton *>*btns;
 
 @property (nonatomic, assign) NSInteger lastIndex,currenIndex;
@@ -189,7 +189,7 @@
   if(_underLine == nil)
   {
       _underLine = [[UIView alloc]initWithFrame:CGRectZero];
-      _underLine.backgroundColor = [UIColor redColor];
+      _underLine.backgroundColor = [UIColor orangeColor];
       [self addSubview:_underLine];
     
   }

@@ -109,6 +109,14 @@ static   NSString *LZBYKMainNearHeadViewID = @"LZBYKMainNearHeadViewID";
     return CGSizeMake(width, model.cellHeight);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+    [UIView animateWithDuration:1.0 animations:^{
+        cell.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0);
+    }];
+}
+
 #pragma mark - set/get
 - (UICollectionView *)collectionView
 {
@@ -132,7 +140,7 @@ static   NSString *LZBYKMainNearHeadViewID = @"LZBYKMainNearHeadViewID";
         _flowLayout.minimumInteritemSpacing = default_Margin;
         _flowLayout.sectionInset = UIEdgeInsetsMake(default_Margin, default_Margin, default_Margin, default_Margin);
         _flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        _flowLayout.headerReferenceSize = CGSizeMake(LZBSCREEN__WIDTH, 50);
+        _flowLayout.headerReferenceSize = CGSizeMake(LZBSCREEN__WIDTH, 50 * get6sConstantHeightScale());
     }
     return _flowLayout;
 }
