@@ -29,7 +29,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.nearPlayButton.frame = CGRectMake(10, 10, LZBSCREEN__WIDTH * 0.3, 30);
+    self.nearPlayButton.frame = CGRectMake(10, 10, LZBSCREEN__WIDTH * 0.4, 30);
 }
 
 - (UIButton *)nearPlayButton

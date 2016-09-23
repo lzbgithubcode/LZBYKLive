@@ -65,7 +65,7 @@
                       duration:0.3
                        options:UIViewAnimationOptionTransitionFlipFromTop
                     completion:^(BOOL finished) {
-                         [HUD showSuccessMessage:@"登陆成功"];
+                        // [HUD showSuccessMessage:@"登陆成功"];
                           weakSelf.window.rootViewController = rootVC;
                     }];
  

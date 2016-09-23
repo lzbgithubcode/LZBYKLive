@@ -12,9 +12,8 @@
 
 #define default_Margin 50
 #define default_Tag  100
-#define yunImageView_Width    70
-#define yunImageView_Height    45
-#define yunImageView_image  [UIImage imageNamed:@"loginyyun"]
+#define yunImageView_Width    80
+#define yunImageView_Height    42
 
 //第三方登录
 #define centerLabel_BottomMargin 200
@@ -54,7 +53,10 @@
     for(NSInteger i = 0; i < 3; i++)
     {
         UIImageView *yunImageView = [UIImageView new];
-        yunImageView.image  = yunImageView_image;
+        yunImageView.contentMode = UIViewContentModeScaleAspectFill;
+        yunImageView.clipsToBounds = YES;
+        yunImageView.image = [UIImage imageNamed:@"login_bg_cloud_2"];
+            
         [self.view addSubview:yunImageView];
         yunImageView.tag = default_Tag + i;
         CGFloat imageX = 0;
@@ -165,7 +167,7 @@
     moveAnimation.toValue=[NSValue valueWithCGPoint:CGPointMake(-LZBSCREEN__WIDTH * 0.2, animationView.lzb_CenterY)];
    
     CAKeyframeAnimation *scaleAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    scaleAnimation.values = @[@1.0,@1.5,@1.0];
+    scaleAnimation.values = @[@1.0,@1.2,@1.0];
 
     CAAnimationGroup *grop = [CAAnimationGroup animation];
     grop.animations = @[moveAnimation,scaleAnimation];
