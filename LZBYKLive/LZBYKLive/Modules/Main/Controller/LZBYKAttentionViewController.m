@@ -7,13 +7,17 @@
 //
 
 #import "LZBYKAttentionViewController.h"
+#import "LZBYKDefaultNoDataView.h"
 
 @implementation LZBYKAttentionViewController
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [LZBYKDefaultNoDataView showDefaultNoDataViewInView:self.view];
 }
+
+
 
 
 

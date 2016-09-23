@@ -34,6 +34,9 @@
 		182651581D94C096001BE03A /* me_other_followed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651561D94C096001BE03A /* me_other_followed@3x.png */; };
 		1826515B1D94CA04001BE03A /* live_tag_live@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651591D94CA04001BE03A /* live_tag_live@2x.png */; };
 		1826515C1D94CA04001BE03A /* live_tag_live@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1826515A1D94CA04001BE03A /* live_tag_live@3x.png */; };
+		182651631D94D49A001BE03A /* live_empty_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651611D94D49A001BE03A /* live_empty_bg@2x.png */; };
+		182651641D94D49A001BE03A /* live_empty_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651621D94D49A001BE03A /* live_empty_bg@3x.png */; };
+		182651671D94D74D001BE03A /* LZBYKDefaultNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651661D94D74D001BE03A /* LZBYKDefaultNoDataView.m */; };
 		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
@@ -203,6 +206,10 @@
 		182651561D94C096001BE03A /* me_other_followed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_other_followed@3x.png"; sourceTree = "<group>"; };
 		182651591D94CA04001BE03A /* live_tag_live@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live_tag_live@2x.png"; sourceTree = "<group>"; };
 		1826515A1D94CA04001BE03A /* live_tag_live@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live_tag_live@3x.png"; sourceTree = "<group>"; };
+		182651611D94D49A001BE03A /* live_empty_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live_empty_bg@2x.png"; sourceTree = "<group>"; };
+		182651621D94D49A001BE03A /* live_empty_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live_empty_bg@3x.png"; sourceTree = "<group>"; };
+		182651651D94D74D001BE03A /* LZBYKDefaultNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKDefaultNoDataView.h; sourceTree = "<group>"; };
+		182651661D94D74D001BE03A /* LZBYKDefaultNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKDefaultNoDataView.m; sourceTree = "<group>"; };
 		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
 		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
@@ -777,6 +784,8 @@
 				182651161D92B7E6001BE03A /* LZBYKGifHeader.m */,
 				182651181D92B899001BE03A /* LZBYKAutoFooter.h */,
 				182651191D92B899001BE03A /* LZBYKAutoFooter.m */,
+				182651651D94D74D001BE03A /* LZBYKDefaultNoDataView.h */,
+				182651661D94D74D001BE03A /* LZBYKDefaultNoDataView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -953,6 +962,8 @@
 		18D8A9401D73C457005768A2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				182651611D94D49A001BE03A /* live_empty_bg@2x.png */,
+				182651621D94D49A001BE03A /* live_empty_bg@3x.png */,
 				182651591D94CA04001BE03A /* live_tag_live@2x.png */,
 				1826515A1D94CA04001BE03A /* live_tag_live@3x.png */,
 				182651551D94C096001BE03A /* me_other_followed@2x.png */,
@@ -1201,6 +1212,7 @@
 				18A438451D8E75F800AE6AAD /* login_tree@3x.png in Resources */,
 				18A437C31D87A6E900AE6AAD /* login_weibo@3x.png in Resources */,
 				18A438501D8E76F500AE6AAD /* shortvideo_main_video@2x.png in Resources */,
+				182651641D94D49A001BE03A /* live_empty_bg@3x.png in Resources */,
 				18A438391D8E74E000AE6AAD /* refresh_fly_0021.png in Resources */,
 				184D3E191D7923AA000875B2 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				18A4383B1D8E74E000AE6AAD /* refresh_fly_0023.png in Resources */,
@@ -1235,6 +1247,7 @@
 				18A4383A1D8E74E000AE6AAD /* refresh_fly_0022.png in Resources */,
 				184D3DF11D7921AB000875B2 /* ShareSDK.bundle in Resources */,
 				18A437F91D881D2300AE6AAD /* tab_me@2x.png in Resources */,
+				182651631D94D49A001BE03A /* live_empty_bg@2x.png in Resources */,
 				18A437F51D881D2300AE6AAD /* tab_live@2x.png in Resources */,
 				18A438271D8E74E000AE6AAD /* refresh_fly_0003.png in Resources */,
 				18A438311D8E74E000AE6AAD /* refresh_fly_0013.png in Resources */,
@@ -1365,6 +1378,7 @@
 				18D8A9671D7563C3005768A2 /* BaseModel.m in Sources */,
 				1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */,
 				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
+				182651671D94D74D001BE03A /* LZBYKDefaultNoDataView.m in Sources */,
 				182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
