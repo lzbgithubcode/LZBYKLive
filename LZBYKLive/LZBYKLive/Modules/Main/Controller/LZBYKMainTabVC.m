@@ -13,6 +13,7 @@
 #import "BaseNC.h"
 #import "UIDevice+Extension.h"
 #import "LZBYKTabBar.h"
+#import "LZBCenterChooseView.h"
 
 
 @interface LZBYKMainTabVC()
@@ -42,10 +43,28 @@
 
 - (void)gotoCenterViewControllerWithStartLive
 {
+    LZBWeakSelf(weakSelf);
+    LZBCenterChooseView *chooseView = [LZBCenterChooseView show];
+    [chooseView setChooseTypeBlock:^(LZBCenterChooseViewType type) {
+       if(type ==LZBCenterChooseViewType_Live)
+           [weakSelf gotoLiveViewController];
+       else
+           [weakSelf gotoShortVedioViewController];
+    }];
+    
+}
+
+- (void)gotoLiveViewController
+{
     if([self checkVailableCenterViewController])
        [self presentViewController:[LZBCenterInterfaceDM c_instanceCenterViewController]
                           animated:YES
                         completion:nil];
+}
+
+- (void)gotoShortVedioViewController
+{
+   NSLog(@"当前调用的方法:%s------行号:line-%d ",__func__, __LINE__);
 }
 
 

@@ -39,6 +39,8 @@
 		182651671D94D74D001BE03A /* LZBYKDefaultNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651661D94D74D001BE03A /* LZBYKDefaultNoDataView.m */; };
 		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
+		1837FBE61DAFBA95003DEC08 /* LZBCenterChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837FBE51DAFBA95003DEC08 /* LZBCenterChooseView.m */; };
+		1837FBEC1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837FBEB1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m */; };
 		184D3DD41D7823A6000875B2 /* BaseHttpDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */; };
 		184D3DE01D782CD6000875B2 /* BaseInterfaceDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DDF1D782CD6000875B2 /* BaseInterfaceDM.m */; };
 		184D3DE41D782D19000875B2 /* LonginInterfaceDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3DE31D782D19000875B2 /* LonginInterfaceDM.m */; };
@@ -214,6 +216,10 @@
 		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
 		18370EE81D795B7D006B33A1 /* BaseDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDBModel.m; sourceTree = "<group>"; };
+		1837FBE41DAFBA95003DEC08 /* LZBCenterChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBCenterChooseView.h; sourceTree = "<group>"; };
+		1837FBE51DAFBA95003DEC08 /* LZBCenterChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBCenterChooseView.m; sourceTree = "<group>"; };
+		1837FBEA1DAFC169003DEC08 /* UIButton+ImageTitleSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpace.h"; sourceTree = "<group>"; };
+		1837FBEB1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpace.m"; sourceTree = "<group>"; };
 		184D3DD21D7823A6000875B2 /* BaseHttpDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseHttpDataManger.h; path = BaseModel/BaseHttpDataManger.h; sourceTree = "<group>"; };
 		184D3DD31D7823A6000875B2 /* BaseHttpDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseHttpDataManger.m; path = BaseModel/BaseHttpDataManger.m; sourceTree = "<group>"; };
 		184D3DDB1D782724000875B2 /* LZBYKLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKLoginVC.h; sourceTree = "<group>"; };
@@ -686,6 +692,8 @@
 				18A437A21D82646500AE6AAD /* UIView+ClipAngle.m */,
 				18A438021D8E296100AE6AAD /* UIDevice+Extension.h */,
 				18A438031D8E296100AE6AAD /* UIDevice+Extension.m */,
+				1837FBEA1DAFC169003DEC08 /* UIButton+ImageTitleSpace.h */,
+				1837FBEB1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m */,
 			);
 			path = Categrories;
 			sourceTree = "<group>";
@@ -1007,6 +1015,8 @@
 				182651401D93E4A6001BE03A /* LZBYKMainNearCell.m */,
 				182651421D9406AA001BE03A /* LZBYKMainNearHeadView.h */,
 				182651431D9406AA001BE03A /* LZBYKMainNearHeadView.m */,
+				1837FBE41DAFBA95003DEC08 /* LZBCenterChooseView.h */,
+				1837FBE51DAFBA95003DEC08 /* LZBCenterChooseView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1357,6 +1367,7 @@
 				182651441D9406AA001BE03A /* LZBYKMainNearHeadView.m in Sources */,
 				18A438541D8E79CC00AE6AAD /* LZBYKAttentionViewController.m in Sources */,
 				1888BAA31D91704A00B71E90 /* LZBYKMainListResquestModel.m in Sources */,
+				1837FBEC1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m in Sources */,
 				18A438571D8E7AA500AE6AAD /* LZBYKHotViewController.m in Sources */,
 				18D8A94D1D73C8D7005768A2 /* UIView+Border.m in Sources */,
 				18A437D21D87ED1000AE6AAD /* LZBYKLoginManger.m in Sources */,
@@ -1393,6 +1404,7 @@
 				18D8A9501D73CCDC005768A2 /* UIImage+Common.m in Sources */,
 				182651111D927E16001BE03A /* LZBMainLiveModel.m in Sources */,
 				18A437851D7FAEBD00AE6AAD /* LZBYKAdvertisementVC.m in Sources */,
+				1837FBE61DAFBA95003DEC08 /* LZBCenterChooseView.m in Sources */,
 				18A438011D88231800AE6AAD /* LZBYKTabBar.m in Sources */,
 				184D3E261D792524000875B2 /* YKAppManger.m in Sources */,
 				18D8A97B1D7570DE005768A2 /* BaseResponseModel.m in Sources */,

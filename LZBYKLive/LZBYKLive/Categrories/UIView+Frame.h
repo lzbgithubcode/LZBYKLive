@@ -18,4 +18,6 @@
 @property (nonatomic, assign) CGFloat lzb_CenterX;
 @property (nonatomic, assign) CGFloat lzb_CenterY;
 @property (nonatomic, assign) CGPoint lzb_Center;
+
+- (void)removeAllSubviews;
 @end
