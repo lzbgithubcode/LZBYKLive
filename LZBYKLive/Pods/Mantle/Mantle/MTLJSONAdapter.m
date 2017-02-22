@@ -28,7 +28,7 @@ const NSInteger MTLJSONAdapterErrorInvalidJSONMapping = 4;
 const NSInteger MTLJSONAdapterErrorExceptionThrown = 1;
 
 // Associated with the NSException that was caught.
-NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapterThrownException";
+static NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapterThrownException";
 
 @interface MTLJSONAdapter ()
 
@@ -343,8 +343,7 @@ NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapterThrownE
 			#else
 			if (error != NULL) {
 				NSDictionary *userInfo = @{
-					NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Caught exception parsing JSON key path \"%@\" for model class: %@", JSONKeyPaths, self.modelClass],
-					NSLocalizedRecoverySuggestionErrorKey: ex.description,
+					NSLocalizedDescriptionKey: ex.description,
 					NSLocalizedFailureReasonErrorKey: ex.reason,
 					MTLJSONAdapterThrownExceptionErrorKey: ex
 				};
@@ -383,10 +382,9 @@ NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapterThrownE
 		if ([modelClass respondsToSelector:@selector(JSONTransformerForKey:)]) {
 			NSValueTransformer *transformer = [modelClass JSONTransformerForKey:key];
 
-			if (transformer != nil) {
-				result[key] = transformer;
-				continue;
-			}
+			if (transformer != nil) result[key] = transformer;
+
+			continue;
 		}
 
 		objc_property_t property = class_getProperty(modelClass, key.UTF8String);
@@ -475,7 +473,7 @@ NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapterThrownE
 @implementation MTLJSONAdapter (ValueTransformers)
 
 + (NSValueTransformer<MTLTransformerErrorHandling> *)dictionaryTransformerWithModelClass:(Class)modelClass {
-	NSParameterAssert([modelClass conformsToProtocol:@protocol(MTLModel)]);
+	NSParameterAssert([modelClass isSubclassOfClass:MTLModel.class]);
 	NSParameterAssert([modelClass conformsToProtocol:@protocol(MTLJSONSerializing)]);
 	__block MTLJSONAdapter *adapter;
 	
@@ -510,7 +508,7 @@ NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapterThrownE
 		reverseBlock:^ NSDictionary * (id model, BOOL *success, NSError **error) {
 			if (model == nil) return nil;
 			
-			if (![model conformsToProtocol:@protocol(MTLModel)] || ![model conformsToProtocol:@protocol(MTLJSONSerializing)]) {
+			if (![model isKindOfClass:MTLModel.class] || ![model conformsToProtocol:@protocol(MTLJSONSerializing)]) {
 				if (error != NULL) {
 					NSDictionary *userInfo = @{
 						NSLocalizedDescriptionKey: NSLocalizedString(@"Could not convert model object to JSON dictionary", @""),

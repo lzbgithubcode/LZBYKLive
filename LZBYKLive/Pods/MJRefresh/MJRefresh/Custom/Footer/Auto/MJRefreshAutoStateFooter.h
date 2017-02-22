@@ -9,8 +9,6 @@
 #import "MJRefreshAutoFooter.h"
 
 @interface MJRefreshAutoStateFooter : MJRefreshAutoFooter
-/** 文字距离圈圈、箭头的距离 */
-@property (assign, nonatomic) CGFloat labelLeftInset;
 /** 显示刷新状态的label */
 @property (weak, nonatomic, readonly) UILabel *stateLabel;
 

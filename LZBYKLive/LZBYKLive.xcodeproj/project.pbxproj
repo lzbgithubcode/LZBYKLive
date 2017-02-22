@@ -166,10 +166,12 @@
 		18D8A97C1D7570DE005768A2 /* BaseResquestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9781D7570DE005768A2 /* BaseResquestModel.m */; };
 		18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A97E1D757121005768A2 /* NetWorkResquestTool.m */; };
 		18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9811D7589E9005768A2 /* AppConstants.m */; };
+		265BF26BFD5527DF082F2C57 /* libPods-LZBYKLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CDE4043C795C7836BD6BAF /* libPods-LZBYKLive.a */; };
 		D48A8B2F2794289ECC240BBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80913A990D6EE267523350FB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07CDE4043C795C7836BD6BAF /* libPods-LZBYKLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZBYKLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826510C1D927107001BE03A /* LZBYKMainHttpDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKMainHttpDM.h; sourceTree = "<group>"; };
 		1826510D1D927107001BE03A /* LZBYKMainHttpDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKMainHttpDM.m; sourceTree = "<group>"; };
 		1826510F1D927E16001BE03A /* LZBMainLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBMainLiveModel.h; sourceTree = "<group>"; };
@@ -411,9 +413,11 @@
 		18D8A97E1D757121005768A2 /* NetWorkResquestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkResquestTool.m; sourceTree = "<group>"; };
 		18D8A9801D7589E9005768A2 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		18D8A9811D7589E9005768A2 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		537BD815E73A00293C0A47F2 /* Pods-LZBYKLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZBYKLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive.debug.xcconfig"; sourceTree = "<group>"; };
 		597FFF4F85A490869D747B61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		80913A990D6EE267523350FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABCA77381E370F6AAEB35DA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C9198D37D561BB1579811C33 /* Pods-LZBYKLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZBYKLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +440,7 @@
 				184D3E181D7923AA000875B2 /* TencentOpenAPI.framework in Frameworks */,
 				184D3DEB1D79217F000875B2 /* ShareSDK.framework in Frameworks */,
 				184D3DF21D7921AB000875B2 /* ShareSDKConnector.framework in Frameworks */,
+				265BF26BFD5527DF082F2C57 /* libPods-LZBYKLive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +458,7 @@
 				184D3DF71D7922B7000875B2 /* libz.tbd */,
 				184D3DF51D7922AA000875B2 /* libicucore.tbd */,
 				80913A990D6EE267523350FB /* libPods.a */,
+				07CDE4043C795C7836BD6BAF /* libPods-LZBYKLive.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1152,6 +1158,8 @@
 			children = (
 				BABCA77381E370F6AAEB35DA /* Pods.debug.xcconfig */,
 				597FFF4F85A490869D747B61 /* Pods.release.xcconfig */,
+				537BD815E73A00293C0A47F2 /* Pods-LZBYKLive.debug.xcconfig */,
+				C9198D37D561BB1579811C33 /* Pods-LZBYKLive.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1163,12 +1171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 185082151D531F850014D26D /* Build configuration list for PBXNativeTarget "LZBYKLive" */;
 			buildPhases = (
-				839DE2EE57548414CFC37576 /* Check Pods Manifest.lock */,
+				839DE2EE57548414CFC37576 /* [CP] Check Pods Manifest.lock */,
 				185081FA1D531F850014D26D /* Sources */,
 				185081FB1D531F850014D26D /* Frameworks */,
 				185081FC1D531F850014D26D /* Resources */,
-				51B9F3EB07CBCB0B5697C975 /* Embed Pods Frameworks */,
-				14B1653B98446DF1913EAEAE /* Copy Pods Resources */,
+				51B9F3EB07CBCB0B5697C975 /* [CP] Embed Pods Frameworks */,
+				14B1653B98446DF1913EAEAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1190,7 +1198,7 @@
 				TargetAttributes = {
 					185081FD1D531F850014D26D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8LYGY3ZDDQ;
+						DevelopmentTeam = Y2H57HDYD9;
 					};
 				};
 			};
@@ -1304,49 +1312,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14B1653B98446DF1913EAEAE /* Copy Pods Resources */ = {
+		14B1653B98446DF1913EAEAE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		51B9F3EB07CBCB0B5697C975 /* Embed Pods Frameworks */ = {
+		51B9F3EB07CBCB0B5697C975 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		839DE2EE57548414CFC37576 /* Check Pods Manifest.lock */ = {
+		839DE2EE57548414CFC37576 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1525,19 +1533,20 @@
 		};
 		185082161D531F850014D26D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BABCA77381E370F6AAEB35DA /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 537BD815E73A00293C0A47F2 /* Pods-LZBYKLive.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y2H57HDYD9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LZBYKLive/Library/ShareSDK",
 					"$(PROJECT_DIR)/LZBYKLive/Library/ShareSDK/Required",
 					"$(PROJECT_DIR)/LZBYKLive/Library/ShareSDK/PlatformSDK/QQSDK",
 				);
-				GCC_PREFIX_HEADER = /Users/apple/Documents/demo/github/LZBYKLive/LZBYKLive/LZBYKLive/System/LZBYKPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/apple/Documents/gitdemo/LZBYKLive/LZBYKLive/LZBYKLive/System/LZBYKPrefixHeader.pch;
 				INFOPLIST_FILE = LZBYKLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1554,19 +1563,20 @@
 		};
 		185082171D531F850014D26D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 597FFF4F85A490869D747B61 /* Pods.release.xcconfig */;
+			baseConfigurationReference = C9198D37D561BB1579811C33 /* Pods-LZBYKLive.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y2H57HDYD9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LZBYKLive/Library/ShareSDK",
 					"$(PROJECT_DIR)/LZBYKLive/Library/ShareSDK/Required",
 					"$(PROJECT_DIR)/LZBYKLive/Library/ShareSDK/PlatformSDK/QQSDK",
 				);
-				GCC_PREFIX_HEADER = /Users/apple/Documents/demo/github/LZBYKLive/LZBYKLive/LZBYKLive/System/LZBYKPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/apple/Documents/gitdemo/LZBYKLive/LZBYKLive/LZBYKLive/System/LZBYKPrefixHeader.pch;
 				INFOPLIST_FILE = LZBYKLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

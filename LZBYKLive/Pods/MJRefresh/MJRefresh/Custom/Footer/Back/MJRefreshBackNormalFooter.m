@@ -7,7 +7,6 @@
 //
 
 #import "MJRefreshBackNormalFooter.h"
-#import "NSBundle+MJRefresh.h"
 
 @interface MJRefreshBackNormalFooter()
 {
@@ -21,7 +20,8 @@
 - (UIImageView *)arrowView
 {
     if (!_arrowView) {
-        UIImageView *arrowView = [[UIImageView alloc] initWithImage:[NSBundle mj_arrowImage]];
+        UIImage *image = [UIImage imageNamed:MJRefreshSrcName(@"arrow.png")] ?: [UIImage imageNamed:MJRefreshFrameworkSrcName(@"arrow.png")];
+        UIImageView *arrowView = [[UIImageView alloc] initWithImage:image];
         [self addSubview:_arrowView = arrowView];
     }
     return _arrowView;
@@ -45,7 +45,7 @@
     self.loadingView = nil;
     [self setNeedsLayout];
 }
-#pragma mark - 重写父类的方法
+#pragma makr - 重写父类的方法
 - (void)prepare
 {
     [super prepare];
@@ -60,7 +60,7 @@
     // 箭头的中心点
     CGFloat arrowCenterX = self.mj_w * 0.5;
     if (!self.stateLabel.hidden) {
-        arrowCenterX -= self.labelLeftInset + self.stateLabel.mj_textWith * 0.5;
+        arrowCenterX -= 100;
     }
     CGFloat arrowCenterY = self.mj_h * 0.5;
     CGPoint arrowCenter = CGPointMake(arrowCenterX, arrowCenterY);
@@ -75,8 +75,6 @@
     if (self.loadingView.constraints.count == 0) {
         self.loadingView.center = arrowCenter;
     }
-    
-    self.arrowView.tintColor = self.stateLabel.textColor;
 }
 
 - (void)setState:(MJRefreshState)state

@@ -48,12 +48,12 @@
     if (axisType == MASAxisTypeHorizontal) {
         MAS_VIEW *prev;
         for (int i = 0; i < self.count; i++) {
-            MAS_VIEW *v = self[i];
+            MAS_VIEW *v = [self objectAtIndex:i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (prev) {
                     make.width.equalTo(prev);
                     make.left.equalTo(prev.mas_right).offset(fixedSpacing);
-                    if (i == self.count - 1) {//last one
+                    if (i == (CGFloat)self.count - 1) {//last one
                         make.right.equalTo(tempSuperView).offset(-tailSpacing);
                     }
                 }
@@ -68,12 +68,12 @@
     else {
         MAS_VIEW *prev;
         for (int i = 0; i < self.count; i++) {
-            MAS_VIEW *v = self[i];
+            MAS_VIEW *v = [self objectAtIndex:i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (prev) {
                     make.height.equalTo(prev);
                     make.top.equalTo(prev.mas_bottom).offset(fixedSpacing);
-                    if (i == self.count - 1) {//last one
+                    if (i == (CGFloat)self.count - 1) {//last one
                         make.bottom.equalTo(tempSuperView).offset(-tailSpacing);
                     }                    
                 }
@@ -97,12 +97,12 @@
     if (axisType == MASAxisTypeHorizontal) {
         MAS_VIEW *prev;
         for (int i = 0; i < self.count; i++) {
-            MAS_VIEW *v = self[i];
+            MAS_VIEW *v = [self objectAtIndex:i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (prev) {
                     CGFloat offset = (1-(i/((CGFloat)self.count-1)))*(fixedItemLength+leadSpacing)-i*tailSpacing/(((CGFloat)self.count-1));
                     make.width.equalTo(@(fixedItemLength));
-                    if (i == self.count - 1) {//last one
+                    if (i == (CGFloat)self.count - 1) {//last one
                         make.right.equalTo(tempSuperView).offset(-tailSpacing);
                     }
                     else {
@@ -120,12 +120,12 @@
     else {
         MAS_VIEW *prev;
         for (int i = 0; i < self.count; i++) {
-            MAS_VIEW *v = self[i];
+            MAS_VIEW *v = [self objectAtIndex:i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (prev) {
                     CGFloat offset = (1-(i/((CGFloat)self.count-1)))*(fixedItemLength+leadSpacing)-i*tailSpacing/(((CGFloat)self.count-1));
                     make.height.equalTo(@(fixedItemLength));
-                    if (i == self.count - 1) {//last one
+                    if (i == (CGFloat)self.count - 1) {//last one
                         make.bottom.equalTo(tempSuperView).offset(-tailSpacing);
                     }
                     else {

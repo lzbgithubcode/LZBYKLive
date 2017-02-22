@@ -9,9 +9,7 @@
 #import "MJRefreshBackGifFooter.h"
 
 @interface MJRefreshBackGifFooter()
-{
-    __unsafe_unretained UIImageView *_gifView;
-}
+@property (weak, nonatomic) UIImageView *gifView;
 /** 所有状态对应的动画图片 */
 @property (strong, nonatomic) NSMutableDictionary *stateImages;
 /** 所有状态对应的动画时间 */
@@ -66,14 +64,6 @@
 }
 
 #pragma mark - 实现父类的方法
-- (void)prepare
-{
-    [super prepare];
-    
-    // 初始化间距
-    self.labelLeftInset = 20;
-}
-
 - (void)setPullingPercent:(CGFloat)pullingPercent
 {
     [super setPullingPercent:pullingPercent];
@@ -96,7 +86,7 @@
         self.gifView.contentMode = UIViewContentModeCenter;
     } else {
         self.gifView.contentMode = UIViewContentModeRight;
-        self.gifView.mj_w = self.mj_w * 0.5 - self.labelLeftInset - self.stateLabel.mj_textWith * 0.5;
+        self.gifView.mj_w = self.mj_w * 0.5 - 90;
     }
 }
 

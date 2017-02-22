@@ -1,12 +1,14 @@
 //
 //  SVIndefiniteAnimatedView.m
-//  SVProgressHUD, https://github.com/SVProgressHUD/SVProgressHUD
+//  SVProgressHUD
 //
-//  Copyright (c) 2014-2016 Guillaume Campagna. All rights reserved.
+//  Created by Guillaume Campagna on 2014-12-05.
+//
 //
 
 #import "SVIndefiniteAnimatedView.h"
-#import "SVProgressHUD.h"
+
+#pragma mark SVIndefiniteAnimatedView
 
 @interface SVIndefiniteAnimatedView ()
 
@@ -16,7 +18,7 @@
 
 @implementation SVIndefiniteAnimatedView
 
-- (void)willMoveToSuperview:(UIView*)newSuperview {
+- (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview) {
         [self layoutAnimatedLayer];
     } else {
@@ -27,21 +29,25 @@
 
 - (void)layoutAnimatedLayer {
     CALayer *layer = self.indefiniteAnimatedLayer;
-    [self.layer addSublayer:layer];
     
-    CGFloat widthDiff = CGRectGetWidth(self.bounds) - CGRectGetWidth(layer.bounds);
-    CGFloat heightDiff = CGRectGetHeight(self.bounds) - CGRectGetHeight(layer.bounds);
-    layer.position = CGPointMake(CGRectGetWidth(self.bounds) - CGRectGetWidth(layer.bounds) / 2 - widthDiff / 2, CGRectGetHeight(self.bounds) - CGRectGetHeight(layer.bounds) / 2 - heightDiff / 2);
+    [self.layer addSublayer:layer];
+    layer.position = CGPointMake(CGRectGetWidth(self.bounds) - CGRectGetWidth(layer.bounds) / 2, CGRectGetHeight(self.bounds) - CGRectGetHeight(layer.bounds) / 2);
 }
 
 - (CAShapeLayer*)indefiniteAnimatedLayer {
     if(!_indefiniteAnimatedLayer) {
         CGPoint arcCenter = CGPointMake(self.radius+self.strokeThickness/2+5, self.radius+self.strokeThickness/2+5);
-        UIBezierPath* smoothedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter radius:self.radius startAngle:(CGFloat) (M_PI*3/2) endAngle:(CGFloat) (M_PI/2+M_PI*5) clockwise:YES];
+        CGRect rect = CGRectMake(0.0f, 0.0f, arcCenter.x*2, arcCenter.y*2);
+        
+        UIBezierPath* smoothedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
+                                                                    radius:self.radius
+                                                                startAngle:M_PI*3/2
+                                                                  endAngle:M_PI/2+M_PI*5
+                                                                 clockwise:YES];
         
         _indefiniteAnimatedLayer = [CAShapeLayer layer];
         _indefiniteAnimatedLayer.contentsScale = [[UIScreen mainScreen] scale];
-        _indefiniteAnimatedLayer.frame = CGRectMake(0.0f, 0.0f, arcCenter.x*2, arcCenter.y*2);
+        _indefiniteAnimatedLayer.frame = rect;
         _indefiniteAnimatedLayer.fillColor = [UIColor clearColor].CGColor;
         _indefiniteAnimatedLayer.strokeColor = self.strokeColor.CGColor;
         _indefiniteAnimatedLayer.lineWidth = self.strokeThickness;
@@ -51,13 +57,12 @@
         
         CALayer *maskLayer = [CALayer layer];
         
-        NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
+        NSBundle *bundle = [NSBundle bundleForClass:self.class];
         NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
         NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        
         NSString *path = [imageBundle pathForResource:@"angle-mask" ofType:@"png"];
         
-        maskLayer.contents = (__bridge id)[[UIImage imageWithContentsOfFile:path] CGImage];
+        maskLayer.contents = (id)[[UIImage imageWithContentsOfFile:path] CGImage];;
         maskLayer.frame = _indefiniteAnimatedLayer.bounds;
         _indefiniteAnimatedLayer.mask = maskLayer;
         
@@ -65,8 +70,8 @@
         CAMediaTimingFunction *linearCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        animation.fromValue = (id) 0;
-        animation.toValue = @(M_PI*2);
+        animation.fromValue = 0;
+        animation.toValue = [NSNumber numberWithFloat:M_PI*2];
         animation.duration = animationDuration;
         animation.timingFunction = linearCurve;
         animation.removedOnCompletion = NO;
@@ -97,30 +102,25 @@
 }
 
 - (void)setFrame:(CGRect)frame {
-    if(!CGRectEqualToRect(frame, super.frame)) {
-        [super setFrame:frame];
-        
-        if(self.superview) {
-            [self layoutAnimatedLayer];
-        }
-    }
+    [super setFrame:frame];
     
+    if (self.superview) {
+        [self layoutAnimatedLayer];
+    }
 }
 
 - (void)setRadius:(CGFloat)radius {
-    if(radius != _radius) {
-        _radius = radius;
-        
-        [_indefiniteAnimatedLayer removeFromSuperlayer];
-        _indefiniteAnimatedLayer = nil;
-        
-        if(self.superview) {
-            [self layoutAnimatedLayer];
-        }
+    _radius = radius;
+    
+    [_indefiniteAnimatedLayer removeFromSuperlayer];
+    _indefiniteAnimatedLayer = nil;
+    
+    if (self.superview) {
+        [self layoutAnimatedLayer];
     }
 }
 
-- (void)setStrokeColor:(UIColor*)strokeColor {
+- (void)setStrokeColor:(UIColor *)strokeColor {
     _strokeColor = strokeColor;
     _indefiniteAnimatedLayer.strokeColor = strokeColor.CGColor;
 }

@@ -9,6 +9,8 @@
 
 #import "MJRefreshComponent.h"
 #import "MJRefreshConst.h"
+#import "UIView+MJExtension.h"
+#import "UIScrollView+MJRefresh.h"
 
 @interface MJRefreshComponent()
 @property (strong, nonatomic) UIPanGestureRecognizer *pan;
@@ -37,9 +39,9 @@
 
 - (void)layoutSubviews
 {
-    [self placeSubviews];
-    
     [super layoutSubviews];
+    
+    [self placeSubviews];
 }
 
 - (void)placeSubviews{}
@@ -131,16 +133,6 @@
     self.refreshingAction = action;
 }
 
-- (void)setState:(MJRefreshState)state
-{
-    _state = state;
-    
-    // 加入主队列的目的是等setState:方法调用完毕、设置完文字后再去布局子控件
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self setNeedsLayout];
-    });
-}
-
 #pragma mark 进入刷新状态
 - (void)beginRefreshing
 {
@@ -152,33 +144,16 @@
     if (self.window) {
         self.state = MJRefreshStateRefreshing;
     } else {
-        // 预防正在刷新中时，调用本方法使得header inset回置失败
-        if (self.state != MJRefreshStateRefreshing) {
-            self.state = MJRefreshStateWillRefresh;
-            // 刷新(预防从另一个控制器回到这个控制器的情况，回来要重新刷新一下)
-            [self setNeedsDisplay];
-        }
+        self.state = MJRefreshStateWillRefresh;
+        // 刷新(预防从另一个控制器回到这个控制器的情况，回来要重新刷新一下)
+        [self setNeedsDisplay];
     }
-}
-
-- (void)beginRefreshingWithCompletionBlock:(void (^)())completionBlock
-{
-    self.beginRefreshingCompletionBlock = completionBlock;
-    
-    [self beginRefreshing];
 }
 
 #pragma mark 结束刷新状态
 - (void)endRefreshing
 {
     self.state = MJRefreshStateIdle;
-}
-
-- (void)endRefreshingWithCompletionBlock:(void (^)())completionBlock
-{
-    self.endRefreshingCompletionBlock = completionBlock;
-    
-    [self endRefreshing];
 }
 
 #pragma mark 是否正在刷新
@@ -233,15 +208,12 @@
         if ([self.refreshingTarget respondsToSelector:self.refreshingAction]) {
             MJRefreshMsgSend(MJRefreshMsgTarget(self.refreshingTarget), self.refreshingAction, self);
         }
-        if (self.beginRefreshingCompletionBlock) {
-            self.beginRefreshingCompletionBlock();
-        }
     });
 }
 @end
 
 @implementation UILabel(MJRefresh)
-+ (instancetype)mj_label
++ (instancetype)label
 {
     UILabel *label = [[self alloc] init];
     label.font = MJRefreshLabelFont;
@@ -250,25 +222,5 @@
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     return label;
-}
-
-- (CGFloat)mj_textWith {
-    CGFloat stringWidth = 0;
-    CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
-    if (self.text.length > 0) {
-#if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-        stringWidth =[self.text
-                      boundingRectWithSize:size
-                      options:NSStringDrawingUsesLineFragmentOrigin
-                      attributes:@{NSFontAttributeName:self.font}
-                      context:nil].size.width;
-#else
-        
-        stringWidth = [self.text sizeWithFont:self.font
-                             constrainedToSize:size
-                                 lineBreakMode:NSLineBreakByCharWrapping].width;
-#endif
-    }
-    return stringWidth;
 }
 @end

@@ -97,7 +97,7 @@
 
 #pragma mark - Animator proxy
 
-#if TARGET_OS_MAC && !(TARGET_OS_IPHONE || TARGET_OS_TV)
+#if TARGET_OS_MAC && !TARGET_OS_IPHONE
 
 - (MASConstraint *)animator {
     for (MASConstraint *constraint in self.childConstraints) {

@@ -30,7 +30,7 @@
 - (UILabel *)stateLabel
 {
     if (!_stateLabel) {
-        [self addSubview:_stateLabel = [UILabel mj_label]];
+        [self addSubview:_stateLabel = [UILabel label]];
     }
     return _stateLabel;
 }
@@ -52,14 +52,11 @@
 {
     [super prepare];
     
-    // 初始化间距
-    self.labelLeftInset = MJRefreshLabelLeftInset;
-    
     // 初始化文字
-    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshBackFooterIdleText] forState:MJRefreshStateIdle];
-    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshBackFooterPullingText] forState:MJRefreshStatePulling];
-    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshBackFooterRefreshingText] forState:MJRefreshStateRefreshing];
-    [self setTitle:[NSBundle mj_localizedStringForKey:MJRefreshBackFooterNoMoreDataText] forState:MJRefreshStateNoMoreData];
+    [self setTitle:MJRefreshBackFooterIdleText forState:MJRefreshStateIdle];
+    [self setTitle:MJRefreshBackFooterPullingText forState:MJRefreshStatePulling];
+    [self setTitle:MJRefreshBackFooterRefreshingText forState:MJRefreshStateRefreshing];
+    [self setTitle:MJRefreshBackFooterNoMoreDataText forState:MJRefreshStateNoMoreData];
 }
 
 - (void)placeSubviews
