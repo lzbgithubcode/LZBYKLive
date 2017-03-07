@@ -37,7 +37,6 @@
 		182651631D94D49A001BE03A /* live_empty_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651611D94D49A001BE03A /* live_empty_bg@2x.png */; };
 		182651641D94D49A001BE03A /* live_empty_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182651621D94D49A001BE03A /* live_empty_bg@3x.png */; };
 		182651671D94D74D001BE03A /* LZBYKDefaultNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182651661D94D74D001BE03A /* LZBYKDefaultNoDataView.m */; };
-		18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */; };
 		18370EE91D795B7D006B33A1 /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18370EE81D795B7D006B33A1 /* BaseDBModel.m */; };
 		1837FBE61DAFBA95003DEC08 /* LZBCenterChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837FBE51DAFBA95003DEC08 /* LZBCenterChooseView.m */; };
 		1837FBEC1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837FBEB1DAFC169003DEC08 /* UIButton+ImageTitleSpace.m */; };
@@ -166,6 +165,20 @@
 		18D8A97C1D7570DE005768A2 /* BaseResquestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9781D7570DE005768A2 /* BaseResquestModel.m */; };
 		18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A97E1D757121005768A2 /* NetWorkResquestTool.m */; };
 		18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9811D7589E9005768A2 /* AppConstants.m */; };
+		18E2EEB61E6F04C7005BD6C2 /* LZBRecordProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2EEB31E6F04C7005BD6C2 /* LZBRecordProcessView.m */; };
+		18E2EEB71E6F04C7005BD6C2 /* LZBRecordVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2EEB51E6F04C7005BD6C2 /* LZBRecordVideoTool.m */; };
+		18E2EEC21E6F0503005BD6C2 /* room_pop_up_lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEB81E6F0503005BD6C2 /* room_pop_up_lamp@2x.png */; };
+		18E2EEC31E6F0503005BD6C2 /* room_pop_up_lamp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEB91E6F0503005BD6C2 /* room_pop_up_lamp@3x.png */; };
+		18E2EEC41E6F0503005BD6C2 /* room_task_video_start_fold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEBA1E6F0503005BD6C2 /* room_task_video_start_fold@2x.png */; };
+		18E2EEC51E6F0503005BD6C2 /* room_task_video_start_fold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEBB1E6F0503005BD6C2 /* room_task_video_start_fold@3x.png */; };
+		18E2EEC61E6F0503005BD6C2 /* room_task_video_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEBC1E6F0503005BD6C2 /* room_task_video_start@2x.png */; };
+		18E2EEC71E6F0503005BD6C2 /* room_task_video_start@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEBD1E6F0503005BD6C2 /* room_task_video_start@3x.png */; };
+		18E2EEC81E6F0503005BD6C2 /* shortvideo_button_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEBE1E6F0503005BD6C2 /* shortvideo_button_close@2x.png */; };
+		18E2EEC91E6F0503005BD6C2 /* shortvideo_button_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEBF1E6F0503005BD6C2 /* shortvideo_button_close@3x.png */; };
+		18E2EECA1E6F0503005BD6C2 /* shortvideo_download_5_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEC01E6F0503005BD6C2 /* shortvideo_download_5_refresh@2x.png */; };
+		18E2EECB1E6F0503005BD6C2 /* shortvideo_download_5_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E2EEC11E6F0503005BD6C2 /* shortvideo_download_5_refresh@3x.png */; };
+		18E2EECE1E6F0579005BD6C2 /* LZBRecordVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2EECD1E6F0579005BD6C2 /* LZBRecordVideoVC.m */; };
+		18E2EED21E6F0669005BD6C2 /* YKAppCacheDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2EED11E6F0669005BD6C2 /* YKAppCacheDataManger.m */; };
 		265BF26BFD5527DF082F2C57 /* libPods-LZBYKLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CDE4043C795C7836BD6BAF /* libPods-LZBYKLive.a */; };
 /* End PBXBuildFile section */
 
@@ -213,8 +226,6 @@
 		182651621D94D49A001BE03A /* live_empty_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live_empty_bg@3x.png"; sourceTree = "<group>"; };
 		182651651D94D74D001BE03A /* LZBYKDefaultNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBYKDefaultNoDataView.h; sourceTree = "<group>"; };
 		182651661D94D74D001BE03A /* LZBYKDefaultNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBYKDefaultNoDataView.m; sourceTree = "<group>"; };
-		18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKAppCacheDataManger.h; path = ../Constants/AppManger/YKAppCacheDataManger.h; sourceTree = "<group>"; };
-		18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKAppCacheDataManger.m; path = ../Constants/AppManger/YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		18370EE71D795B7D006B33A1 /* BaseDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBModel.h; sourceTree = "<group>"; };
 		18370EE81D795B7D006B33A1 /* BaseDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDBModel.m; sourceTree = "<group>"; };
 		1837FBE41DAFBA95003DEC08 /* LZBCenterChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBCenterChooseView.h; sourceTree = "<group>"; };
@@ -412,6 +423,24 @@
 		18D8A97E1D757121005768A2 /* NetWorkResquestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkResquestTool.m; sourceTree = "<group>"; };
 		18D8A9801D7589E9005768A2 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		18D8A9811D7589E9005768A2 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		18E2EEB21E6F04C7005BD6C2 /* LZBRecordProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBRecordProcessView.h; sourceTree = "<group>"; };
+		18E2EEB31E6F04C7005BD6C2 /* LZBRecordProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBRecordProcessView.m; sourceTree = "<group>"; };
+		18E2EEB41E6F04C7005BD6C2 /* LZBRecordVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBRecordVideoTool.h; sourceTree = "<group>"; };
+		18E2EEB51E6F04C7005BD6C2 /* LZBRecordVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBRecordVideoTool.m; sourceTree = "<group>"; };
+		18E2EEB81E6F0503005BD6C2 /* room_pop_up_lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "room_pop_up_lamp@2x.png"; sourceTree = "<group>"; };
+		18E2EEB91E6F0503005BD6C2 /* room_pop_up_lamp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "room_pop_up_lamp@3x.png"; sourceTree = "<group>"; };
+		18E2EEBA1E6F0503005BD6C2 /* room_task_video_start_fold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "room_task_video_start_fold@2x.png"; sourceTree = "<group>"; };
+		18E2EEBB1E6F0503005BD6C2 /* room_task_video_start_fold@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "room_task_video_start_fold@3x.png"; sourceTree = "<group>"; };
+		18E2EEBC1E6F0503005BD6C2 /* room_task_video_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "room_task_video_start@2x.png"; sourceTree = "<group>"; };
+		18E2EEBD1E6F0503005BD6C2 /* room_task_video_start@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "room_task_video_start@3x.png"; sourceTree = "<group>"; };
+		18E2EEBE1E6F0503005BD6C2 /* shortvideo_button_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_button_close@2x.png"; sourceTree = "<group>"; };
+		18E2EEBF1E6F0503005BD6C2 /* shortvideo_button_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_button_close@3x.png"; sourceTree = "<group>"; };
+		18E2EEC01E6F0503005BD6C2 /* shortvideo_download_5_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_download_5_refresh@2x.png"; sourceTree = "<group>"; };
+		18E2EEC11E6F0503005BD6C2 /* shortvideo_download_5_refresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortvideo_download_5_refresh@3x.png"; sourceTree = "<group>"; };
+		18E2EECC1E6F0579005BD6C2 /* LZBRecordVideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBRecordVideoVC.h; sourceTree = "<group>"; };
+		18E2EECD1E6F0579005BD6C2 /* LZBRecordVideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBRecordVideoVC.m; sourceTree = "<group>"; };
+		18E2EED01E6F0669005BD6C2 /* YKAppCacheDataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAppCacheDataManger.h; sourceTree = "<group>"; };
+		18E2EED11E6F0669005BD6C2 /* YKAppCacheDataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAppCacheDataManger.m; sourceTree = "<group>"; };
 		537BD815E73A00293C0A47F2 /* Pods-LZBYKLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZBYKLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive.debug.xcconfig"; sourceTree = "<group>"; };
 		C9198D37D561BB1579811C33 /* Pods-LZBYKLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZBYKLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -617,8 +646,18 @@
 		1850822D1D542D280014D26D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				1826514B1D94BCD5001BE03A /* LaunchImage-700-568h@2x.png */,
+				18E2EEB81E6F0503005BD6C2 /* room_pop_up_lamp@2x.png */,
+				18E2EEB91E6F0503005BD6C2 /* room_pop_up_lamp@3x.png */,
+				18E2EEBA1E6F0503005BD6C2 /* room_task_video_start_fold@2x.png */,
+				18E2EEBB1E6F0503005BD6C2 /* room_task_video_start_fold@3x.png */,
+				18E2EEBC1E6F0503005BD6C2 /* room_task_video_start@2x.png */,
+				18E2EEBD1E6F0503005BD6C2 /* room_task_video_start@3x.png */,
+				18E2EEBE1E6F0503005BD6C2 /* shortvideo_button_close@2x.png */,
+				18E2EEBF1E6F0503005BD6C2 /* shortvideo_button_close@3x.png */,
+				18E2EEC01E6F0503005BD6C2 /* shortvideo_download_5_refresh@2x.png */,
+				18E2EEC11E6F0503005BD6C2 /* shortvideo_download_5_refresh@3x.png */,
 				182651211D9373E7001BE03A /* default_ticker.png */,
+				1826514B1D94BCD5001BE03A /* LaunchImage-700-568h@2x.png */,
 				18A438081D8E74E000AE6AAD /* refresh_fly_0001.png */,
 				18A438091D8E74E000AE6AAD /* refresh_fly_0002.png */,
 				18A4380A1D8E74E000AE6AAD /* refresh_fly_0003.png */,
@@ -707,8 +746,8 @@
 				185082431D542D3C0014D26D /* CustomView */,
 				18D8A91D1D6E9690005768A2 /* Macros */,
 				18D8A91E1D6E9690005768A2 /* Network */,
-				18A4377F1D7FAC0F00AE6AAD /* Manger */,
-				18D8A91F1D6E9690005768A2 /* Store */,
+				18E2EEB01E6F0489005BD6C2 /* Tool */,
+				18E2EECF1E6F0647005BD6C2 /* Manger */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -818,15 +857,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		18A4377F1D7FAC0F00AE6AAD /* Manger */ = {
-			isa = PBXGroup;
-			children = (
-				18370EE41D795965006B33A1 /* YKAppCacheDataManger.h */,
-				18370EE51D795965006B33A1 /* YKAppCacheDataManger.m */,
-			);
-			path = Manger;
-			sourceTree = "<group>";
-		};
 		18A437D61D87F3C600AE6AAD /* DM */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,13 +903,6 @@
 				18D8A9791D7570DE005768A2 /* Tool */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		18D8A91F1D6E9690005768A2 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		18D8A9381D73C457005768A2 /* Center */ = {
@@ -948,6 +971,8 @@
 				18A438561D8E7AA500AE6AAD /* LZBYKHotViewController.m */,
 				18A438581D8E7ACD00AE6AAD /* LZBYKNearViewController.h */,
 				18A438591D8E7ACD00AE6AAD /* LZBYKNearViewController.m */,
+				18E2EECC1E6F0579005BD6C2 /* LZBRecordVideoVC.h */,
+				18E2EECD1E6F0579005BD6C2 /* LZBRecordVideoVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1147,6 +1172,34 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		18E2EEB01E6F0489005BD6C2 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				18E2EEB11E6F04C7005BD6C2 /* RecordTool */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		18E2EEB11E6F04C7005BD6C2 /* RecordTool */ = {
+			isa = PBXGroup;
+			children = (
+				18E2EEB21E6F04C7005BD6C2 /* LZBRecordProcessView.h */,
+				18E2EEB31E6F04C7005BD6C2 /* LZBRecordProcessView.m */,
+				18E2EEB41E6F04C7005BD6C2 /* LZBRecordVideoTool.h */,
+				18E2EEB51E6F04C7005BD6C2 /* LZBRecordVideoTool.m */,
+			);
+			path = RecordTool;
+			sourceTree = "<group>";
+		};
+		18E2EECF1E6F0647005BD6C2 /* Manger */ = {
+			isa = PBXGroup;
+			children = (
+				18E2EED01E6F0669005BD6C2 /* YKAppCacheDataManger.h */,
+				18E2EED11E6F0669005BD6C2 /* YKAppCacheDataManger.m */,
+			);
+			path = Manger;
+			sourceTree = "<group>";
+		};
 		57109CE72DEC3994D51E8CE1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1224,12 +1277,14 @@
 				18A438501D8E76F500AE6AAD /* shortvideo_main_video@2x.png in Resources */,
 				182651641D94D49A001BE03A /* live_empty_bg@3x.png in Resources */,
 				18A438391D8E74E000AE6AAD /* refresh_fly_0021.png in Resources */,
+				18E2EEC31E6F0503005BD6C2 /* room_pop_up_lamp@3x.png in Resources */,
 				184D3E191D7923AA000875B2 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				18A4383B1D8E74E000AE6AAD /* refresh_fly_0023.png in Resources */,
 				1826515C1D94CA04001BE03A /* live_tag_live@3x.png in Resources */,
 				18A437C41D87A6E900AE6AAD /* login_wx@2x.png in Resources */,
 				18A4383D1D8E74E000AE6AAD /* refresh_fly_0025.png in Resources */,
 				18A4382C1D8E74E000AE6AAD /* refresh_fly_0008.png in Resources */,
+				18E2EECB1E6F0503005BD6C2 /* shortvideo_download_5_refresh@3x.png in Resources */,
 				18A438331D8E74E000AE6AAD /* refresh_fly_0015.png in Resources */,
 				18A438291D8E74E000AE6AAD /* refresh_fly_0005.png in Resources */,
 				18A4382A1D8E74E000AE6AAD /* refresh_fly_0006.png in Resources */,
@@ -1240,6 +1295,7 @@
 				18A438381D8E74E000AE6AAD /* refresh_fly_0020.png in Resources */,
 				18A437BF1D87A6E900AE6AAD /* login_dx@3x.png in Resources */,
 				18A437C51D87A6E900AE6AAD /* login_wx@3x.png in Resources */,
+				18E2EEC51E6F0503005BD6C2 /* room_task_video_start_fold@3x.png in Resources */,
 				18A438341D8E74E000AE6AAD /* refresh_fly_0016.png in Resources */,
 				18A4384E1D8E76F500AE6AAD /* shortvideo_main_live@2x.png in Resources */,
 				18A4382F1D8E74E000AE6AAD /* refresh_fly_0011.png in Resources */,
@@ -1249,6 +1305,7 @@
 				18A437FD1D88222F00AE6AAD /* tab_launch@2x.png in Resources */,
 				18A437871D7FB41B00AE6AAD /* wenxin_tuanguan_icon.jpg in Resources */,
 				182651221D9373E7001BE03A /* default_ticker.png in Resources */,
+				18E2EEC81E6F0503005BD6C2 /* shortvideo_button_close@2x.png in Resources */,
 				18A4383E1D8E74E000AE6AAD /* refresh_fly_0026.png in Resources */,
 				182651521D94BD6C001BE03A /* login_bg_cloud_1@3x.png in Resources */,
 				184D3E1B1D7923AA000875B2 /* WeiboSDK.bundle in Resources */,
@@ -1260,6 +1317,8 @@
 				182651631D94D49A001BE03A /* live_empty_bg@2x.png in Resources */,
 				18A437F51D881D2300AE6AAD /* tab_live@2x.png in Resources */,
 				18A438271D8E74E000AE6AAD /* refresh_fly_0003.png in Resources */,
+				18E2EEC41E6F0503005BD6C2 /* room_task_video_start_fold@2x.png in Resources */,
+				18E2EEC91E6F0503005BD6C2 /* shortvideo_button_close@3x.png in Resources */,
 				18A438311D8E74E000AE6AAD /* refresh_fly_0013.png in Resources */,
 				18A438401D8E74E000AE6AAD /* refresh_fly_0028.png in Resources */,
 				18A437FE1D88222F00AE6AAD /* tab_launch@3x.png in Resources */,
@@ -1271,16 +1330,19 @@
 				1826513A1D93DDC4001BE03A /* nearby_icon_now_live@2x.png in Resources */,
 				18A4383C1D8E74E000AE6AAD /* refresh_fly_0024.png in Resources */,
 				18A4382E1D8E74E000AE6AAD /* refresh_fly_0010.png in Resources */,
+				18E2EEC61E6F0503005BD6C2 /* room_task_video_start@2x.png in Resources */,
 				184D3E1E1D7923AA000875B2 /* README.txt in Resources */,
 				18A437F41D881D2300AE6AAD /* tab_live_p@3x.png in Resources */,
 				18A437C01D87A6E900AE6AAD /* login_qq@2x.png in Resources */,
 				18A437C21D87A6E900AE6AAD /* login_weibo@2x.png in Resources */,
 				1826512C1D93BBA6001BE03A /* default_photo@2x.png in Resources */,
+				18E2EECA1E6F0503005BD6C2 /* shortvideo_download_5_refresh@2x.png in Resources */,
 				18A437C11D87A6E900AE6AAD /* login_qq@3x.png in Resources */,
 				18A438441D8E75F800AE6AAD /* login_tree@2x.png in Resources */,
 				185082381D542D280014D26D /* Assets.xcassets in Resources */,
 				18A438481D8E769A00AE6AAD /* searchbar_search@2x.png in Resources */,
 				18A437F71D881D2300AE6AAD /* tab_me_p@2x.png in Resources */,
+				18E2EEC21E6F0503005BD6C2 /* room_pop_up_lamp@2x.png in Resources */,
 				18A438301D8E74E000AE6AAD /* refresh_fly_0012.png in Resources */,
 				18A438261D8E74E000AE6AAD /* refresh_fly_0002.png in Resources */,
 				18A438281D8E74E000AE6AAD /* refresh_fly_0004.png in Resources */,
@@ -1297,6 +1359,7 @@
 				18A4384F1D8E76F500AE6AAD /* shortvideo_main_live@3x.png in Resources */,
 				182651541D94BD6C001BE03A /* login_bg_cloud_2@3x.png in Resources */,
 				18A438321D8E74E000AE6AAD /* refresh_fly_0014.png in Resources */,
+				18E2EEC71E6F0503005BD6C2 /* room_task_video_start@3x.png in Resources */,
 				18A437F61D881D2300AE6AAD /* tab_live@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1359,7 +1422,6 @@
 				18A437A31D82646500AE6AAD /* UIView+ClipAngle.m in Sources */,
 				18D8A9491D73C4A0005768A2 /* UIView+Frame.m in Sources */,
 				18A4378D1D7FB6FD00AE6AAD /* UIConstantColor.m in Sources */,
-				18370EE61D795965006B33A1 /* YKAppCacheDataManger.m in Sources */,
 				18A437E71D88026400AE6AAD /* LZBCenterInterfaceDM.m in Sources */,
 				182651411D93E4A6001BE03A /* LZBYKMainNearCell.m in Sources */,
 				182651141D927EDC001BE03A /* LZBYKCreatorModel.m in Sources */,
@@ -1378,6 +1440,7 @@
 				18A438071D8E3DB900AE6AAD /* UIConstant.m in Sources */,
 				182651171D92B7E6001BE03A /* LZBYKGifHeader.m in Sources */,
 				18A437DC1D8800B900AE6AAD /* LZBYKMainViewController.m in Sources */,
+				18E2EEB71E6F04C7005BD6C2 /* LZBRecordVideoTool.m in Sources */,
 				185D56311D76D9CD00A53AE9 /* BaseDataManger.m in Sources */,
 				185D562B1D76D3CF00A53AE9 /* BaseTC.m in Sources */,
 				18A437D91D87F3FA00AE6AAD /* LZBYKMainInterfaceDM.m in Sources */,
@@ -1390,6 +1453,7 @@
 				1826511A1D92B899001BE03A /* LZBYKAutoFooter.m in Sources */,
 				18A437DF1D88011700AE6AAD /* LZBYKCenterViewController.m in Sources */,
 				182651671D94D74D001BE03A /* LZBYKDefaultNoDataView.m in Sources */,
+				18E2EECE1E6F0579005BD6C2 /* LZBRecordVideoVC.m in Sources */,
 				182651201D9371BC001BE03A /* LZBInifiteScrollView.m in Sources */,
 				185D562E1D76D3E700A53AE9 /* BaseVC.m in Sources */,
 				18A4377B1D7EB05400AE6AAD /* YKAPPConfigModel.m in Sources */,
@@ -1407,6 +1471,8 @@
 				1837FBE61DAFBA95003DEC08 /* LZBCenterChooseView.m in Sources */,
 				18A438011D88231800AE6AAD /* LZBYKTabBar.m in Sources */,
 				184D3E261D792524000875B2 /* YKAppManger.m in Sources */,
+				18E2EEB61E6F04C7005BD6C2 /* LZBRecordProcessView.m in Sources */,
+				18E2EED21E6F0669005BD6C2 /* YKAppCacheDataManger.m in Sources */,
 				18D8A97B1D7570DE005768A2 /* BaseResponseModel.m in Sources */,
 				18A4377E1D7EB82100AE6AAD /* LZBDataConversionManger.m in Sources */,
 				185D56191D76734C00A53AE9 /* LZBFuncTools.m in Sources */,

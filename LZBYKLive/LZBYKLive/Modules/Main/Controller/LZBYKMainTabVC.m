@@ -64,7 +64,10 @@
 
 - (void)gotoShortVedioViewController
 {
-   NSLog(@"当前调用的方法:%s------行号:line-%d ",__func__, __LINE__);
+   if([self checkVailableCenterViewController])
+       [self presentViewController:[LZBYKMainInterfaceDM m_instanceRecordVideoVC]
+                          animated:YES
+                        completion:nil];
 }
 
 

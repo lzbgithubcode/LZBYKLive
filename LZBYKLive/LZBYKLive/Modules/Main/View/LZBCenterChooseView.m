@@ -92,7 +92,10 @@
 - (void)chooseViewClick:(UIButton *)btn
 {
    if(self.chooseTypeBlock)
+   {
        self.chooseTypeBlock(btn.tag == DAFAULT_TAG?LZBCenterChooseViewType_Live:LZBCenterChooseViewType_ShortVideo);
+       [self cancleChooseView];
+   }
 }
 
 - (void)addAnimationWithView:(UIView *)animationView

@@ -20,4 +20,8 @@
 {
     return [[LZBYKMainViewController alloc]init];
 }
++ (LZBRecordVideoVC *)m_instanceRecordVideoVC
+{
+    return [[LZBRecordVideoVC alloc]init];
+}
 @end
