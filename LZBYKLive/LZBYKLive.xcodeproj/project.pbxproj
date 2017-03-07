@@ -167,7 +167,6 @@
 		18D8A97F1D757121005768A2 /* NetWorkResquestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A97E1D757121005768A2 /* NetWorkResquestTool.m */; };
 		18D8A9821D7589E9005768A2 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A9811D7589E9005768A2 /* AppConstants.m */; };
 		265BF26BFD5527DF082F2C57 /* libPods-LZBYKLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CDE4043C795C7836BD6BAF /* libPods-LZBYKLive.a */; };
-		D48A8B2F2794289ECC240BBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80913A990D6EE267523350FB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -414,9 +413,6 @@
 		18D8A9801D7589E9005768A2 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		18D8A9811D7589E9005768A2 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		537BD815E73A00293C0A47F2 /* Pods-LZBYKLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZBYKLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive.debug.xcconfig"; sourceTree = "<group>"; };
-		597FFF4F85A490869D747B61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		80913A990D6EE267523350FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BABCA77381E370F6AAEB35DA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C9198D37D561BB1579811C33 /* Pods-LZBYKLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZBYKLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZBYKLive/Pods-LZBYKLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -434,7 +430,6 @@
 				184D3E1C1D7923AA000875B2 /* libWeChatSDK.a in Frameworks */,
 				184D3DF61D7922AA000875B2 /* libicucore.tbd in Frameworks */,
 				184D3DF01D7921AB000875B2 /* MOBFoundation.framework in Frameworks */,
-				D48A8B2F2794289ECC240BBD /* libPods.a in Frameworks */,
 				184D3E1A1D7923AA000875B2 /* libWeiboSDK.a in Frameworks */,
 				184D3DF41D79221D000875B2 /* ShareSDKExtension.framework in Frameworks */,
 				184D3E181D7923AA000875B2 /* TencentOpenAPI.framework in Frameworks */,
@@ -457,7 +452,6 @@
 				184D3DF91D7922CD000875B2 /* libstdc++.tbd */,
 				184D3DF71D7922B7000875B2 /* libz.tbd */,
 				184D3DF51D7922AA000875B2 /* libicucore.tbd */,
-				80913A990D6EE267523350FB /* libPods.a */,
 				07CDE4043C795C7836BD6BAF /* libPods-LZBYKLive.a */,
 			);
 			name = Frameworks;
@@ -1156,8 +1150,6 @@
 		57109CE72DEC3994D51E8CE1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BABCA77381E370F6AAEB35DA /* Pods.debug.xcconfig */,
-				597FFF4F85A490869D747B61 /* Pods.release.xcconfig */,
 				537BD815E73A00293C0A47F2 /* Pods-LZBYKLive.debug.xcconfig */,
 				C9198D37D561BB1579811C33 /* Pods-LZBYKLive.release.xcconfig */,
 			);
