@@ -133,13 +133,14 @@
     if(cellModel == nil) return;
     _cellModel = cellModel;
     LZBWeakSelf(weakSelf);
-    NSString *portaitUrl = [UIConstant httpImage_getNormalImageNameString:cellModel.liver_portrait withSize:CGSizeZero];
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:portaitUrl] placeholderImage:[UIImage imageNamed:@"default_head"]];
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:cellModel.liver_portrait] placeholderImage:[UIImage imageNamed:@"default_head"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        weakSelf.iconImageView.image = image;
+    }];
     self.nameLabel.text = cellModel.liver_name.length > 0?cellModel.liver_name:@"无名氏";
     [self.locationButton setTitle:cellModel.liver_city.length > 0?cellModel.liver_city:default_location_address forState:UIControlStateNormal];
     self.peopleLabel.text = cellModel.audience_count;
     self.tipLabel.text = @"在看";
-    [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:[UIConstant httpImage_getNormalImageNameString:cellModel.liver_portrait withSize:CGSizeZero]] placeholderImage:[UIImage imageNamed:@"default_photo"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:cellModel.liver_portrait] placeholderImage:[UIImage imageNamed:@"default_photo"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [LZBCommonTool animationOptionTransitionCrossDissolveView:weakSelf.contentImageView];
     }];
     
